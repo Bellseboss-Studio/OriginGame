@@ -4,14 +4,15 @@ Aqui voy a colocar todas las features que vayamos a colocar y las que ya estan h
 
 
 Scenario de Main menu
-	- Play
-	- Credits
-	- Options
-	- Controlls
-	- Salir
+	Logic:
+	[x] Play
+	[x] Credits
+	[x] Options
+	[x] Controlls
+	[x] Salir
 	
 Escena de Intro
-	- Video del estudio
+	[x] Video del estudio
 	
 Escena de Cinematica inicial
 	- Timeline
