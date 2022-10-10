@@ -1,3 +1,4 @@
+using SystemOfExtras;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -5,7 +6,7 @@ using UnityEngine.UI;
 public class MainMenuLogic : MonoBehaviour
 {
     [SerializeField] private Button start, credits, controls, options, exit;
-    [SerializeField] private string nextScene;
+    [SerializeField] private int nextScene;
     [SerializeField] private GameObject mainMenuPanel, creditsPanel, controlsPanel, optionsPanel;
 
     private void Start()
@@ -63,6 +64,10 @@ public class MainMenuLogic : MonoBehaviour
 
     private void StartGame()
     {
-        SceneManager.LoadScene(nextScene);
+        ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
+        {
+            //configure more things
+            SceneManager.LoadScene(nextScene); 
+        });
     }
 }
