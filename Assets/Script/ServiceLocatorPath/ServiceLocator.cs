@@ -35,10 +35,5 @@ namespace SystemOfExtras
 
             return (T) service;
         }
-
-        public void RemoveService<T>(T service)
-        {
-            _services.Remove(typeof(T));
-        }
     }
 }
