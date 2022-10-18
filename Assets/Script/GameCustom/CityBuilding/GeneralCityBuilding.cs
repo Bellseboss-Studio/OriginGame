@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using SystemOfExtras;
 using Terrains;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GeneralCityBuilding : MonoBehaviour
 {
     [SerializeField] private CreateTerrainMap map;
+    [SerializeField] private int sceneRulete;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +16,13 @@ public class GeneralCityBuilding : MonoBehaviour
         var newTarget = map.Hexagons[h, w];
         ServiceLocator.Instance.GetService<ICameraController>().SetTarget(newTarget.gameObject);
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
+    }
+
+    public void GoToRulete()
+    {
+        ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
+        {
+            SceneManager.LoadScene(sceneRulete);
+        });
     }
 }
