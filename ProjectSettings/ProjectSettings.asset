@@ -42,10 +42,10 @@ PlayerSettings:
   m_SplashScreenLogos: []
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
-  defaultScreenWidth: 540
-  defaultScreenHeight: 960
-  defaultScreenWidthWeb: 540
-  defaultScreenHeightWeb: 960
+  defaultScreenWidth: 486
+  defaultScreenHeight: 864
+  defaultScreenWidthWeb: 486
+  defaultScreenHeightWeb: 864
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 0
   m_MTRendering: 1
@@ -156,7 +156,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.Bellseboss.OriginGame
-    Standalone: com.Bellseboss-Development-Studio.BaseProyectBellseboss
+    Standalone: com.Bellseboss.OriginGame
   buildNumber:
     Standalone: 0
     iPhone: 0
