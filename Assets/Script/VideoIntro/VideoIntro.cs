@@ -1,6 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
+using SystemOfExtras;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -22,6 +21,9 @@ public class VideoIntro : MonoBehaviour
 
     public  void SkipVideo()
     {
-        SceneManager.LoadScene(1);
+        ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
+        {
+            SceneManager.LoadScene(1); 
+        });
     }
 }
