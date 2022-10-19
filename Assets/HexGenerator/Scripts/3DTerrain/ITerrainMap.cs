@@ -4,6 +4,6 @@ namespace Terrains
 {
     public interface ITerrainMap
     {
-        Hexagon GetCenter();
+        HexagonTemplate GetCenter();
     }
 }

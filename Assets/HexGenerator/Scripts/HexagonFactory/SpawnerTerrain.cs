@@ -6,6 +6,7 @@ namespace Terrains
     public class SpawnerTerrain : MonoBehaviour
     {
         [SerializeField] private HexagonConfiguration _hexagonConfiguration;
+        [SerializeField] private HexagonTemplate template;
         private HexagonFactory _hexagonFactory;
 
         private void Awake()
@@ -13,14 +14,18 @@ namespace Terrains
             _hexagonFactory = new HexagonFactory(Instantiate(_hexagonConfiguration));
         }
 
-        public Hexagon CreateByHeight(float height)
+        public HexagonTemplate CreateByHeight(float height)
         {
-            return _hexagonFactory.Create(height);
+            var hexagonTemplate = Instantiate(template);
+            hexagonTemplate.Configure(_hexagonFactory.Create(height));
+            return hexagonTemplate;
         }
 
-        public Hexagon CreateById(string name)
+        public HexagonTemplate CreateById(string name)
         {
-            return _hexagonFactory.Create(name);
+            var hexagonTemplate = Instantiate(template);
+            hexagonTemplate.Configure(_hexagonFactory.Create(name));
+            return hexagonTemplate;
         }
     }
 }
