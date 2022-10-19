@@ -15,7 +15,7 @@ namespace Hexagons
             _idToHexagon = new Dictionary<string, Hexagon>();
             foreach (var hexagon in _hexagons)
             {
-                _idToHexagon.Add(hexagon.id, hexagon);
+                _idToHexagon.Add(hexagon.Id, hexagon);
             }
         }
         public Hexagon GetHexagonPrefabById(string id)

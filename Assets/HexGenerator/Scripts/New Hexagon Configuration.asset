@@ -13,16 +13,5 @@ MonoBehaviour:
   m_Name: New Hexagon Configuration
   m_EditorClassIdentifier: 
   _hexagons:
-  - {fileID: -7869888400735726814, guid: ebb37df94a5945040a4e7237f3d44ef7, type: 3}
-  - {fileID: -6149782807038705977, guid: 706c7ecd27ebfa6488e4873e8e11d20d, type: 3}
-  - {fileID: 354974309590330935, guid: 73278d1045d84c94b85ec770c1561fbf, type: 3}
-  - {fileID: 3300103399056633940, guid: 437b165b55b1feb419db8b7fb0423652, type: 3}
-  - {fileID: 8261957701656767996, guid: 14937b7cf1b848047928b770e53147d5, type: 3}
-  - {fileID: -2733360506816461979, guid: d20ae9e98f2a5994bb9c98d441b945ab, type: 3}
-  - {fileID: -6661489320269546278, guid: a73f582339a17044092a82c55fbb8188, type: 3}
-  - {fileID: -3722176441720416353, guid: cd9bc499eaf987446a452faca540b75c, type: 3}
-  - {fileID: -1698193084752865245, guid: bba89f911f5d60940935232e76445b40, type: 3}
-  - {fileID: 3340860882961127844, guid: 80bf4930ef5ddcb4ca65338fb36b9a91, type: 3}
-  - {fileID: -2172073282337080856, guid: 316fdd147ba3c1a47baaae923a73a746, type: 3}
-  - {fileID: 4692393062327845404, guid: 97aa9907ac3cbc24a916d5a89473c088, type: 3}
-  - {fileID: 2056560588735544955, guid: 75880cfedcb5a974b95e8896aa4028d6, type: 3}
+  - {fileID: 11400000, guid: 06ae28e57a37d7643af6d8d695d8bfc1, type: 2}
+  - {fileID: 11400000, guid: 5ea4c9823d1d3f54f8063170af4ffec2, type: 2}

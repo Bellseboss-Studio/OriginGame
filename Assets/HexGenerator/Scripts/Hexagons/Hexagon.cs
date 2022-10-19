@@ -1,17 +1,21 @@
 ﻿using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace Hexagons
 {
-    public abstract class Hexagon : MonoBehaviour
+    [CreateAssetMenu(menuName = "Custom/Hexagon single")]
+    public class Hexagon : ScriptableObject
     {
-        [SerializeField]
-        public string id;
+        [SerializeField] private string id;
+
+        [SerializeField] private GameObject hexagonPrefab;
 
         [SerializeField] private float minHeight, maxHeight;
 
         public float Min => minHeight;
         public float Max => maxHeight;
+
+        public string Id => id;
+        public GameObject Prefab => hexagonPrefab;
 
         public virtual void Orientation()
         {

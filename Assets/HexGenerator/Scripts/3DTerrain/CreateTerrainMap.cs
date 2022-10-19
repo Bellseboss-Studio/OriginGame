@@ -12,12 +12,12 @@ namespace Terrains
         [SerializeField] private SpawnerTerrain spawner;
         [SerializeField] private float offsetHeight;
         private float[,] map;
-        private Hexagon[,] mapGameObject;
+        private HexagonTemplate[,] mapGameObject;
 
         public void CreateMap()
         {
             map = mapGenerator.GenerateMap();
-            mapGameObject = new Hexagon[map.GetLength(0), map.GetLength(1)];
+            mapGameObject = new HexagonTemplate[map.GetLength(0), map.GetLength(1)];
             
             float radio = 0.86602f;//Z
             float altura = 1.5f;//X
@@ -29,7 +29,7 @@ namespace Terrains
             {
                 for (int j = 0; j < map.GetLength(1); j++)
                 {
-                    Hexagon byHeight;
+                    HexagonTemplate byHeight;
                     try
                     {
                         byHeight = spawner.CreateByHeight(map[i, j]);
@@ -37,7 +37,7 @@ namespace Terrains
                     catch (Exception e)
                     {
                         Debug.Log($"{e.Message}");
-                        byHeight = spawner.CreateById("3");
+                        byHeight = spawner.CreateById("2");
                     }
 
                     mapGameObject[i, j] = byHeight;
@@ -56,7 +56,7 @@ namespace Terrains
             }
         }
 
-        public Hexagon GetCenter()
+        public HexagonTemplate GetCenter()
         {
             var middle1 = map.GetLength(0)/2;
             var middle2 = map.GetLength(1)/2;
