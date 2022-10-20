@@ -1,4 +1,6 @@
 ﻿using Game.VisorDeDialogosSystem;
+using SystemOfExtras.GlobalInformationPath;
+using SystemOfExtras.SavedData;
 using UnityEngine;
 
 namespace SystemOfExtras
@@ -17,6 +19,9 @@ namespace SystemOfExtras
             ServiceLocator.Instance.RegisterService<IDialogSystem>(dialogSystem);
             ServiceLocator.Instance.RegisterService<ILoadScene>(ladSceneM);
             ServiceLocator.Instance.RegisterService<IServiceOfMissions>(new ServiceOfMissions());
+            ServiceLocator.Instance.RegisterService<ISaveData>(new SaveData());
+            ServiceLocator.Instance.RegisterService<IGlobalInformation>(new GlobalInformation());
+            ServiceLocator.Instance.RegisterService<IRouletteService>(new RouletteAwards());
             DontDestroyOnLoad(gameObject);
         }
     }

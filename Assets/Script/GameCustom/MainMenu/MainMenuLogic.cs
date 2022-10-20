@@ -1,22 +1,45 @@
+using System;
 using SystemOfExtras;
+using SystemOfExtras.GlobalInformationPath;
+using SystemOfExtras.SavedData;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuLogic : MonoBehaviour
 {
-    [SerializeField] private Button start, credits, controls, options, exit;
+    [SerializeField] private Button start, credits, controls, options, exit, login;
     [SerializeField] private int nextScene;
-    [SerializeField] private GameObject mainMenuPanel, creditsPanel, controlsPanel, optionsPanel;
+    [SerializeField] private GameObject mainMenuPanel, creditsPanel, controlsPanel, optionsPanel, loginPanel;
+    [SerializeField] private TMP_InputField inputNick;
 
     private void Start()
     {
+        HideAllPanels();
         start.onClick.AddListener(StartGame);
         credits.onClick.AddListener(ShowCredits);
         controls.onClick.AddListener(ShowControls);
         options.onClick.AddListener(ShowOptions);
         exit.onClick.AddListener(ExitGame);
+        login.onClick.AddListener(Login);
+        if (!ServiceLocator.Instance.GetService<IGlobalInformation>().IsWasPlayBefore())
+        {
+            loginPanel.SetActive(true);
+        }
+        else
+        {
+            GoBackMainMenu();
+        }
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
+    }
+
+    private void Login()
+    {
+        var nick = inputNick.text;
+        inputNick.text = string.Empty;
+        ServiceLocator.Instance.GetService<IGlobalInformation>().SaveNickName(nick);
+        GoBackMainMenu();
     }
 
     private void ExitGame()
@@ -30,10 +53,8 @@ public class MainMenuLogic : MonoBehaviour
 
     private void ShowOptions()
     {
-        
         HideAllPanels();
         optionsPanel.SetActive(true);
-        
     }
 
     private void ShowControls()
@@ -55,6 +76,7 @@ public class MainMenuLogic : MonoBehaviour
         creditsPanel.SetActive(false);
         optionsPanel.SetActive(false);
         controlsPanel.SetActive(false);
+        loginPanel.SetActive(false);
     }
 
     public void GoBackMainMenu()
