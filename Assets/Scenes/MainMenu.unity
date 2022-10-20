@@ -3199,6 +3199,7 @@ MonoBehaviour:
   controlsPanel: {fileID: 1293653154}
   optionsPanel: {fileID: 930323775}
   loginPanel: {fileID: 1711048557}
+  inputNick: {fileID: 1026578393}
 --- !u!4 &1301775087
 Transform:
   m_ObjectHideFlags: 0

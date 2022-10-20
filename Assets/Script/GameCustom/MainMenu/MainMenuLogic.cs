@@ -1,4 +1,8 @@
+using System;
 using SystemOfExtras;
+using SystemOfExtras.GlobalInformationPath;
+using SystemOfExtras.SavedData;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,6 +12,7 @@ public class MainMenuLogic : MonoBehaviour
     [SerializeField] private Button start, credits, controls, options, exit, login;
     [SerializeField] private int nextScene;
     [SerializeField] private GameObject mainMenuPanel, creditsPanel, controlsPanel, optionsPanel, loginPanel;
+    [SerializeField] private TMP_InputField inputNick;
 
     private void Start()
     {
@@ -18,12 +23,22 @@ public class MainMenuLogic : MonoBehaviour
         options.onClick.AddListener(ShowOptions);
         exit.onClick.AddListener(ExitGame);
         login.onClick.AddListener(Login);
-        loginPanel.SetActive(true);
+        if (!ServiceLocator.Instance.GetService<IGlobalInformation>().IsWasPlayBefore())
+        {
+            loginPanel.SetActive(true);
+        }
+        else
+        {
+            GoBackMainMenu();
+        }
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
     }
 
     private void Login()
     {
+        var nick = inputNick.text;
+        inputNick.text = string.Empty;
+        ServiceLocator.Instance.GetService<IGlobalInformation>().SaveNickName(nick);
         GoBackMainMenu();
     }
 
