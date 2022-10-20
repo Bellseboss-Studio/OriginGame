@@ -1,5 +1,6 @@
 using SystemOfExtras;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Hexagons
 {
@@ -10,7 +11,7 @@ namespace Hexagons
         private Hexagon referenceToConfig;
         public void Configure(Hexagon config)
         {
-            collider.OnClick += OnClick;
+            collider.OnClickInHexagon += OnClick;
             referenceToConfig = config;
             hexagonPrivate = Instantiate(referenceToConfig.Prefab, transform);
         }
@@ -18,7 +19,18 @@ namespace Hexagons
         private void OnClick()
         {
             Debug.Log($"Click in {referenceToConfig.Id}");
-            ServiceLocator.Instance.GetService<ICameraController>().SetTarget(gameObject);
+            //ServiceLocator.Instance.GetService<ICameraController>().SetTarget(gameObject);
+            ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
+            {
+                SceneManager.LoadScene(4);
+            });
+            /*ServiceLocator.Instance.GetService<IMessagingService>().ShowYesAndNo("title", "message",() =>
+            {
+
+            }, () =>
+            {
+
+            });*/
         }
     }
 }

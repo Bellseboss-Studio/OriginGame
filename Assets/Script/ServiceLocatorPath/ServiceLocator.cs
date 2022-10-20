@@ -39,8 +39,6 @@ namespace SystemOfExtras
         public void RemoveService<T>(T service)
         {
             var type = typeof(T);
-            Assert.IsFalse(_services.ContainsKey(type), 
-                $"Service {type} not found");
             _services.Remove(type);
         }
     }

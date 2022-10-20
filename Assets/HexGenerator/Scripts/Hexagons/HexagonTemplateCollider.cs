@@ -5,11 +5,11 @@ namespace Hexagons
 {
     public class HexagonTemplateCollider : MonoBehaviour
     {
-        public Action OnClick;
+        public Action OnClickInHexagon;
 
         public void Click()
         {
-            OnClick?.Invoke();
+            OnClickInHexagon?.Invoke();
         }
     }
 }
