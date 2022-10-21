@@ -23,7 +23,7 @@ public class MainMenuLogic : MonoBehaviour
         options.onClick.AddListener(ShowOptions);
         exit.onClick.AddListener(ExitGame);
         login.onClick.AddListener(Login);
-        if (!ServiceLocator.Instance.GetService<IGlobalInformation>().IsWasPlayBefore())
+        if (!ServiceLocator.Instance.GetService<IGlobalInformation>().IsAuthenticated())
         {
             loginPanel.SetActive(true);
         }
