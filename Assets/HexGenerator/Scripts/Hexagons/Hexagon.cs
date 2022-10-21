@@ -10,6 +10,9 @@ namespace Hexagons
         [SerializeField] private GameObject hexagonPrefab;
 
         [SerializeField] private float minHeight, maxHeight;
+        private string position;
+
+        public string Position => position;
 
         public float Min => minHeight;
         public float Max => maxHeight;
@@ -20,6 +23,11 @@ namespace Hexagons
         public virtual void Orientation()
         {
             
+        }
+
+        public void Config(string position)
+        {
+            this.position = position;
         }
     }
 }

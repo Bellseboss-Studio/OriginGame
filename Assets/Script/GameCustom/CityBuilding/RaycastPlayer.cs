@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class RaycastPlayer : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
+    [SerializeField] private RectTransform raycastPlace;
     private Vector2 _mousePosition;
 
     public void Click(InputAction.CallbackContext contex)
@@ -20,18 +21,23 @@ public class RaycastPlayer : MonoBehaviour
     public void Point(InputAction.CallbackContext contex)
     {
         _mousePosition = contex.ReadValue<Vector2>();
+        //Debug.Log($"{_mousePosition}");
     }
 
     private void ShootRaycast()
     {
         RaycastHit hit;
-        Ray ray = mainCamera.ScreenPointToRay(_mousePosition);
-        
-        if (Physics.Raycast(ray, out hit)) {
-            var objectHit = hit.transform;
-            if (objectHit.gameObject.TryGetComponent<HexagonTemplateCollider>(out var template))
+        if (_mousePosition.x <= Screen.width && _mousePosition.y <= (Screen.height * 0.86f))
+        {
+            Ray ray = mainCamera.ScreenPointToRay(_mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
             {
-                template.Click();
+                var objectHit = hit.transform;
+                if (objectHit.gameObject.TryGetComponent<HexagonTemplateCollider>(out var template))
+                {
+                    template.Click();
+                }
             }
         }
     }
