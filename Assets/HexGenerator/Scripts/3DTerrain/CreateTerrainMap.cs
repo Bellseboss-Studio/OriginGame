@@ -32,12 +32,12 @@ namespace Terrains
                     HexagonTemplate byHeight;
                     try
                     {
-                        byHeight = spawner.CreateByHeight(map[i, j]);
+                        byHeight = spawner.CreateByHeight(map[i, j], i, j);
                     }
                     catch (Exception e)
                     {
-                        Debug.Log($"{e.Message}");
-                        byHeight = spawner.CreateById("2");
+                        //Debug.Log($"{e.Message}");
+                        byHeight = spawner.CreateById("2", i, j);
                     }
 
                     mapGameObject[i, j] = byHeight;
@@ -54,6 +54,15 @@ namespace Terrains
                     alturaAlter = 0;
                 }
             }
+            //Create the piramide to player
+            
+            var middle1 = map.GetLength(0)/2;
+            var middle2 = map.GetLength(1)/2;
+            var position = mapGameObject[middle1, middle2].gameObject.transform.position; 
+            Destroy(mapGameObject[middle1, middle2].gameObject);
+            mapGameObject[middle1, middle2] = spawner.CreateById("0", middle1, middle2);
+            mapGameObject[middle1, middle2].transform.position = position;
+            mapGameObject[middle1, middle2].PlayerWinThisHexagon();
         }
 
         public HexagonTemplate GetCenter()

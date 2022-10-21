@@ -1,4 +1,5 @@
 using System;
+using Hexagons;
 
 namespace SystemOfExtras.GlobalInformationPath
 {
@@ -17,5 +18,9 @@ namespace SystemOfExtras.GlobalInformationPath
         int GetBet();
         void SetBet(int bet);
         bool IsAuthenticated();
+        void HexagonToBet(HexagonTemplate hexagonTemplate);
+        void LoseHexagon();
+        void WinHexagon();
+        bool ThisHexagonIsWinToPlayer(string position);
     }
 }

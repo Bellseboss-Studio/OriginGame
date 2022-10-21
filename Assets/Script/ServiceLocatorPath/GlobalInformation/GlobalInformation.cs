@@ -1,12 +1,29 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Hexagons;
 using SystemOfExtras.SavedData;
+using UnityEngine;
 
 namespace SystemOfExtras.GlobalInformationPath
 {
     public class GlobalInformation:IGlobalInformation
     {
+        private HexagonTemplate _hexagonTemplate;
+
+        private List<string> hexagonsWinsFromPlayer;
+
         public GlobalInformation()
         {
+            hexagonsWinsFromPlayer = new List<string>();
+            var hexagonSaved = ServiceLocator.Instance.GetService<ISaveData>().Get("hexagonsWins");
+            if (hexagonSaved != "")
+            {
+                foreach (var hexag in hexagonSaved.Split(";"))
+                {
+                    hexagonsWinsFromPlayer.Add(hexag);
+                }
+            }
         }
 
         public void SaveNickName(string nick)
@@ -65,6 +82,35 @@ namespace SystemOfExtras.GlobalInformationPath
         public bool IsAuthenticated()
         {
             return GetNickName() != "";
+        }
+
+        public void HexagonToBet(HexagonTemplate hexagonTemplate)
+        {
+            _hexagonTemplate = hexagonTemplate;
+        }
+
+        public void WinHexagon()
+        {
+            hexagonsWinsFromPlayer.Add(_hexagonTemplate.Id);
+            _hexagonTemplate.PlayerWinThisHexagon();
+            _hexagonTemplate = null;
+            var hexagonsWins = "";
+            foreach (var hexagonTemplate in hexagonsWinsFromPlayer)
+            {
+                hexagonsWins += hexagonTemplate + ";";
+            }
+            Debug.Log(hexagonsWins);
+            ServiceLocator.Instance.GetService<ISaveData>().Save("hexagonsWins", hexagonsWins);
+        }
+
+        public bool ThisHexagonIsWinToPlayer(string position)
+        {
+            return hexagonsWinsFromPlayer.Any(hexagonTemplate => hexagonTemplate.Equals(position));
+        }
+
+        public void LoseHexagon()
+        {
+            _hexagonTemplate = null;
         }
     }
 }

@@ -7,6 +7,7 @@ public class Presentations : MonoBehaviour
     private bool _finishEnemyPresentation;
     private bool _finishPlayerPresentation;
     private bool _finishPresentation;
+    private bool _finishPresentationWinner = true;
 
     public bool FinishEnemyPresentation
     {
@@ -33,6 +34,15 @@ public class Presentations : MonoBehaviour
         {
             var alter = _finishPresentation;
             if (_finishPresentation) _finishPresentation = false;
+            return alter;
+        }
+    }
+
+    public bool FinishPresentationOfWinner {
+        get
+        {
+            var alter = _finishPresentationWinner;
+            if (_finishPresentationWinner) _finishPresentationWinner = false;
             return alter;
         }
     }
@@ -84,5 +94,15 @@ public class Presentations : MonoBehaviour
     {
         game.StartPresentation();
         StartCoroutine(WaitForFinishPresentation());
+    }
+
+    public void WinGameAnimation()
+    {
+        
+    }
+
+    public void LoseGameAnimation()
+    {
+        
     }
 }
