@@ -21,7 +21,7 @@ namespace SystemOfExtras.GlobalInformationPath
 
         public void ReceiveGold(int gold)
         {
-            var totalGold = int.Parse(ServiceLocator.Instance.GetService<ISaveData>().Get("gold"));
+            int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("gold"), out var totalGold);
             totalGold += gold;
             ServiceLocator.Instance.GetService<ISaveData>().Save("gold", totalGold.ToString());
             OnUpdateGold?.Invoke(totalGold);
@@ -29,7 +29,7 @@ namespace SystemOfExtras.GlobalInformationPath
 
         public void SpendGold(int gold)
         {
-            var totalGold = int.Parse(ServiceLocator.Instance.GetService<ISaveData>().Get("gold"));
+            int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("gold"), out var totalGold);
             totalGold -= gold;
             ServiceLocator.Instance.GetService<ISaveData>().Save("gold", totalGold.ToString());
             OnUpdateGold?.Invoke(totalGold);
@@ -37,30 +37,34 @@ namespace SystemOfExtras.GlobalInformationPath
 
         public int GetGold()
         {
-            return int.Parse(ServiceLocator.Instance.GetService<ISaveData>().Get("gold")); 
+            return int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("gold"), out var gold) ? gold : 0;
         }
 
         public bool IsWasPlayBefore()
         {
-            var isFirstTimeToPlay =
-                bool.Parse(ServiceLocator.Instance.GetService<ISaveData>().Get("firstTimeToPlay"));
+            bool.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("firstTimeToPlay"),
+                out var isFirstTimeToPlay);
             if (!isFirstTimeToPlay)
             {
                 ServiceLocator.Instance.GetService<ISaveData>().Save("firstTimeToPlay", true.ToString());
             }
-
             return isFirstTimeToPlay;
         }
 
         public Action<int> OnUpdateGold { get; set; }
         public int GetBet()
         {
-            return int.Parse(ServiceLocator.Instance.GetService<ISaveData>().Get("bet"));
+            return int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("bet"), out var bet) ? bet : 0;
         }
         
         public void SetBet(int bet)
         {
             ServiceLocator.Instance.GetService<ISaveData>().Save("bet", bet.ToString());
+        }
+
+        public bool IsAuthenticated()
+        {
+            return GetNickName() != "";
         }
     }
 }

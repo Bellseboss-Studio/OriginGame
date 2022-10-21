@@ -16,5 +16,6 @@ namespace SystemOfExtras.GlobalInformationPath
         Action<int> OnUpdateGold { get; set; }
         int GetBet();
         void SetBet(int bet);
+        bool IsAuthenticated();
     }
 }
