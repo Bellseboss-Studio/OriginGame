@@ -21,6 +21,18 @@ public class RouletteController : MonoBehaviour
         betInput.text = _apuestaPuesta.ToString();
     }
 
+    public void UpdateBet(string betBefore)
+    {
+        if (int.TryParse(betBefore, out var betFinal))
+        {
+            if (betFinal <= 0) betFinal = 1;
+            ServiceLocator.Instance.GetService<IGlobalInformation>().SetBet(betFinal);
+            _apuestaPuesta = betFinal;
+            Debug.Log(">>>>"+_apuestaPuesta.ToString());
+            betInput.text = _apuestaPuesta.ToString();
+        }
+    }
+
     public void LessBet()
     {
         _apuestaPuesta -= 1;
@@ -43,7 +55,7 @@ public class RouletteController : MonoBehaviour
     {
         if (_autoRun)
         {
-            animRoulette.SetTrigger(Go);   
+            Roulette();
         }
     }
 
@@ -63,7 +75,11 @@ public class RouletteController : MonoBehaviour
     public void Roulette()
     {
         ServiceLocator.Instance.GetService<IGlobalInformation>().SpendGold(_apuestaPuesta);
-        animRoulette.SetTrigger(Go);
+        //animRoulette.SetTrigger(Go);
+        var randomRound = Random.Range(1, 12);
+        var animationToPlayInRoulette = $"Round{randomRound}";
+        Debug.Log(animationToPlayInRoulette);
+        animRoulette.Play(animationToPlayInRoulette);
     }
 
     public void SetResult()

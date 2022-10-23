@@ -12,6 +12,7 @@ public class GiveGoldForFirstTime : MonoBehaviour
     [SerializeField] private Button buttonToFinish;
     private static readonly int StartAnim = Animator.StringToHash("start");
     private static readonly int Finish = Animator.StringToHash("finish");
+    [SerializeField] private int goldToReceive;
 
     private void Start()
     {
@@ -30,7 +31,7 @@ public class GiveGoldForFirstTime : MonoBehaviour
     private IEnumerator GiveGold()
     {
         yield return new WaitForSeconds(2);
-        ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(1000);
+        ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(goldToReceive);
         ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
     }
 }
