@@ -8,6 +8,7 @@ public class GeneralBlackJack : MonoBehaviour
 {
     [SerializeField] private Presentations presentations;
     [SerializeField] private Button winBtn, loseBtn;
+    [SerializeField] private DeckForGame playerDeck, botDeck;
     private TeaTime _presentationEnemy, _presentationPlayer, _preparingGame, _game, _winGame, _loseGame;
     private int stateOfGame;//0: inGame; 1: Win; 2: Lose
 
@@ -45,12 +46,13 @@ public class GeneralBlackJack : MonoBehaviour
 
         _preparingGame = this.tt().Pause().Add(() =>
         {
-            presentations.StartPreparingGame();
+            botDeck.DrawCards();
+            playerDeck.DrawCards();
         }).Loop(handle =>
         {
-            if (presentations.FinishPresentation)
+            if (playerDeck.DrawIsFinished && botDeck.DrawIsFinished)
             {
-                handle.Break();
+                handle.Break();   
             }
         }).Add(() =>
         {
@@ -134,8 +136,8 @@ public class GeneralBlackJack : MonoBehaviour
     
     public void StartGame()
     {
-        winBtn.gameObject.SetActive(true);
-        loseBtn.gameObject.SetActive(true);
+        //winBtn.gameObject.SetActive(true);
+        //loseBtn.gameObject.SetActive(true);
     }
 
     private void HideButtons()

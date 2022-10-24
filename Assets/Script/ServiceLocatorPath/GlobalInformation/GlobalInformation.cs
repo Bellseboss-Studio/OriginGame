@@ -108,6 +108,16 @@ namespace SystemOfExtras.GlobalInformationPath
             return hexagonsWinsFromPlayer.Any(hexagonTemplate => hexagonTemplate.Equals(position));
         }
 
+        public void SetDamage(int damage)
+        {
+            ServiceLocator.Instance.GetService<ISaveData>().Save("damage", damage.ToString());
+        }
+
+        public void SetHealth(int health)
+        {
+            ServiceLocator.Instance.GetService<ISaveData>().Save("health", health.ToString());
+        }
+
         public void LoseHexagon()
         {
             _hexagonTemplate = null;

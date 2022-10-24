@@ -22,5 +22,7 @@ namespace SystemOfExtras.GlobalInformationPath
         void LoseHexagon();
         void WinHexagon();
         bool ThisHexagonIsWinToPlayer(string position);
+        void SetDamage(int damage);
+        void SetHealth(int healthInitial);
     }
 }
