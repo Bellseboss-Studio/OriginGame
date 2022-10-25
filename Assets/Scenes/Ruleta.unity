@@ -4230,7 +4230,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorToReceiveGold: {fileID: 1122223305}
   buttonToFinish: {fileID: 715195395}
-  goldToReceive: 10
+  goldInitial: 10
+  damageInitial: 10
+  healthInitial: 200
 --- !u!1 &1154303051
 GameObject:
   m_ObjectHideFlags: 0
