@@ -1,9 +1,11 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Presentations : MonoBehaviour
 {
-    [SerializeField] private Presentation enemy, player, game;
+    [SerializeField] private Presentation enemy, player, game, attackEnemy, attackPlayer;
+    [SerializeField] private TextMeshProUGUI damageInPlayer, damageInEnemy;
     private bool _finishEnemyPresentation;
     private bool _finishPlayerPresentation;
     private bool _finishPresentation;
@@ -96,13 +98,25 @@ public class Presentations : MonoBehaviour
         StartCoroutine(WaitForFinishPresentation());
     }
 
-    public void WinGameAnimation()
+    public void AttackToEnemyAnimation(int totalDamage)
     {
-        
+        damageInEnemy.text = $"{totalDamage}";
+        attackEnemy.StartPresentation();
     }
 
-    public void LoseGameAnimation()
+    public void AttackToPlayerAnimation(int totalDamage)
     {
-        
+        damageInPlayer.text = $"{totalDamage}";
+        attackPlayer.StartPresentation();
+    }
+
+    public bool FinishAttackToEnemy()
+    {
+        return attackEnemy.IsFinishPresentation;
+    }
+
+    public bool FinishAttackToPlayer()
+    {
+        return attackPlayer.IsFinishPresentation;
     }
 }
