@@ -8,15 +8,16 @@ public class GeneralBlackJack : MonoBehaviour
 {
     [SerializeField] private Presentations presentations;
     [SerializeField] private Button winBtn, loseBtn;
-    [SerializeField] private DeckForGame playerDeck, botDeck;
-    private TeaTime _presentationEnemy, _presentationPlayer, _preparingGame, _game, _winGame, _loseGame;
-    private int stateOfGame;//0: inGame; 1: Win; 2: Lose
+    [SerializeField] private GameLogic game;
+    private TeaTime _presentationEnemyState, _presentationPlayerState, _preparingGameState, _gameState, _winGameState, _loseGameState, _definitionOfGame;
+    [SerializeField] private int healthEnemy, healthPlayer;
+    [SerializeField] private int damageEnemy, damagePlayer;
 
     private void Start()
     {
         HideButtons();
         ServiceLocator.Instance.GetService<ILoadScene>().Lock();
-        _presentationEnemy = this.tt().Pause().Add(() =>
+        _presentationEnemyState = this.tt().Pause().Add(() =>
         {
             presentations.StartPresentationEnemy();
         }).Loop(handler =>
@@ -27,10 +28,10 @@ public class GeneralBlackJack : MonoBehaviour
             }
         }).Add(() =>
         {
-            _presentationPlayer.Play();
+            _presentationPlayerState.Play();
         });
 
-        _presentationPlayer = this.tt().Pause().Add(() =>
+        _presentationPlayerState = this.tt().Pause().Add(() =>
         {
             presentations.StartPresentationPlayer();
         }).Loop(handler =>
@@ -41,33 +42,31 @@ public class GeneralBlackJack : MonoBehaviour
             }
         }).Add(() =>
         {
-            _preparingGame.Play();
+            _preparingGameState.Play();
         });
 
-        _preparingGame = this.tt().Pause().Add(() =>
+        _preparingGameState = this.tt().Pause().Add(() =>
         {
-            botDeck.DrawCards();
-            playerDeck.DrawCards();
+            game.DrawCards();
         }).Loop(handle =>
         {
-            if (playerDeck.DrawIsFinished && botDeck.DrawIsFinished)
+            if (game.DrawCardsIsFinished())
             {
                 handle.Break();   
             }
         }).Add(() =>
         {
-            ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
-            _game.Play();
+            _gameState.Play();
         });
 
-        _game = this.tt().Pause().Add(() =>
+        _gameState = this.tt().Pause().Add(() =>
         {
             //show buttons
             StartGame();
             Debug.Log("In Game");
         }).Loop(handle =>
         {
-            if (stateOfGame > 0)
+            if (game.StateOfGame > 0)
             {
                 handle.Break();
             }
@@ -75,83 +74,92 @@ public class GeneralBlackJack : MonoBehaviour
         {
             Debug.Log("Game Finished");
             ServiceLocator.Instance.GetService<ILoadScene>().Lock();
-            switch (stateOfGame)
+            switch (game.StateOfGame)
             {
                 case 1:
-                    _winGame.Play();
+                    _winGameState.Play();
                     break;
                 case 2:
-                    _loseGame.Play();
+                    _loseGameState.Play();
                     break;
             }
         });
 
-        _winGame = this.tt().Pause().Add(() =>
+        _winGameState = this.tt().Pause().Add(() =>
         {
             Debug.Log("Game Win");
-            presentations.WinGameAnimation();
+            var totalDamage = damagePlayer * game.LoadToPlayer();
+            healthEnemy -= totalDamage;
+            presentations.AttackToEnemyAnimation(totalDamage);
         }).Loop(handle =>
         {
-            if (presentations.FinishPresentationOfWinner)
+            if (presentations.FinishAttackToEnemy())
             {
                 handle.Break();
             }
         }).Add(() =>
         {
-            ServiceLocator.Instance.GetService<IGlobalInformation>().WinHexagon();
-            GoToCityBuilding();
+            _definitionOfGame.Play();
         }); 
-        _loseGame = this.tt().Pause().Add(() =>
+        _loseGameState = this.tt().Pause().Add(() =>
         {
             Debug.Log("Game Lose");
-            presentations.LoseGameAnimation();
+            var totalDamage = damageEnemy * game.LoadToEnemy();
+            healthPlayer -= totalDamage;
+            presentations.AttackToPlayerAnimation(totalDamage);
         }).Loop(handle =>
         {
-            if (presentations.FinishPresentationOfWinner)
+            if (presentations.FinishAttackToPlayer())
             {
                 handle.Break();
             }
         }).Add(() =>
         {
-            ServiceLocator.Instance.GetService<IGlobalInformation>().LoseHexagon();
-            GoToCityBuilding();
-        }); 
+            _definitionOfGame.Play();
+        });
 
-        _presentationEnemy.Play();
+        _definitionOfGame = this.tt().Pause().Add(() =>
+        {
+            if (healthEnemy <= 0)
+            {
+                ServiceLocator.Instance.GetService<IGlobalInformation>().WinHexagon();
+                GoToCityBuilding();
+            }
+
+            if (healthPlayer <= 0)
+            {
+                ServiceLocator.Instance.GetService<IGlobalInformation>().LoseHexagon();
+                GoToCityBuilding();
+            }
+
+            _preparingGameState.Play();
+        });
+        
+        _presentationEnemyState.Play();
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
     }
 
     public void GoToCityBuilding()
     {
         ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
-        _presentationEnemy.Stop();
-        _presentationPlayer.Stop();
-        _preparingGame.Stop();
+        _presentationEnemyState.Stop();
+        _presentationPlayerState.Stop();
+        _preparingGameState.Stop();
         ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
         {
             SceneManager.LoadScene(3);
         });
     }
-    
-    
-    public void StartGame()
+
+
+    private void StartGame()
     {
-        //winBtn.gameObject.SetActive(true);
-        //loseBtn.gameObject.SetActive(true);
+        game.StartGame();
     }
 
     private void HideButtons()
     {
         winBtn.gameObject.SetActive(false);
         loseBtn.gameObject.SetActive(false);
-    }
-
-    public void Win()
-    {
-        stateOfGame = 1;
-    }
-    public void Lose()
-    {
-        stateOfGame = 2;
     }
 }
