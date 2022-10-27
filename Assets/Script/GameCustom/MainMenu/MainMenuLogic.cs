@@ -1,4 +1,5 @@
 using System;
+using Gameplay;
 using SystemOfExtras;
 using SystemOfExtras.GlobalInformationPath;
 using SystemOfExtras.SavedData;
@@ -16,6 +17,7 @@ public class MainMenuLogic : MonoBehaviour
 
     private void Start()
     {
+        //ServiceLocator.Instance.GetService<MixerManager>().
         HideAllPanels();
         start.onClick.AddListener(StartGame);
         credits.onClick.AddListener(ShowCredits);

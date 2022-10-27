@@ -12,6 +12,8 @@ public class GameLogic : MonoBehaviour, IGameLogic
     private bool isTurnOfPlayer;
 
     private TeaTime _turnOfPlayer, _turnOfBot, _intermediateTurn;
+    private bool _setGame;
+    private IGeneralBlackJack _generalBlackJack;
 
     private void Start()
     {
@@ -48,12 +50,6 @@ public class GameLogic : MonoBehaviour, IGameLogic
         
         _intermediateTurn = this.tt().Pause().Add(() =>
         {
-            
-        }).Loop(handle =>
-        {
-            handle.Break();
-        }).Add(() =>
-        {
             if (isTurnOfPlayer)
             {
                 _turnOfPlayer.Play();
@@ -86,6 +82,8 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public void StartGame()
     {
         ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
+        _stateOfGame = 0;
+        isTurnOfPlayer = false;
         _intermediateTurn.Play();
     }
     
@@ -111,7 +109,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
             else
             {
                 Win();
-            }   
+            }
         }
     }
 
@@ -129,6 +127,21 @@ public class GameLogic : MonoBehaviour, IGameLogic
         }
     }
 
+    public void SetGame()
+    {
+        _setGame = true;
+    }
+
+    public bool IsSetGame()
+    {
+        return _setGame;
+    }
+
+    public void DontPassThisTurn()
+    {
+        _generalBlackJack.ShowMessage("Dont pass this time", "the game is SET");
+    }
+
     public int LoadToPlayer()
     {
         return _loadPlayer;
@@ -137,5 +150,27 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public int LoadToEnemy()
     {
         return _loadBot;
+    }
+
+    public void BeginGame()
+    {
+        _stateOfGame = 0;
+        _loadPlayer = 0;
+        _loadBot = 0;
+        _totalNumber = 0;
+        isTurnOfPlayer = false;
+        _setGame = false;       
+        botDeck.BeginGame();
+        playerDeck.BeginGame();
+    }
+
+    public void Configurate(IGeneralBlackJack generalBlackJack)
+    {
+        _generalBlackJack = generalBlackJack;
+    }
+
+    public void GameFinished()
+    {
+        //botDeck.Restart();
     }
 }

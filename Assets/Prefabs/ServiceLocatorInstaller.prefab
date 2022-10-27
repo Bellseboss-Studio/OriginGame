@@ -822,6 +822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9063591741261005102}
   - component: {fileID: 9063591741261005105}
+  - component: {fileID: 346564279}
   m_Layer: 0
   m_Name: ServiceLocatorInstaller
   m_TagString: Untagged
@@ -860,6 +861,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogSystem: {fileID: 9063591739972279752}
   ladSceneM: {fileID: 9063591741397345231}
+  mixerManager: {fileID: 346564279}
+--- !u!114 &346564279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9063591741261005103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7d02ca627374d72ab15c9ec51c9501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GameplayMix: {fileID: 24500006, guid: 9ed6bba9bcb5bff4aad528a98420a81a, type: 2}
+  m_PauseMix: {fileID: -7909190592039378874, guid: 9ed6bba9bcb5bff4aad528a98420a81a, type: 2}
+  m_TransitionTime: 0.5
 --- !u!1 &9063591741270817052
 GameObject:
   m_ObjectHideFlags: 0
