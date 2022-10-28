@@ -1,19 +1,15 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class BotDeck : DeckForGame
 {
-    [SerializeField] private bool isFinishTurn;
-    
-    public override bool IsFinishTurn()
-    {
-        return isFinishTurn;
-    }
+    [SerializeField] private int numberOfDontOverBot;
+    private IEnumerator placeCard;
 
-    public override void PlaceCard()
+    private void Awake()
     {
-        base.PlaceCard();
-        isFinishTurn = true;
+        placeCard = PlaceCardCoroutine();
     }
 
     public override void FinishTurn()
@@ -23,13 +19,27 @@ public class BotDeck : DeckForGame
     public override void BeginTurn()
     {
         base.BeginTurn();
-        isFinishTurn = false;
         StartCoroutine(PlaceCardCoroutine());
     }
 
     private IEnumerator PlaceCardCoroutine()
     {
         yield return new WaitForSeconds(2);
-        PlaceCard();
+        //Here is the logic for IA of Enemy
+        if (!_gameLogic.IsSetGame() && _gameLogic.TotalNumberInGame() > numberOfDontOverBot)
+        {
+            SetGame();
+            Debug.Log("Set from bot");
+        }
+        else
+        {
+            PlaceCard();   
+        }
+    }
+
+    public override void Restart()
+    {
+        base.Restart();
+        StopCoroutine(placeCard);
     }
 }

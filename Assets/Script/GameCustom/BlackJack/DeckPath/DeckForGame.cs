@@ -10,15 +10,17 @@ public abstract class DeckForGame : MonoBehaviour
     [SerializeField] private GameObject primaryCard, secondaryCard, pointInTheTable;
     [SerializeField] private CardInWord primaryCardInWord, secondaryCardInWord;
     [SerializeField] private CardInWord cardPrefab;
-    private static readonly int Draw = Animator.StringToHash("draw");
     protected bool _drawIsFinished;
     [SerializeField] private int cartsInHand;
     [SerializeField] private List<Card> deckOfCards;
     [SerializeField] private List<Card> deckFinish;
-    private IGameLogic _gameLogic;
+    [SerializeField] private bool isFinishTurn;
+    private List<CardInWord> cartsToPlace;
+    protected IGameLogic _gameLogic;
 
     private void Start()
     {
+        cartsToPlace = new List<CardInWord>();
         deck.transform.position = originDeck.transform.position;
         deckFinish = new List<Card>();
         foreach (var card in deckOfCards)
@@ -82,19 +84,29 @@ public abstract class DeckForGame : MonoBehaviour
         primaryCardInWord.transform.DOMove(pointInTheTable.transform.position, .5f);
         primaryCardInWord.name = "outOfContext";
         _gameLogic.Sum(primaryCardInWord.Card.number);
+        cartsToPlace.Add(primaryCardInWord);
+        _gameLogic.EvaluateCard(primaryCardInWord);
         primaryCardInWord = null;
         _gameLogic.AddLoad();
+        isFinishTurn = true;
     }
-    
 
     public virtual void PassTurn()
     {
-        
+        if (_gameLogic.IsSetGame())
+        {
+            _gameLogic.DontPassThisTurn();
+            return;
+        }
+        isFinishTurn = true;
     }
 
     public virtual void SetGame()
     {
-        
+        if (_gameLogic.IsSetGame()) return;
+        PlaceCard();
+        _gameLogic.AddLoad();
+        _gameLogic.SetGame();
     }
 
     public bool DrawIsFinished => _drawIsFinished;
@@ -102,10 +114,12 @@ public abstract class DeckForGame : MonoBehaviour
     public virtual void BeginTurn()
     {
         TakeCard();
+        isFinishTurn = false;
     }
 
     private void TakeCard()
     {
+        if (cartsInHand >= 2) return;
         cartsInHand++;
         primaryCardInWord = secondaryCardInWord;
         primaryCardInWord.name = "primary";
@@ -116,12 +130,42 @@ public abstract class DeckForGame : MonoBehaviour
         primaryCardInWord.transform.DOMove(primaryCard.transform.position, .5f);
     }
 
-    public abstract bool IsFinishTurn();
+    
+    public virtual bool IsFinishTurn()
+    {
+        return isFinishTurn;
+    }
 
     public abstract void FinishTurn();
 
     public void Configure(IGameLogic gameLogic)
     {
         _gameLogic = gameLogic;
+    }
+
+    public virtual void BeginGame()
+    {
+        _drawIsFinished = false;
+        cartsInHand = 0;
+        foreach (var cardInWord in cartsToPlace)
+        {
+            Destroy(cardInWord.gameObject);
+        }
+        cartsToPlace = new List<CardInWord>();
+        
+        if (secondaryCardInWord != null)
+        {
+            Destroy(secondaryCardInWord.gameObject);
+        }
+        if (primaryCardInWord != null)
+        {
+            Destroy(primaryCardInWord.gameObject);
+        }
+        isFinishTurn = true;
+    }
+
+    public virtual void Restart()
+    {
+        
     }
 }

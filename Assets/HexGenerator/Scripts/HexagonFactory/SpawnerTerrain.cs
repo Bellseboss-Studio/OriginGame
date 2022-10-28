@@ -14,17 +14,17 @@ namespace Terrains
             _hexagonFactory = new HexagonFactory(Instantiate(_hexagonConfiguration));
         }
 
-        public HexagonTemplate CreateByHeight(float height, int x, int y)
+        public HexagonTemplate CreateByHeight(float height, int x, int y, ITerrainMap createTerrainMap)
         {
             var hexagonTemplate = Instantiate(template);
-            hexagonTemplate.Configure(_hexagonFactory.Create(height), x, y);
+            hexagonTemplate.Configure(_hexagonFactory.Create(height), x, y,createTerrainMap);
             return hexagonTemplate;
         }
 
-        public HexagonTemplate CreateById(string name, int x, int y)
+        public HexagonTemplate CreateById(string name, int x, int y, ITerrainMap createTerrainMap)
         {
             var hexagonTemplate = Instantiate(template);
-            hexagonTemplate.Configure(_hexagonFactory.Create(name), x, y);
+            hexagonTemplate.Configure(_hexagonFactory.Create(name), x, y,createTerrainMap);
             return hexagonTemplate;
         }
     }

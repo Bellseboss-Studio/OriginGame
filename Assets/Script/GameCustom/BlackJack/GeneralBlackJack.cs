@@ -1,10 +1,11 @@
 using SystemOfExtras;
 using SystemOfExtras.GlobalInformationPath;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GeneralBlackJack : MonoBehaviour
+public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
 {
     [SerializeField] private Presentations presentations;
     [SerializeField] private Button winBtn, loseBtn;
@@ -12,10 +13,12 @@ public class GeneralBlackJack : MonoBehaviour
     private TeaTime _presentationEnemyState, _presentationPlayerState, _preparingGameState, _gameState, _winGameState, _loseGameState, _definitionOfGame;
     [SerializeField] private int healthEnemy, healthPlayer;
     [SerializeField] private int damageEnemy, damagePlayer;
+    [SerializeField] private TextMeshProUGUI healthTextPlayer, attackTextPlayer, healthTextBot;
 
     private void Start()
     {
         HideButtons();
+        game.Configurate(this);
         ServiceLocator.Instance.GetService<ILoadScene>().Lock();
         _presentationEnemyState = this.tt().Pause().Add(() =>
         {
@@ -47,6 +50,7 @@ public class GeneralBlackJack : MonoBehaviour
 
         _preparingGameState = this.tt().Pause().Add(() =>
         {
+            game.BeginGame();
             game.DrawCards();
         }).Loop(handle =>
         {
@@ -61,8 +65,7 @@ public class GeneralBlackJack : MonoBehaviour
 
         _gameState = this.tt().Pause().Add(() =>
         {
-            //show buttons
-            StartGame();
+            game.StartGame();
             Debug.Log("In Game");
         }).Loop(handle =>
         {
@@ -70,6 +73,8 @@ public class GeneralBlackJack : MonoBehaviour
             {
                 handle.Break();
             }
+            
+            attackTextPlayer.text = $"Attack: {damageEnemy * game.LoadToPlayer()}";
         }).Add(() =>
         {
             Debug.Log("Game Finished");
@@ -83,6 +88,8 @@ public class GeneralBlackJack : MonoBehaviour
                     _loseGameState.Play();
                     break;
             }
+
+            game.GameFinished();
         });
 
         _winGameState = this.tt().Pause().Add(() =>
@@ -90,6 +97,7 @@ public class GeneralBlackJack : MonoBehaviour
             Debug.Log("Game Win");
             var totalDamage = damagePlayer * game.LoadToPlayer();
             healthEnemy -= totalDamage;
+            healthTextBot.text = $"Health: {healthEnemy}";
             presentations.AttackToEnemyAnimation(totalDamage);
         }).Loop(handle =>
         {
@@ -106,6 +114,7 @@ public class GeneralBlackJack : MonoBehaviour
             Debug.Log("Game Lose");
             var totalDamage = damageEnemy * game.LoadToEnemy();
             healthPlayer -= totalDamage;
+            healthTextPlayer.text = $"Health: {healthPlayer}";
             presentations.AttackToPlayerAnimation(totalDamage);
         }).Loop(handle =>
         {
@@ -136,6 +145,7 @@ public class GeneralBlackJack : MonoBehaviour
         });
         
         _presentationEnemyState.Play();
+        attackTextPlayer.text = $"Attack: {damageEnemy * game.LoadToPlayer()}";
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
     }
 
@@ -151,15 +161,14 @@ public class GeneralBlackJack : MonoBehaviour
         });
     }
 
-
-    private void StartGame()
-    {
-        game.StartGame();
-    }
-
     private void HideButtons()
     {
         winBtn.gameObject.SetActive(false);
         loseBtn.gameObject.SetActive(false);
+    }
+
+    public void ShowMessage(string title, string message)
+    {
+        //TODO show the message to player
     }
 }
