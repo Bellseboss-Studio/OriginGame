@@ -100,6 +100,10 @@ public class GameLogic : MonoBehaviour, IGameLogic
     {
         _totalNumber += cardNumber;
         totalNumber.text = $"Total: {_totalNumber}";
+        if (maxNumberInGame == _totalNumber)
+        {
+            EvaluateToTotalAdded();   
+        }
         if (_totalNumber > maxNumberInGame)
         {
             if (isTurnOfPlayer)
@@ -111,6 +115,34 @@ public class GameLogic : MonoBehaviour, IGameLogic
                 Win();
             }
         }
+    }
+
+    private void EvaluateToTotalAdded()
+    {
+        if (isTurnOfPlayer)
+        {
+            //Treinta y dos to player
+            ShowAnimationToPlayer32();
+            AddLoad();
+        }
+        else
+        {
+            //Treinta y dos to bot
+            ShowAnimationToBot32();
+            AddLoad();
+        }
+    }
+
+    private void ShowAnimationToBot32()
+    {
+        //TODO animation for show 32 points for bot
+        Debug.Log("Is a 32 from Bot!");
+    }
+
+    private void ShowAnimationToPlayer32()
+    {
+        //TODO animation for show 32 points for player
+        Debug.Log("Is a 32 from Player!");
     }
 
     public void AddLoad()
@@ -130,6 +162,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public void SetGame()
     {
         _setGame = true;
+        //TODO animation to show the set game
     }
 
     public bool IsSetGame()
@@ -140,6 +173,26 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public void DontPassThisTurn()
     {
         _generalBlackJack.ShowMessage("Dont pass this time", "the game is SET");
+    }
+
+    public void EvaluateCard(CardInWord card)
+    {
+        if (card.Card.number == 0)
+        {
+            AddLoad();
+            ShowComodinEvent();
+        }
+    }
+
+    public int TotalNumberInGame()
+    {
+        return _totalNumber;
+    }
+
+    private void ShowComodinEvent()
+    {
+        //TODO animation for  show the card is a joke
+        Debug.Log("Is a JOKE!");
     }
 
     public int LoadToPlayer()

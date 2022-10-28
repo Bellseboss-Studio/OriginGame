@@ -16,3 +16,6 @@ MonoBehaviour:
   hexagonPrefab: {fileID: 919132149155446097, guid: 37bfc7459af28334e84aff5c75411839, type: 3}
   minHeight: 0.33
   maxHeight: 0.66
+  originalMaterials:
+  - {fileID: -7842457696890018531, guid: 37bfc7459af28334e84aff5c75411839, type: 3}
+  cost: 10

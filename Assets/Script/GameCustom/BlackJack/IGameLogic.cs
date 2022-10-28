@@ -5,4 +5,6 @@ public interface IGameLogic
     void SetGame();
     bool IsSetGame();
     void DontPassThisTurn();
+    void EvaluateCard(CardInWord card);
+    int TotalNumberInGame();
 }

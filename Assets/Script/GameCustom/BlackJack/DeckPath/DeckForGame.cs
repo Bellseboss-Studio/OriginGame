@@ -85,6 +85,7 @@ public abstract class DeckForGame : MonoBehaviour
         primaryCardInWord.name = "outOfContext";
         _gameLogic.Sum(primaryCardInWord.Card.number);
         cartsToPlace.Add(primaryCardInWord);
+        _gameLogic.EvaluateCard(primaryCardInWord);
         primaryCardInWord = null;
         _gameLogic.AddLoad();
         isFinishTurn = true;

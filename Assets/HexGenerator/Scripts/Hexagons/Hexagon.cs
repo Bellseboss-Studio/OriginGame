@@ -10,6 +10,8 @@ namespace Hexagons
         [SerializeField] private GameObject hexagonPrefab;
 
         [SerializeField] private float minHeight, maxHeight;
+        [SerializeField] private Material[] originalMaterials;
+        [SerializeField] private int cost;
         private string position;
 
         public string Position => position;
@@ -19,6 +21,7 @@ namespace Hexagons
 
         public string Id => id;
         public GameObject Prefab => hexagonPrefab;
+        public int Cost => cost;
 
         public virtual void Orientation()
         {
@@ -28,6 +31,11 @@ namespace Hexagons
         public void Config(string position)
         {
             this.position = position;
+        }
+
+        public Material[] OriginalMaterials()
+        {
+            return originalMaterials;
         }
     }
 }

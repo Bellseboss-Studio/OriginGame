@@ -13,7 +13,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
     private TeaTime _presentationEnemyState, _presentationPlayerState, _preparingGameState, _gameState, _winGameState, _loseGameState, _definitionOfGame;
     [SerializeField] private int healthEnemy, healthPlayer;
     [SerializeField] private int damageEnemy, damagePlayer;
-    [SerializeField] private TextMeshProUGUI healthTextPlayer, attackTextPlayer;
+    [SerializeField] private TextMeshProUGUI healthTextPlayer, attackTextPlayer, healthTextBot;
 
     private void Start()
     {
@@ -97,6 +97,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
             Debug.Log("Game Win");
             var totalDamage = damagePlayer * game.LoadToPlayer();
             healthEnemy -= totalDamage;
+            healthTextBot.text = $"Health: {healthEnemy}";
             presentations.AttackToEnemyAnimation(totalDamage);
         }).Loop(handle =>
         {

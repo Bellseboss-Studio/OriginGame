@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BotDeck : DeckForGame
 {
+    [SerializeField] private int numberOfDontOverBot;
     private IEnumerator placeCard;
 
     private void Awake()
@@ -25,7 +26,15 @@ public class BotDeck : DeckForGame
     {
         yield return new WaitForSeconds(2);
         //Here is the logic for IA of Enemy
-        PlaceCard();
+        if (!_gameLogic.IsSetGame() && _gameLogic.TotalNumberInGame() > numberOfDontOverBot)
+        {
+            SetGame();
+            Debug.Log("Set from bot");
+        }
+        else
+        {
+            PlaceCard();   
+        }
     }
 
     public override void Restart()

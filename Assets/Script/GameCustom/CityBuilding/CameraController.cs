@@ -22,4 +22,9 @@ public class CameraController : MonoBehaviour, ICameraController
         camera.Follow = target.transform;
         camera.LookAt = target.transform;
     }
+
+    public GameObject GetCamera()
+    {
+        return camera.gameObject;
+    }
 }

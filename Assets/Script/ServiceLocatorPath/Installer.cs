@@ -18,6 +18,7 @@ namespace SystemOfExtras
                 Destroy(gameObject);
                 return;
             }
+            QualitySettings.vSyncCount = 2;
             ServiceLocator.Instance.RegisterService<IDialogSystem>(dialogSystem);
             ServiceLocator.Instance.RegisterService<ILoadScene>(ladSceneM);
             ServiceLocator.Instance.RegisterService<IServiceOfMissions>(new ServiceOfMissions());
