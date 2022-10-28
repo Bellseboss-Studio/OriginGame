@@ -36,6 +36,10 @@ namespace Hexagons
                 .ThisHexagonIsWinToPlayer(referenceToConfig.Position);
             camera = ServiceLocator.Instance.GetService<ICameraController>().GetCamera();
             _totalCost = referenceToConfig.Cost; //if they have a multiplic value
+            if (isHexagonBelongsThePlayer)
+            {
+                hexagonPrivate.GetComponent<MeshRenderer>().materials = referenceToConfig.OriginalMaterials();
+            }
         }
 
         private void OnClick()
@@ -58,7 +62,6 @@ namespace Hexagons
         public void PlayerWinThisHexagon()
         {
             isHexagonBelongsThePlayer = true;
-            hexagonPrivate.GetComponent<MeshRenderer>().materials = referenceToConfig.OriginalMaterials();
         }
 
         public bool IsPlayerHexagon()
