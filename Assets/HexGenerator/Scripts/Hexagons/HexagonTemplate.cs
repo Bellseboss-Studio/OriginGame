@@ -74,14 +74,8 @@ namespace Hexagons
                                 SceneManager.LoadScene(sceneRoulette);
                             });
                         }, 
-                        "Tweet the game", () =>
-                        {
-                            //TODO launch the tweet the game
-                            //https://twitter.com/intent/tweet?text=
-                            var message = "Estoy jugando a https://bellseboss.itch.io/origin-game es el mejor juego de todos @bellseboss";
-                            Application.OpenURL($"https://twitter.com/intent/tweet?text={message}");
-                            ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(200);
-                        }, () =>
+                        "Tweet the game", 
+                        ServiceLocator.Instance.GetService<IGlobalInformation>().TweetAction(), () =>
                         {
                             //TODO whats happend if the cancel way
                         });

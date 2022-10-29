@@ -24,5 +24,8 @@ namespace SystemOfExtras.GlobalInformationPath
         bool ThisHexagonIsWinToPlayer(string position);
         void SetDamage(int damage);
         void SetHealth(int healthInitial);
+        
+        string Tweet();
+        Action TweetAction();
     }
 }

@@ -98,7 +98,7 @@ public class RouletteController : MonoBehaviour
                 {
                     //TODO launch the tweet the game
                     //https://twitter.com/intent/tweet?text=
-                    var message = "Estoy jugando a https://bellseboss.itch.io/origin-game es el mejor juego de todos @bellseboss";
+                    var message = ServiceLocator.Instance.GetService<IGlobalInformation>().Tweet();
                     Application.OpenURL($"https://twitter.com/intent/tweet?text={message}");
                     ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(200);
                 }, () =>
