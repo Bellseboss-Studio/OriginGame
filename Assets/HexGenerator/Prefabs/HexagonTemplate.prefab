@@ -193,3 +193,5 @@ MonoBehaviour:
   positionHexagon: 
   panel: {fileID: -3432648798092820414, guid: 7f3726be867083b4c90b0588b015a380, type: 3}
   pointToStayPanel: {fileID: 6577092935615731507}
+  sceneBlackJack: 3
+  sceneRoulette: 4

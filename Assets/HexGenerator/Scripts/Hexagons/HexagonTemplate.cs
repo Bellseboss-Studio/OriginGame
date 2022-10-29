@@ -15,6 +15,7 @@ namespace Hexagons
         [SerializeField] private string positionHexagon;
         [SerializeField] private CostTemplate panel;
         [SerializeField] private GameObject pointToStayPanel;
+        [SerializeField]private int sceneBlackJack, sceneRoulette;
         private GameObject hexagonPrivate;
         private Hexagon referenceToConfig;
         private ITerrainMap _terrainMap;
@@ -50,12 +51,41 @@ namespace Hexagons
             }
             else
             {
-                ServiceLocator.Instance.GetService<IGlobalInformation>().SpendGold(_totalCost);
-                ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
+                try
                 {
-                    ServiceLocator.Instance.GetService<IGlobalInformation>().HexagonToBet(this);
-                    SceneManager.LoadScene(4);
-                });   
+                    ServiceLocator.Instance.GetService<IGlobalInformation>().SpendGold(_totalCost);
+                    ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
+                    {
+                        ServiceLocator.Instance.GetService<IGlobalInformation>().HexagonToBet(this);
+                        SceneManager.LoadScene(sceneBlackJack);
+                    });
+                }
+                catch (Exception e)
+                {
+                    //no le alacanzo el oro
+                    ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithTwoButton(
+                        "Gold is not enough", 
+                        "If you wanna to play, you can play roulette or tweet the game to win gold. What do you want to do?", 
+                        "Play Roullete", () =>
+                        {
+                            //TODO go to roulette
+                            ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
+                            {
+                                SceneManager.LoadScene(sceneRoulette);
+                            });
+                        }, 
+                        "Tweet the game", () =>
+                        {
+                            //TODO launch the tweet the game
+                            //https://twitter.com/intent/tweet?text=
+                            var message = "Estoy jugando a https://bellseboss.itch.io/origin-game es el mejor juego de todos @bellseboss";
+                            Application.OpenURL($"https://twitter.com/intent/tweet?text={message}");
+                            ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(200);
+                        }, () =>
+                        {
+                            //TODO whats happend if the cancel way
+                        });
+                }
             }
         }
 

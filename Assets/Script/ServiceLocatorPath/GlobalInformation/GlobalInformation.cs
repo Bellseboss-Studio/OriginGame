@@ -47,6 +47,10 @@ namespace SystemOfExtras.GlobalInformationPath
         public void SpendGold(int gold)
         {
             int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("gold"), out var totalGold);
+            if (totalGold - gold < 0)
+            {
+                throw new Exception("Enough gold");
+            }
             totalGold -= gold;
             ServiceLocator.Instance.GetService<ISaveData>().Save("gold", totalGold.ToString());
             OnUpdateGold?.Invoke(totalGold);
