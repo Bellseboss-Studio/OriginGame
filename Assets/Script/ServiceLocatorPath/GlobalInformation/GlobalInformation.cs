@@ -13,8 +13,13 @@ namespace SystemOfExtras.GlobalInformationPath
 
         private List<string> hexagonsWinsFromPlayer;
 
+        private string messateForTwetter;
+
+        private Action TwetterActionCustom;
+
         public GlobalInformation()
         {
+            messateForTwetter = "Estoy jugando a https://bellseboss.itch.io/origin-game es el mejor juego de todos @bellseboss #gamedev";
             hexagonsWinsFromPlayer = new List<string>();
             var hexagonSaved = ServiceLocator.Instance.GetService<ISaveData>().Get("hexagonsWins");
             if (hexagonSaved != "")
@@ -24,6 +29,8 @@ namespace SystemOfExtras.GlobalInformationPath
                     hexagonsWinsFromPlayer.Add(hexag);
                 }
             }
+
+            TwetterActionCustom = TwetterAction;
         }
 
         public void SaveNickName(string nick)
@@ -47,6 +54,10 @@ namespace SystemOfExtras.GlobalInformationPath
         public void SpendGold(int gold)
         {
             int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("gold"), out var totalGold);
+            if (totalGold - gold < 0)
+            {
+                throw new Exception("Enough gold");
+            }
             totalGold -= gold;
             ServiceLocator.Instance.GetService<ISaveData>().Save("gold", totalGold.ToString());
             OnUpdateGold?.Invoke(totalGold);
@@ -118,9 +129,26 @@ namespace SystemOfExtras.GlobalInformationPath
             ServiceLocator.Instance.GetService<ISaveData>().Save("health", health.ToString());
         }
 
+        public string Tweet()
+        {
+            return messateForTwetter;
+        }
+
+        public Action TweetAction()
+        {
+            return TwetterActionCustom;
+        }
+
         public void LoseHexagon()
         {
             _hexagonTemplate = null;
+        }
+
+        public void TwetterAction()
+        {
+            var message = ServiceLocator.Instance.GetService<IGlobalInformation>().Tweet();
+            Application.OpenURL($"https://twitter.com/intent/tweet?text={message}");
+            ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(200);
         }
     }
 }

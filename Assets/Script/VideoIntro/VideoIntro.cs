@@ -10,12 +10,15 @@ public class VideoIntro : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(NextScene());
+        video.prepareCompleted += source =>
+        {
+            StartCoroutine(NextScene(source));
+        };
     }
 
-    private IEnumerator NextScene()
+    private IEnumerator NextScene(VideoPlayer videoPlayer)
     {
-        yield return new WaitForSeconds((float)video.clip.length);
+        yield return new WaitForSeconds((float)videoPlayer.length);
         SkipVideo();
     }
 
