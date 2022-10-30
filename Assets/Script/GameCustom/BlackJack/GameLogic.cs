@@ -35,6 +35,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
         _turnOfPlayer = this.tt().Pause().Add(() =>
         {
             playerDeck.BeginTurn();
+            ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
         }).Loop(handle =>
         {
             if (playerDeck.IsFinishTurn())
@@ -46,6 +47,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
             isTurnOfPlayer = false;
             playerDeck.FinishTurn();
             _intermediateTurn.Play();
+            ServiceLocator.Instance.GetService<ILoadScene>().Lock();
         });
         
         _intermediateTurn = this.tt().Pause().Add(() =>

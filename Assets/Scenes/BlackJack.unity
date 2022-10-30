@@ -6317,6 +6317,7 @@ MonoBehaviour:
   healthTextPlayer: {fileID: 768345072}
   attackTextPlayer: {fileID: 1842527765}
   healthTextBot: {fileID: 236622803}
+  sceneCityBuilding: 2
 --- !u!114 &2093506023
 MonoBehaviour:
   m_ObjectHideFlags: 0
