@@ -45,6 +45,7 @@ namespace Hexagons
 
         private void OnClick()
         {
+            if (!isVisibleForPlayer) return;
             if (isHexagonBelongsThePlayer)
             {
                 ServiceLocator.Instance.GetService<ICameraController>().SetTarget(gameObject);   
