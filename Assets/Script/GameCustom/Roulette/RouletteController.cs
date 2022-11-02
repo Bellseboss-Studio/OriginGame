@@ -4,58 +4,51 @@ using SystemOfExtras.GlobalInformationPath;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class RouletteController : MonoBehaviour
 {
     [SerializeField] private Animator animRoulette;
     [SerializeField] private AwardController award;
-    [SerializeField] private TextMeshProUGUI textToAutoRun, resultBet;
+    [SerializeField] private TextMeshProUGUI textToAutoRun, resultBet, lootAccumulate;
     [SerializeField] private TMP_InputField betInput;
+    [SerializeField] private int spendForThrowOfRoulette, multipleOfThrow;
+    [SerializeField] private Image skullResult;
     private static readonly int Go = Animator.StringToHash("go");
     private bool _autoRun;
-    private int _apuestaPuesta;
     private int _result;
+    private int loot;
+    private IRouletteGeneral _rouletteGeneral;
 
     private void Start()
     {
+        resultBet.gameObject.SetActive(true);
+        skullResult.gameObject.SetActive(false);
+        lootAccumulate.text = $"Loot: {loot}";
+    }
+
+    private void OnEnable()
+    {
         award.OnFinishPresentationAwards += OnFinishPresentationAwards;
-        _apuestaPuesta = ServiceLocator.Instance.GetService<IGlobalInformation>().GetBet();
-        betInput.text = _apuestaPuesta.ToString();
     }
 
-    public void UpdateBet(string betBefore)
+    private void OnDisable()
     {
-        if (int.TryParse(betBefore, out var betFinal))
-        {
-            if (betFinal <= 0) betFinal = 1;
-            ServiceLocator.Instance.GetService<IGlobalInformation>().SetBet(betFinal);
-            _apuestaPuesta = betFinal;
-            Debug.Log(">>>>"+_apuestaPuesta.ToString());
-            betInput.text = _apuestaPuesta.ToString();
-        }
-    }
-
-    public void LessBet()
-    {
-        _apuestaPuesta -= 1;
-        if (_apuestaPuesta <= 0)
-        {
-            _apuestaPuesta = 1;
-        }
-        ServiceLocator.Instance.GetService<IGlobalInformation>().SetBet(_apuestaPuesta);
-        betInput.text = _apuestaPuesta.ToString();
-    }
-
-    public void MoreBet()
-    {
-        _apuestaPuesta += 1;
-        ServiceLocator.Instance.GetService<IGlobalInformation>().SetBet(_apuestaPuesta);
-        betInput.text = _apuestaPuesta.ToString();
+        award.OnFinishPresentationAwards -= OnFinishPresentationAwards;
     }
 
     private void OnFinishPresentationAwards()
     {
+        if (_result == 0)
+        {
+            loot = 0;
+            lootAccumulate.text = $"Loot: {loot}";
+        }
+        else
+        {
+            lootAccumulate.text = $"Loot: {loot}";
+        }
         if (_autoRun)
         {
             Roulette();
@@ -79,8 +72,7 @@ public class RouletteController : MonoBehaviour
     {
         try
         {
-
-            ServiceLocator.Instance.GetService<IGlobalInformation>().SpendGold(_apuestaPuesta);
+            ServiceLocator.Instance.GetService<IGlobalInformation>().SpendTokens(spendForThrowOfRoulette * multipleOfThrow);
             //animRoulette.SetTrigger(Go);
             var randomRound = Random.Range(1, 12);
             var animationToPlayInRoulette = $"Round{randomRound}";
@@ -92,15 +84,13 @@ public class RouletteController : MonoBehaviour
             
             //no le alacanzo el oro
             ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton(
-                "Gold is not enough", 
-                "If you wanna to play, you can play roulette or tweet the game to win gold. What do you want to do?", 
+                "Tokens is not enough", 
+                "If you wanna to play, you can play roulette or tweet the game to win Tokens. What do you want to do?", 
                 "Tweet the game", () =>
                 {
-                    //TODO launch the tweet the game
-                    //https://twitter.com/intent/tweet?text=
                     var message = ServiceLocator.Instance.GetService<IGlobalInformation>().Tweet();
                     Application.OpenURL($"https://twitter.com/intent/tweet?text={message}");
-                    ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(200);
+                    ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(20);
                 }, () =>
                 {
                     //TODO whats happend if the cancel way
@@ -112,17 +102,47 @@ public class RouletteController : MonoBehaviour
     {
         _result = 0;
         _result = ServiceLocator.Instance.GetService<IRouletteService>().GetResult();
-        resultBet.text = $"X {_result}";
+        if (_result == 0)
+        {
+            resultBet.gameObject.SetActive(false);
+            skullResult.gameObject.SetActive(true);
+        }
+        else
+        {
+            resultBet.gameObject.SetActive(true);
+            skullResult.gameObject.SetActive(false);
+            resultBet.text = $"X {_result}";
+        }
+        
     }
 
     public void AwardPresentation()
     {
-        //Presentacion de premio?
-        award.ShowAwards(_apuestaPuesta * _result);
+        if (_result == 0)
+        {
+            award.ShowLoseGold();
+        }
+        else
+        {
+            var betWin = _result;
+            loot += betWin;
+            award.ShowAccumulate(betWin);
+        }
     }
     
     public void StopAutoRun()
     {
         _autoRun = false;
+    }
+
+    public void TakeLoot()
+    {
+        award.ShowWinLoot(loot);
+        loot = 0;
+    }
+
+    public void Configure(IRouletteGeneral rouletteGeneral)
+    {
+        _rouletteGeneral = rouletteGeneral;
     }
 }

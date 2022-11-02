@@ -10,23 +10,33 @@ public class AwardController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI resultText;
     private static readonly int Open = Animator.StringToHash("open");
     public Action OnFinishPresentationAwards;
-    private int _ganado;
 
-    public void ShowAwards(int ganado)
+    public void ShowAccumulate(int ganado)
     {
-        _ganado = ganado;
         resultText.text = $"Win \n {ganado}";
         animatorAwards.SetBool(Open, true);
     }
 
     public void HideAwards()
     {
-        ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(_ganado);
         animatorAwards.SetBool(Open, false);
     }
 
     public void FinishHideAwards()
     {
         OnFinishPresentationAwards?.Invoke();
+    }
+
+    public void ShowLoseGold()
+    {
+        animatorAwards.SetBool(Open, true);
+        resultText.text = $"Lose the loot";
+    }
+
+    public void ShowWinLoot(int totalLootWin)
+    {
+        animatorAwards.SetBool(Open, true);
+        resultText.text = $"You Win Total {totalLootWin}";
+        ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(totalLootWin);
     }
 }

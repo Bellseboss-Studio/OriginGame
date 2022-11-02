@@ -15,6 +15,7 @@ namespace SystemOfExtras.GlobalInformationPath
         int GetGold();
         bool IsWasPlayBefore();
         Action<int> OnUpdateGold { get; set; }
+        Action<int> OnUpdateToken { get; set; }
         int GetBet();
         void SetBet(int bet);
         bool IsAuthenticated();
@@ -27,5 +28,8 @@ namespace SystemOfExtras.GlobalInformationPath
         
         string Tweet();
         Action TweetAction();
+        int GetTokens();
+        void SpendTokens(int tokenCount);
+        void ReceiveToken(int tokenCount);
     }
 }

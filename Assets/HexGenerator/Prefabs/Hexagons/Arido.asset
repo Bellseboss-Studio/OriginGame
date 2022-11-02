@@ -18,4 +18,4 @@ MonoBehaviour:
   maxHeight: 0.33
   originalMaterials:
   - {fileID: 2100000, guid: 86642521ff089f84dab506c0b216589c, type: 2}
-  cost: 10
+  cost: 0

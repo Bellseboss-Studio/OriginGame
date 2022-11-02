@@ -80,6 +80,7 @@ namespace SystemOfExtras.GlobalInformationPath
         }
 
         public Action<int> OnUpdateGold { get; set; }
+        public Action<int> OnUpdateToken { get; set; }
         public int GetBet()
         {
             return int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("bet"), out var bet) ? bet : 0;
@@ -137,6 +138,30 @@ namespace SystemOfExtras.GlobalInformationPath
         public Action TweetAction()
         {
             return TwetterActionCustom;
+        }
+
+        public int GetTokens()
+        {
+            return int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("token"), out var token) ? token : 0;
+        }
+        public void SpendTokens(int tokenCount)
+        {
+            int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("token"), out var totalToken);
+            if (totalToken - tokenCount < 0)
+            {
+                throw new Exception("Enough Tokens");
+            }
+            totalToken -= tokenCount;
+            ServiceLocator.Instance.GetService<ISaveData>().Save("token", totalToken.ToString());
+            OnUpdateToken?.Invoke(totalToken);
+        }
+
+        public void ReceiveToken(int tokenCount)
+        {
+            int.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("token"), out var totalTokens);
+            totalTokens += tokenCount;
+            ServiceLocator.Instance.GetService<ISaveData>().Save("token", totalTokens.ToString());
+            OnUpdateToken?.Invoke(totalTokens);            
         }
 
         public void LoseHexagon()

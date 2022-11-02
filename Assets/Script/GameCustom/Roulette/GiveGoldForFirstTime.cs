@@ -24,16 +24,16 @@ public class GiveGoldForFirstTime : MonoBehaviour
         });
     }
 
-    public void GiveTheMoney()
+    public void GiveTheToken()
     {
         animatorToReceiveGold.SetTrigger(StartAnim);
-        StartCoroutine(GiveGold());
+        StartCoroutine(GiveToken());
     }
 
-    private IEnumerator GiveGold()
+    private IEnumerator GiveToken()
     {
         yield return new WaitForSeconds(2);
-        ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(goldInitial);
+        ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(goldInitial);
         ServiceLocator.Instance.GetService<IGlobalInformation>().SetDamage(damageInitial);
         ServiceLocator.Instance.GetService<IGlobalInformation>().SetHealth(healthInitial);
         ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
