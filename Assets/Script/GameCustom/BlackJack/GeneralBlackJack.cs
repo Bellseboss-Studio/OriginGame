@@ -15,6 +15,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
     [SerializeField] private int damageEnemy, damagePlayer;
     [SerializeField] private TextMeshProUGUI healthTextPlayer, attackTextPlayer, healthTextBot;
     [SerializeField] private int sceneCityBuilding;
+    [SerializeField] private int tokensForGame;
 
     private void Start()
     {
@@ -134,12 +135,14 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
             {
                 ServiceLocator.Instance.GetService<IGlobalInformation>().WinHexagon();
                 GoToCityBuilding();
+                ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(tokensForGame);
             }
 
             if (healthPlayer <= 0)
             {
                 ServiceLocator.Instance.GetService<IGlobalInformation>().LoseHexagon();
                 GoToCityBuilding();
+                ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(tokensForGame / 2);
             }
 
             _preparingGameState.Play();

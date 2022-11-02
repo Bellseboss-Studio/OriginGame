@@ -100,10 +100,11 @@ namespace Hexagons
             if (isVisibleForPlayer || isHexagonBelongsThePlayer) return;
             isVisibleForPlayer = true;
             //hexagonPrivate.GetComponent<MeshRenderer>().materials = new[] { _terrainMap.GetConqueredMaterial() };
-            var costTemplate = Instantiate(panel, _terrainMap.GetCanvasGeneral().transform, true);
+            /*var costTemplate = Instantiate(panel, _terrainMap.GetCanvasGeneral().transform, true);
             costTemplate.transform.position = pointToStayPanel.transform.position;
             costTemplate.Using($"Cost: {_totalCost} gold");
             costTemplate.transform.LookAt(_terrainMap.GetCanvasGeneral().transform);
+            */
         }
 
         public bool IsVisibleForPlayer()
