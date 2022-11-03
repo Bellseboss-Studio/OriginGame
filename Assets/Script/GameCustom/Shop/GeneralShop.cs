@@ -37,6 +37,7 @@ public class GeneralShop : MonoBehaviour
                 OnUpdateHealth(ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth());
                 OnUpdateGold(ServiceLocator.Instance.GetService<IGlobalInformation>().GetGold());
             };
+            item.gameObject.transform.localScale = Vector3.one;
             deltaHeight += baseStep;
             sizeOfContainer++;   
         }

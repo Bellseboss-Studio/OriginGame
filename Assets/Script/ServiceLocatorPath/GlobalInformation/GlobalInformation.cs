@@ -19,8 +19,6 @@ namespace SystemOfExtras.GlobalInformationPath
 
         private List<string> hexagonsWinsFromPlayer;
 
-        private string messateForTwetter;
-
         private Action TwetterActionCustom;
 
         private int healthBase = 100;
@@ -44,7 +42,6 @@ namespace SystemOfExtras.GlobalInformationPath
             _sceneShop = sceneShop;
             _healthEnemyBase = healthEnemyBase;
             _damageEnemyBase = damageEnemyBase;
-            messateForTwetter = "Estoy jugando a https://bellseboss.itch.io/origin-game es el mejor juego de todos @bellseboss #gamedev";
             hexagonsWinsFromPlayer = new List<string>();
             var hexagonSaved = ServiceLocator.Instance.GetService<ISaveData>().Get("hexagonsWins");
             if (hexagonSaved != "")
@@ -178,7 +175,7 @@ namespace SystemOfExtras.GlobalInformationPath
 
         public string Tweet()
         {
-            return messateForTwetter;
+            return "I'm playing https://bellseboss.itch.io/origin-game the best game ever created TY @bellseboss #gamedev";
         }
 
         public Action TweetAction()
