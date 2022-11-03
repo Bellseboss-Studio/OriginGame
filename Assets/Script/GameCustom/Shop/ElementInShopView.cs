@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ElementInShopView : MonoBehaviour, IElement
 {
-    [SerializeField] private TextMeshProUGUI title, value;
+    [SerializeField] private TextMeshProUGUI title, value, cost;
     [SerializeField] private RectTransform getRectTransform;
     public Action OnUpdateData;
     private ElementInShop _element;
@@ -19,6 +19,7 @@ public class ElementInShopView : MonoBehaviour, IElement
         _element = element;
         title.text = element.name;
         value.text = element.value;
+        cost.text = $"{element.cost} g";
     }
 
     public void GetTheItem()
@@ -32,7 +33,7 @@ public class ElementInShopView : MonoBehaviour, IElement
             //no le alacanzo el oro
             ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithTwoButton(
                 "Gold is not enough",
-                "If you wanna to play, you can play roulette or tweet the game to win gold. What do you want to do?",
+                "If you want to buy, you can play roulette or tweet the game to win gold. What do you want to do?",
                 "Play Roulette", () =>
                 {
                     //TODO go to roulette
