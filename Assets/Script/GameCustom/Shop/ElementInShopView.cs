@@ -33,7 +33,7 @@ public class ElementInShopView : MonoBehaviour, IElement
             //no le alacanzo el oro
             ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithTwoButton(
                 "Gold is not enough",
-                "If you wanna to play, you can play roulette or tweet the game to win gold. What do you want to do?",
+                "If you want to buy, you can play roulette or tweet the game to win gold. What do you want to do?",
                 "Play Roulette", () =>
                 {
                     //TODO go to roulette
