@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   hexagonPrefab: {fileID: 919132149155446097, guid: dace781a1e1008147aad26fa99f7d8bd, type: 3}
+  prefabConquered: {fileID: 919132149155446097, guid: e9cf9fc54f2cfe145abfbb8a394f39a3, type: 3}
   minHeight: 0.33
   maxHeight: 0.66
-  originalMaterials:
-  - {fileID: -7805965318761107941, guid: dace781a1e1008147aad26fa99f7d8bd, type: 3}
   cost: 0
