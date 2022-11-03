@@ -16,6 +16,8 @@ namespace SystemOfExtras.GlobalInformationPath
         bool IsWasPlayBefore();
         Action<int> OnUpdateGold { get; set; }
         Action<int> OnUpdateToken { get; set; }
+        Action<int> OnUpdateHealth { get; set; }
+        Action<int> OnUpdateDamage { get; set; }
         int GetBet();
         void SetBet(int bet);
         bool IsAuthenticated();
@@ -31,5 +33,7 @@ namespace SystemOfExtras.GlobalInformationPath
         int GetTokens();
         void SpendTokens(int tokenCount);
         void ReceiveToken(int tokenCount);
+        int GetSceneForRoulette();
+        int GetSceneForCityBuilding();
     }
 }

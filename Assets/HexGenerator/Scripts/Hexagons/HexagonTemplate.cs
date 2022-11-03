@@ -55,6 +55,8 @@ namespace Hexagons
                 try
                 {
                     ServiceLocator.Instance.GetService<IGlobalInformation>().SpendGold(_totalCost);
+                    //Calculate the health and damage for enemy
+                    ServiceLocator.Instance.GetService<IStatsInformation>().CalculateStatsForEnemy(referenceToConfig);
                     ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
                     {
                         ServiceLocator.Instance.GetService<IGlobalInformation>().HexagonToBet(this);
@@ -116,6 +118,11 @@ namespace Hexagons
         {
             //Debug.Log($"Try Hide {referenceToConfig.Position}");
             hexagonPrivate.GetComponent<MeshRenderer>().materials = new[] { _terrainMap.GetDarkMaterial() };
+        }
+
+        public Hexagon GetHexagon()
+        {
+            return referenceToConfig;
         }
     }
 }

@@ -1133,5 +1133,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ServiceLocatorInstaller
       objectReference: {fileID: 0}
+    - target: {fileID: 9063591741261005105, guid: ee30d00dcfcd81a45b074577f3d8753e, type: 3}
+      propertyPath: increment
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee30d00dcfcd81a45b074577f3d8753e, type: 3}

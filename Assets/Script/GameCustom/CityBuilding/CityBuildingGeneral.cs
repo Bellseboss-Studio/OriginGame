@@ -10,16 +10,20 @@ public class CityBuildingGeneral : MonoBehaviour
 {
     [SerializeField] private CreateTerrainMap map;
     [SerializeField] private CameraController cameraController;
-    [SerializeField] private TextMeshProUGUI goldText;
+    [SerializeField] private TextMeshProUGUI goldText, healthText, damageText;
     [SerializeField] private int sceneRoulette;
+    [SerializeField] private int sceneShop;
 
     void Start()
     {
         map.CreateMap();
         var target = map.GetCenter();
         cameraController.SetTarget(target.gameObject);
+        ServiceLocator.Instance.GetService<IStatsInformation>().SetCenter(target.GetHexagon());
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
         OnUpdateGold(ServiceLocator.Instance.GetService<IGlobalInformation>().GetGold());
+        healthText.text = $"HP: {ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth()}";
+        damageText.text = $"PW: {ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage()}";
     }
 
     private void OnEnable()
@@ -42,6 +46,15 @@ public class CityBuildingGeneral : MonoBehaviour
         ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
         {
             SceneManager.LoadScene(sceneRoulette);
+        });
+    }
+
+    public void GoToShop()
+    {
+        
+        ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
+        {
+            SceneManager.LoadScene(sceneShop);
         });
     }
 }
