@@ -3369,6 +3369,11 @@ MonoBehaviour:
   dialogSystem: {fileID: 9063591739972279752}
   ladSceneM: {fileID: 9063591741397345231}
   mixerManager: {fileID: 346564279}
+  cityBuilding: 2
+  roulette: 4
+  shop: 5
+  healthEnemyBase: 200
+  damageEnemyBase: 10
 --- !u!114 &346564279
 MonoBehaviour:
   m_ObjectHideFlags: 0

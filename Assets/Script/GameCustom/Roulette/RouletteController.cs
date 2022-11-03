@@ -83,15 +83,22 @@ public class RouletteController : MonoBehaviour
         {
             
             //no le alacanzo el oro
-            ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton(
+            ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithTwoButton(
                 "Tokens is not enough", 
                 "If you wanna to play, you can play roulette or tweet the game to win Tokens. What do you want to do?", 
-                "Tweet the game", () =>
+                "Tweet the game",
+                () =>
                 {
                     var message = ServiceLocator.Instance.GetService<IGlobalInformation>().Tweet();
                     Application.OpenURL($"https://twitter.com/intent/tweet?text={message}");
                     ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(20);
-                }, () =>
+                },
+                "Explore the map", () =>
+                {
+                    SceneManager.LoadScene(ServiceLocator.Instance.GetService<IGlobalInformation>()
+                        .GetSceneForCityBuilding());
+                },
+                () =>
                 {
                     //TODO whats happend if the cancel way
                 });

@@ -11,6 +11,8 @@ namespace SystemOfExtras
         [SerializeField] private DialogSystem dialogSystem;
         [SerializeField] private LoadSceneService ladSceneM;
         [SerializeField] private MixerManager mixerManager;
+        [SerializeField] private int cityBuilding, roulette, shop, healthEnemyBase, damageEnemyBase;
+        [SerializeField] private float increment;
         private void Awake()
         {
             if (FindObjectsOfType<Installer>().Length > 1)
@@ -23,7 +25,17 @@ namespace SystemOfExtras
             ServiceLocator.Instance.RegisterService<ILoadScene>(ladSceneM);
             ServiceLocator.Instance.RegisterService<IServiceOfMissions>(new ServiceOfMissions());
             ServiceLocator.Instance.RegisterService<ISaveData>(new SaveData());
-            ServiceLocator.Instance.RegisterService<IGlobalInformation>(new GlobalInformation());
+            var global = new GlobalInformation(
+                cityBuilding,
+                roulette,
+                shop,
+                healthEnemyBase,
+                damageEnemyBase,
+                increment
+            );
+            ServiceLocator.Instance.RegisterService<IGlobalInformation>(global);
+            ServiceLocator.Instance.RegisterService<IStatsInformation>(global);
+            ServiceLocator.Instance.RegisterService<IShopService>(global);
             ServiceLocator.Instance.RegisterService<IRouletteService>(new RouletteAwards());
             ServiceLocator.Instance.RegisterService(mixerManager);
             DontDestroyOnLoad(gameObject);
