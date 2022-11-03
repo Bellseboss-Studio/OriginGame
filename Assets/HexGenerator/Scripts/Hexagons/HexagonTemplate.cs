@@ -32,15 +32,11 @@ namespace Hexagons
             referenceToConfig = config;
             referenceToConfig.Config($"{positionX}-{positionY}");
             positionHexagon = referenceToConfig.Position;
-            hexagonPrivate = Instantiate(referenceToConfig.Prefab, transform);
             isHexagonBelongsThePlayer = ServiceLocator.Instance.GetService<IGlobalInformation>()
                 .ThisHexagonIsWinToPlayer(referenceToConfig.Position);
             camera = ServiceLocator.Instance.GetService<ICameraController>().GetCamera();
             _totalCost = referenceToConfig.Cost; //if they have a multiplic value
-            if (isHexagonBelongsThePlayer)
-            {
-                hexagonPrivate.GetComponent<MeshRenderer>().materials = referenceToConfig.OriginalMaterials();
-            }
+            hexagonPrivate = Instantiate(isHexagonBelongsThePlayer ? referenceToConfig.PrefabConquered : referenceToConfig.Prefab, transform);
         }
 
         private void OnClick()
@@ -117,7 +113,7 @@ namespace Hexagons
         public void HideToPlayer()
         {
             //Debug.Log($"Try Hide {referenceToConfig.Position}");
-            hexagonPrivate.GetComponent<MeshRenderer>().materials = new[] { _terrainMap.GetDarkMaterial() };
+            //hexagonPrivate.GetComponent<MeshRenderer>().materials = new[] { _terrainMap.GetDarkMaterial() };
         }
 
         public Hexagon GetHexagon()
