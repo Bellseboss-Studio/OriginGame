@@ -23,6 +23,13 @@ namespace Gameplay.UsoDeCartas
         public bool estaSeleccionadaLaCarta;
         [SerializeField] private GameObject colision;
         private IDeckForGame _deckForGame;
+        private Vector2 _pointInScreen;
+
+        public void PointMouseTouch(InputAction.CallbackContext context)
+        {
+            _pointInScreen = context.ReadValue<Vector2>();
+            Debug.Log($"point {_pointInScreen}");
+        }
         
         private void Start()
         {
@@ -66,6 +73,7 @@ namespace Gameplay.UsoDeCartas
                     break;
                 case "Pass":
                     _deckForGame.PassTurn();
+                    RestartPosition();
                     break;
             }
             OnDropCompleted?.Invoke();
@@ -86,7 +94,11 @@ namespace Gameplay.UsoDeCartas
         private void ObjectDragging_(PointerEventData data)
         {
 
-            Vector3 mousePosition = Mouse.current.position.ReadValue();
+            Vector3 mousePosition = _pointInScreen;
+            Vector3 mousePositionAlter = Mouse.current.position.ReadValue();
+            mousePosition = mousePositionAlter;
+            
+            Debug.Log($"Mouse {mousePosition} Alter {mousePositionAlter}");
             mousePosition.z = 80;
             Debug.DrawRay(_camera.transform.position, (_camera.ScreenToWorldPoint(mousePosition)), Color.cyan);
 

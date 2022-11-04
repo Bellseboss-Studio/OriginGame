@@ -22,7 +22,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
             botDeck.BeginTurn();
         }).Loop(handle =>
         {
-            if (botDeck.IsFinishTurn())
+            if (botDeck.IsFinishTurn() && _generalBlackJack.MessageHasBeenDelivered())
             {
                 handle.Break();
             }
@@ -38,7 +38,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
             ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
         }).Loop(handle =>
         {
-            if (playerDeck.IsFinishTurn())
+            if (playerDeck.IsFinishTurn() && _generalBlackJack.MessageHasBeenDelivered())
             {
                 handle.Break();
             }
@@ -96,12 +96,13 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public void Lose()
     {
         _stateOfGame = 2;
+        _generalBlackJack.ShowMessage("You Lose", "you exceeded 32");
     }
 
     public void Sum(int cardNumber)
     {
         _totalNumber += cardNumber;
-        totalNumber.text = $"Total: {_totalNumber}";
+        totalNumber.text = $"{_totalNumber}/32";
         if (maxNumberInGame == _totalNumber)
         {
             EvaluateToTotalAdded();   
@@ -137,14 +138,12 @@ public class GameLogic : MonoBehaviour, IGameLogic
 
     private void ShowAnimationToBot32()
     {
-        //TODO animation for show 32 points for bot
-        Debug.Log("Is a 32 from Bot!");
+        _generalBlackJack.ShowMessage("Bad luck!", "Is a 32 from Enemy");
     }
 
     private void ShowAnimationToPlayer32()
     {
-        //TODO animation for show 32 points for player
-        Debug.Log("Is a 32 from Player!");
+        _generalBlackJack.ShowMessage("Good move!", "Is a 32 from player");
     }
 
     public void AddLoad()
@@ -164,7 +163,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public void SetGame()
     {
         _setGame = true;
-        //TODO animation to show the set game
+        _generalBlackJack.ShowMessage("SET Game!", "You can't pass turns again.");
     }
 
     public bool IsSetGame()
@@ -193,8 +192,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
 
     private void ShowComodinEvent()
     {
-        //TODO animation for  show the card is a joke
-        Debug.Log("Is a JOKE!");
+        _generalBlackJack.ShowMessage("It's a JOKE!", "Take one more load");
     }
 
     public int LoadToPlayer()
@@ -217,6 +215,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
         _setGame = false;       
         botDeck.BeginGame();
         playerDeck.BeginGame();
+        _generalBlackJack.ShowMessage("How to Play?", "loses who exceeds 32");
     }
 
     public void Configurate(IGeneralBlackJack generalBlackJack)

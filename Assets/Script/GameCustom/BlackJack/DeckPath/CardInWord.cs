@@ -9,10 +9,14 @@ public class CardInWord : MonoBehaviour
     private Card _card;
     public Card Card => _card;
 
-    public void Configurate(Card card, Camera camera, IDeckForGame deckForGame)
+    public void Configurate(Card card)
     {
         _card = card;
         textOfNumber.text = $"{_card.number}";
+    }
+
+    public void EnabledDragComponent(Camera camera, IDeckForGame deckForGame)
+    {
         drag.Configure(camera, deckForGame);
     }
 }

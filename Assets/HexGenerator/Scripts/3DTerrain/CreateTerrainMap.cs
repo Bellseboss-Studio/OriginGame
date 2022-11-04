@@ -66,7 +66,7 @@ namespace Terrains
             mapGameObject[middle1, middle2].PlayerWinThisHexagon();
             mapGameObject[middle1, middle2].transform.position = position;
             
-            //ilumint the next hexagons for the close to conquister hexagons
+            //ilumint the next hexagons for the close to conquer hexagons
             for (int i = 0; i < map.GetLength(0); i++)
             {
                 for (int j = 0; j < map.GetLength(1); j++)

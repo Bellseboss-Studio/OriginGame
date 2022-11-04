@@ -75,7 +75,7 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
     private CardInWord CreateCard()
     {
         var cardInWord = Instantiate(cardPrefab, transform);
-        cardInWord.Configurate(deckFinish[Random.Range(0, deckFinish.Count)], camera, this);
+        cardInWord.Configurate(deckFinish[Random.Range(0, deckFinish.Count)]);
         return cardInWord;
     }
 
@@ -96,9 +96,11 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
     {
         if (_gameLogic.IsSetGame())
         {
+            Debug.Log("Don't pass");
             _gameLogic.DontPassThisTurn();
             return;
         }
+        Debug.Log("Do pass");
         isFinishTurn = true;
     }
 
@@ -124,6 +126,7 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
         cartsInHand++;
         primaryCardInWord = secondaryCardInWord;
         primaryCardInWord.name = "primary";
+        primaryCardInWord.EnabledDragComponent(camera, this);
         secondaryCardInWord = CreateCard();
         secondaryCardInWord.name = "secondary";
         secondaryCardInWord.transform.position = deck.transform.position;

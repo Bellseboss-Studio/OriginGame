@@ -17,6 +17,9 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
     [SerializeField] private int sceneCityBuilding;
     [SerializeField] private int tokensForGame;
     [SerializeField] private NewGamePlayBlackJack gameplay;
+    [SerializeField] private Presentation messages;
+    [SerializeField] private TextMeshProUGUI titleText, messageText;
+    [SerializeField] private Camera cameraInBattle;
     private int _damagePlayer;
     private int _healthPlayer;
 
@@ -51,6 +54,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         }).Add(() =>
         {
             _preparingGameState.Play();
+            cameraInBattle.gameObject.SetActive(true);
         });
 
         _preparingGameState = this.tt().Pause().Add(() =>
@@ -165,6 +169,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         damageEnemyText.text = $"Damage: {damageEnemy}";
         healthTextBot.text = $"Health: {healthEnemy}";
         gameplay.Configure(_healthPlayer, healthEnemy);
+        cameraInBattle.gameObject.SetActive(false);
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
     }
 
@@ -188,6 +193,13 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
 
     public void ShowMessage(string title, string message)
     {
-        //TODO show the message to player
+        titleText.text = $"{title}";
+        messageText.text = $"{message}";
+        messages.StartPresentation();
+    }
+
+    public bool MessageHasBeenDelivered()
+    {
+        return messages.IsFinishPresentation;
     }
 }

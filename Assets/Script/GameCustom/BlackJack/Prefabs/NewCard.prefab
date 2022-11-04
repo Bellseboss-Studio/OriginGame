@@ -753,6 +753,7 @@ MonoBehaviour:
   isDetachable: 0
   canUseComponent: 0
   estaSeleccionadaLaCarta: 0
+  colision: {fileID: 0}
 --- !u!114 &-2839453569993700349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,7 +807,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -4094281928044791771}
         m_TargetAssemblyTypeName: Gameplay.UsoDeCartas.DragComponent, Assembly-CSharp
-        m_MethodName: MousePosition
+        m_MethodName: PointMouseTouch
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
