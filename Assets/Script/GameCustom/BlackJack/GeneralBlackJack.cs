@@ -11,10 +11,13 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
     [SerializeField] private Button winBtn, loseBtn;
     [SerializeField] private GameLogic game;
     private TeaTime _presentationEnemyState, _presentationPlayerState, _preparingGameState, _gameState, _winGameState, _loseGameState, _definitionOfGame;
-    [SerializeField] private int healthEnemy, healthPlayer;
-    [SerializeField] private int damageEnemy, damagePlayer;
-    [SerializeField] private TextMeshProUGUI healthTextPlayer, attackTextPlayer, healthTextBot;
+    [SerializeField] private int healthEnemy;
+    [SerializeField] private int damageEnemy;
+    [SerializeField] private TextMeshProUGUI healthTextPlayer, attackTextPlayer, healthTextBot, damageEnemyText;
     [SerializeField] private int sceneCityBuilding;
+    [SerializeField] private int tokensForGame;
+    private int _damagePlayer;
+    private int _healthPlayer;
 
     private void Start()
     {
@@ -75,7 +78,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
                 handle.Break();
             }
             
-            attackTextPlayer.text = $"Attack: {damageEnemy * game.LoadToPlayer()}";
+            attackTextPlayer.text = $"Damage: {_damagePlayer * game.LoadToPlayer()}";
         }).Add(() =>
         {
             Debug.Log("Game Finished");
@@ -96,7 +99,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         _winGameState = this.tt().Pause().Add(() =>
         {
             Debug.Log("Game Win");
-            var totalDamage = damagePlayer * game.LoadToPlayer();
+            var totalDamage = _damagePlayer * game.LoadToPlayer();
             healthEnemy -= totalDamage;
             healthTextBot.text = $"Health: {healthEnemy}";
             presentations.AttackToEnemyAnimation(totalDamage);
@@ -114,8 +117,8 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         {
             Debug.Log("Game Lose");
             var totalDamage = damageEnemy * game.LoadToEnemy();
-            healthPlayer -= totalDamage;
-            healthTextPlayer.text = $"Health: {healthPlayer}";
+            _healthPlayer -= totalDamage;
+            healthTextPlayer.text = $"Health: {_healthPlayer}";
             presentations.AttackToPlayerAnimation(totalDamage);
         }).Loop(handle =>
         {
@@ -134,19 +137,32 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
             {
                 ServiceLocator.Instance.GetService<IGlobalInformation>().WinHexagon();
                 GoToCityBuilding();
+                ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(tokensForGame);
             }
 
-            if (healthPlayer <= 0)
+            if (_healthPlayer <= 0)
             {
                 ServiceLocator.Instance.GetService<IGlobalInformation>().LoseHexagon();
                 GoToCityBuilding();
+                ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(tokensForGame / 2);
             }
 
             _preparingGameState.Play();
         });
         
         _presentationEnemyState.Play();
-        attackTextPlayer.text = $"Attack: {damageEnemy * game.LoadToPlayer()}";
+        
+        _damagePlayer = ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage();
+        _healthPlayer = ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth();
+        
+        attackTextPlayer.text = $"Damage: {_damagePlayer}";
+        healthTextPlayer.text = $"Health: {_healthPlayer}";
+        
+        healthEnemy = ServiceLocator.Instance.GetService<IStatsInformation>().GetEnemyHealth();
+        damageEnemy = ServiceLocator.Instance.GetService<IStatsInformation>().GetEnemyDamage();
+        
+        damageEnemyText.text = $"Damage: {damageEnemy}";
+        healthTextBot.text = $"Health: {healthEnemy}";
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
     }
 

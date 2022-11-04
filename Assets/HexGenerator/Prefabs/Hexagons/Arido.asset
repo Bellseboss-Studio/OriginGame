@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Arido
   m_EditorClassIdentifier: 
   id: 1
-  hexagonPrefab: {fileID: 919132149155446097, guid: 3ccb74d29c39d6842bd0ab9f72fa11ee, type: 3}
+  hexagonPrefab: {fileID: 919132149155446097, guid: 187addc3a3f64044baf9cdc1acf9d21f, type: 3}
+  prefabConquered: {fileID: 919132149155446097, guid: e42f69b5953117e4ea0a23bd0dc4ce64, type: 3}
   minHeight: 0
   maxHeight: 0.33
-  originalMaterials:
-  - {fileID: -7207946281568464248, guid: 3ccb74d29c39d6842bd0ab9f72fa11ee, type: 3}
-  cost: 10
+  cost: 0

@@ -1321,7 +1321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Cancel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1574,7 +1574,7 @@ RectTransform:
   m_GameObject: {fileID: 5638862437696725251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6586748778191014903}
@@ -3369,6 +3369,11 @@ MonoBehaviour:
   dialogSystem: {fileID: 9063591739972279752}
   ladSceneM: {fileID: 9063591741397345231}
   mixerManager: {fileID: 346564279}
+  cityBuilding: 2
+  roulette: 4
+  shop: 5
+  healthEnemyBase: 200
+  damageEnemyBase: 10
 --- !u!114 &346564279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3510,7 +3515,7 @@ MonoBehaviour:
   animationController: {fileID: 9063591740322155328}
   panelLocked: {fileID: 1997779006}
   twoButtons: {fileID: 2397379741741163112}
-  oneButtons: {fileID: 0}
+  oneButtons: {fileID: 4338242786454187777}
 --- !u!1 &9104256776540922304
 GameObject:
   m_ObjectHideFlags: 0

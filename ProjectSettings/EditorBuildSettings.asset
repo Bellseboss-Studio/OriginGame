@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ruleta.unity
     guid: 321a1bcde8181254bbfc7620f5307bab
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: a9b597c6fbedbbf4887bcfd5f0ed3622
   m_configObjects: {}

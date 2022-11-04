@@ -32,19 +32,16 @@ namespace Hexagons
             referenceToConfig = config;
             referenceToConfig.Config($"{positionX}-{positionY}");
             positionHexagon = referenceToConfig.Position;
-            hexagonPrivate = Instantiate(referenceToConfig.Prefab, transform);
             isHexagonBelongsThePlayer = ServiceLocator.Instance.GetService<IGlobalInformation>()
                 .ThisHexagonIsWinToPlayer(referenceToConfig.Position);
             camera = ServiceLocator.Instance.GetService<ICameraController>().GetCamera();
             _totalCost = referenceToConfig.Cost; //if they have a multiplic value
-            if (isHexagonBelongsThePlayer)
-            {
-                hexagonPrivate.GetComponent<MeshRenderer>().materials = referenceToConfig.OriginalMaterials();
-            }
+            hexagonPrivate = Instantiate(isHexagonBelongsThePlayer ? referenceToConfig.PrefabConquered : referenceToConfig.Prefab, transform);
         }
 
         private void OnClick()
         {
+            if (!isVisibleForPlayer && !isHexagonBelongsThePlayer) return;
             if (isHexagonBelongsThePlayer)
             {
                 ServiceLocator.Instance.GetService<ICameraController>().SetTarget(gameObject);   
@@ -54,6 +51,8 @@ namespace Hexagons
                 try
                 {
                     ServiceLocator.Instance.GetService<IGlobalInformation>().SpendGold(_totalCost);
+                    //Calculate the health and damage for enemy
+                    ServiceLocator.Instance.GetService<IStatsInformation>().CalculateStatsForEnemy(referenceToConfig);
                     ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
                     {
                         ServiceLocator.Instance.GetService<IGlobalInformation>().HexagonToBet(this);
@@ -99,10 +98,11 @@ namespace Hexagons
             if (isVisibleForPlayer || isHexagonBelongsThePlayer) return;
             isVisibleForPlayer = true;
             //hexagonPrivate.GetComponent<MeshRenderer>().materials = new[] { _terrainMap.GetConqueredMaterial() };
-            var costTemplate = Instantiate(panel, _terrainMap.GetCanvasGeneral().transform, true);
+            /*var costTemplate = Instantiate(panel, _terrainMap.GetCanvasGeneral().transform, true);
             costTemplate.transform.position = pointToStayPanel.transform.position;
             costTemplate.Using($"Cost: {_totalCost} gold");
             costTemplate.transform.LookAt(_terrainMap.GetCanvasGeneral().transform);
+            */
         }
 
         public bool IsVisibleForPlayer()
@@ -113,7 +113,12 @@ namespace Hexagons
         public void HideToPlayer()
         {
             //Debug.Log($"Try Hide {referenceToConfig.Position}");
-            hexagonPrivate.GetComponent<MeshRenderer>().materials = new[] { _terrainMap.GetDarkMaterial() };
+            //hexagonPrivate.GetComponent<MeshRenderer>().materials = new[] { _terrainMap.GetDarkMaterial() };
+        }
+
+        public Hexagon GetHexagon()
+        {
+            return referenceToConfig;
         }
     }
 }
