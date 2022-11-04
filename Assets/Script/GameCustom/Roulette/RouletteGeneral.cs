@@ -9,6 +9,8 @@ public class RouletteGeneral : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI nick, gold;
     [SerializeField] private GiveGoldForFirstTime isFirstTimeToPlay;
+    [SerializeField] private int sceneCityBuilding;
+
     void Start()
     {
         nick.text = ServiceLocator.Instance.GetService<IGlobalInformation>().GetNickName();
@@ -40,7 +42,7 @@ public class RouletteGeneral : MonoBehaviour
     {
         ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(sceneCityBuilding);
         });
     }
 }

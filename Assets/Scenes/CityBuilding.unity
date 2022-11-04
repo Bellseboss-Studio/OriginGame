@@ -1160,6 +1160,7 @@ MonoBehaviour:
   map: {fileID: 824094182}
   cameraController: {fileID: 1087458687}
   goldText: {fileID: 56693927}
+  sceneRoulette: 4
 --- !u!114 &1087458687
 MonoBehaviour:
   m_ObjectHideFlags: 0

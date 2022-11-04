@@ -11,6 +11,8 @@ public class CityBuildingGeneral : MonoBehaviour
     [SerializeField] private CreateTerrainMap map;
     [SerializeField] private CameraController cameraController;
     [SerializeField] private TextMeshProUGUI goldText;
+    [SerializeField] private int sceneRoulette;
+
     void Start()
     {
         map.CreateMap();
@@ -39,7 +41,7 @@ public class CityBuildingGeneral : MonoBehaviour
     {
         ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(sceneRoulette);
         });
     }
 }

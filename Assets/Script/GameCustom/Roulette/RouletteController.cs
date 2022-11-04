@@ -1,7 +1,10 @@
+using System;
 using SystemOfExtras;
 using SystemOfExtras.GlobalInformationPath;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class RouletteController : MonoBehaviour
 {
@@ -74,12 +77,35 @@ public class RouletteController : MonoBehaviour
 
     public void Roulette()
     {
-        ServiceLocator.Instance.GetService<IGlobalInformation>().SpendGold(_apuestaPuesta);
-        //animRoulette.SetTrigger(Go);
-        var randomRound = Random.Range(1, 12);
-        var animationToPlayInRoulette = $"Round{randomRound}";
-        Debug.Log(animationToPlayInRoulette);
-        animRoulette.Play(animationToPlayInRoulette);
+        try
+        {
+
+            ServiceLocator.Instance.GetService<IGlobalInformation>().SpendGold(_apuestaPuesta);
+            //animRoulette.SetTrigger(Go);
+            var randomRound = Random.Range(1, 12);
+            var animationToPlayInRoulette = $"Round{randomRound}";
+            Debug.Log(animationToPlayInRoulette);
+            animRoulette.Play(animationToPlayInRoulette);
+        }
+        catch (Exception e)
+        {
+            
+            //no le alacanzo el oro
+            ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton(
+                "Gold is not enough", 
+                "If you wanna to play, you can play roulette or tweet the game to win gold. What do you want to do?", 
+                "Tweet the game", () =>
+                {
+                    //TODO launch the tweet the game
+                    //https://twitter.com/intent/tweet?text=
+                    var message = ServiceLocator.Instance.GetService<IGlobalInformation>().Tweet();
+                    Application.OpenURL($"https://twitter.com/intent/tweet?text={message}");
+                    ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(200);
+                }, () =>
+                {
+                    //TODO whats happend if the cancel way
+                });
+        }
     }
 
     public void SetResult()
