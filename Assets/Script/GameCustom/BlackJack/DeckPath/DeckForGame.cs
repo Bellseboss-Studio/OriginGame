@@ -4,17 +4,18 @@ using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public abstract class DeckForGame : MonoBehaviour
+public abstract class DeckForGame : MonoBehaviour, IDeckForGame
 {
     [SerializeField] private GameObject deck, originDeck, finishDeck;
     [SerializeField] private GameObject primaryCard, secondaryCard, pointInTheTable;
     [SerializeField] private CardInWord primaryCardInWord, secondaryCardInWord;
     [SerializeField] private CardInWord cardPrefab;
-    protected bool _drawIsFinished;
     [SerializeField] private int cartsInHand;
     [SerializeField] private List<Card> deckOfCards;
     [SerializeField] private List<Card> deckFinish;
     [SerializeField] private bool isFinishTurn;
+    [SerializeField] private Camera camera;
+    protected bool _drawIsFinished;
     private List<CardInWord> cartsToPlace;
     protected IGameLogic _gameLogic;
 
@@ -74,7 +75,7 @@ public abstract class DeckForGame : MonoBehaviour
     private CardInWord CreateCard()
     {
         var cardInWord = Instantiate(cardPrefab, transform);
-        cardInWord.Configurate(deckFinish[Random.Range(0, deckFinish.Count)]);
+        cardInWord.Configurate(deckFinish[Random.Range(0, deckFinish.Count)], camera, this);
         return cardInWord;
     }
 

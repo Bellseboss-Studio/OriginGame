@@ -16,6 +16,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
     [SerializeField] private TextMeshProUGUI healthTextPlayer, attackTextPlayer, healthTextBot, damageEnemyText;
     [SerializeField] private int sceneCityBuilding;
     [SerializeField] private int tokensForGame;
+    [SerializeField] private NewGamePlayBlackJack gameplay;
     private int _damagePlayer;
     private int _healthPlayer;
 
@@ -163,6 +164,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         
         damageEnemyText.text = $"Damage: {damageEnemy}";
         healthTextBot.text = $"Health: {healthEnemy}";
+        gameplay.Configure(_healthPlayer, healthEnemy);
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
     }
 

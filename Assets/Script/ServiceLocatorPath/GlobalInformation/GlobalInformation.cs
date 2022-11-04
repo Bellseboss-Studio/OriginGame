@@ -31,7 +31,7 @@ namespace SystemOfExtras.GlobalInformationPath
         private readonly int _healthEnemyBase;
         private readonly int _damageEnemyBase;
         private Hexagon _center;
-        private int _healthEnemy, _damageEnemy;
+        private int _healthEnemy = 1, _damageEnemy = 1;
         private readonly float _increment;
 
         public GlobalInformation(int sceneCityBuilding,int sceneRoulette, int sceneShop, int healthEnemyBase, int damageEnemyBase, float increment)
