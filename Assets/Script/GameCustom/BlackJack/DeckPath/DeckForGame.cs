@@ -75,7 +75,7 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
     private CardInWord CreateCard()
     {
         var cardInWord = Instantiate(cardPrefab, transform);
-        cardInWord.Configurate(deckFinish[Random.Range(0, deckFinish.Count)]);
+        cardInWord.Configurate(deckFinish[Random.Range(0, deckFinish.Count)], _gameLogic);
         return cardInWord;
     }
 

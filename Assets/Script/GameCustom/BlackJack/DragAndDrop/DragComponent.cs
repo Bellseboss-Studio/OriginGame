@@ -24,6 +24,7 @@ namespace Gameplay.UsoDeCartas
         [SerializeField] private GameObject colision;
         private IDeckForGame _deckForGame;
         private Vector2 _pointInScreen;
+        private IGameLogic _gameLogic;
 
         public void PointMouseTouch(InputAction.CallbackContext context)
         {
@@ -93,12 +94,8 @@ namespace Gameplay.UsoDeCartas
 
         private void ObjectDragging_(PointerEventData data)
         {
-
-            Vector3 mousePosition = _pointInScreen;
-            Vector3 mousePositionAlter = Mouse.current.position.ReadValue();
-            mousePosition = mousePositionAlter;
+            Vector3 mousePosition = Application.platform == RuntimePlatform.Android ? _gameLogic.GetPosition() : Mouse.current.position.ReadValue();
             
-            Debug.Log($"Mouse {mousePosition} Alter {mousePositionAlter}");
             mousePosition.z = 80;
             Debug.DrawRay(_camera.transform.position, (_camera.ScreenToWorldPoint(mousePosition)), Color.cyan);
 
@@ -123,10 +120,11 @@ namespace Gameplay.UsoDeCartas
 
         }
 
-        public void Configure(Camera camera, IDeckForGame deckForGame)
+        public void Configure(Camera camera, IDeckForGame deckForGame, IGameLogic gameLogic)
         {
             _camera = camera;
             _deckForGame = deckForGame;
+            _gameLogic = gameLogic;
             //_factoriaCarta = factoriaCartas;
             posicionInicial = transform.localPosition;
             CreateEventForDragAndDrop();

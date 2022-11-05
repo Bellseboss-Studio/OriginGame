@@ -7,6 +7,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
     [SerializeField] private DeckForGame playerDeck, botDeck;
     [SerializeField] private int maxNumberInGame;
     [SerializeField] private TextMeshProUGUI totalNumber, loadsToPlayer, loadsToEnemy;
+    [SerializeField] private InputSystemCustom inputCustom;
     private int _stateOfGame;//0: inGame; 1: Win; 2: Lose
     private int _loadPlayer, _loadBot, _totalNumber;
     private bool isTurnOfPlayer;
@@ -188,6 +189,11 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public int TotalNumberInGame()
     {
         return _totalNumber;
+    }
+
+    public Vector2 GetPosition()
+    {
+        return inputCustom.PositionInScreen;
     }
 
     private void ShowComodinEvent()

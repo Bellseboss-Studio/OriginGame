@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public interface IGameLogic
 {
     void Sum(int cardNumber);
@@ -7,4 +9,5 @@ public interface IGameLogic
     void DontPassThisTurn();
     void EvaluateCard(CardInWord card);
     int TotalNumberInGame();
+    Vector2 GetPosition();
 }
