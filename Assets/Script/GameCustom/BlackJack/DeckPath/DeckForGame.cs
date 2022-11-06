@@ -81,12 +81,14 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
 
     public virtual void PlaceCard()
     {
+        if (primaryCardInWord == null) return; 
         cartsInHand--;
         primaryCardInWord.transform.DOMove(pointInTheTable.transform.position, .5f);
         primaryCardInWord.name = "outOfContext";
         _gameLogic.Sum(primaryCardInWord.Card.number);
         cartsToPlace.Add(primaryCardInWord);
         _gameLogic.EvaluateCard(primaryCardInWord);
+        primaryCardInWord.LeaveCard();
         primaryCardInWord = null;
         _gameLogic.AddLoad();
         isFinishTurn = true;

@@ -832,21 +832,17 @@ MonoBehaviour:
     m_ActionId: 1da83a4b-4d81-4827-b07c-b32e6021b722
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -4094281928044791771}
-        m_TargetAssemblyTypeName: Gameplay.UsoDeCartas.DragComponent, Assembly-CSharp
-        m_MethodName: PointMouseTouch
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 91998556-1682-460a-af72-f666107c7aea
-    m_ActionName: UI/TouchCustom[/Device Simulator Touchscreen/primaryTouch/position]
+      m_Calls: []
+    m_ActionId: 47aa4a5c-7faa-41ee-a71a-79c70246187e
+    m_ActionName: Player/TouchPosition[/Device Simulator Touchscreen/primaryTouch]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5efc2415-07ea-4b09-8517-f45347105304
+    m_ActionName: Player/TouchPress[/Device Simulator Touchscreen/primaryTouch/press]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0d51613c-9dcf-4edd-950a-92a2e0b324e6
+    m_ActionName: Player/TouchPosition[/Device Simulator Touchscreen/primaryTouch/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

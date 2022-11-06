@@ -21,4 +21,9 @@ public class CardInWord : MonoBehaviour
     {
         drag.Configure(camera, deckForGame, _gameLogic);
     }
+
+    public void LeaveCard()
+    {
+        drag.enabled = false;
+    }
 }

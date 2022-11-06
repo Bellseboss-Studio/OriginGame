@@ -55,9 +55,27 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Touch"",
+                    ""name"": ""TouchInput"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""d7c30966-f984-4c68-96bb-430169ff22af"",
+                    ""id"": ""47aa4a5c-7faa-41ee-a71a-79c70246187e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""TouchPress"",
+                    ""type"": ""Button"",
+                    ""id"": ""5efc2415-07ea-4b09-8517-f45347105304"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TouchPosition"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""0d51613c-9dcf-4edd-950a-92a2e0b324e6"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -287,12 +305,34 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fe0a6352-9329-4415-9f09-c202b076f914"",
+                    ""id"": ""b18c5b63-b02b-46b5-bce1-2892d16f5e5d"",
+                    ""path"": ""<Touchscreen>/primaryTouch"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""TouchInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a855410e-f726-4220-b4dc-9d6f31067715"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TouchPress"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d7b54184-b5e7-46ba-b380-0e04d2b04d5f"",
                     ""path"": ""<Touchscreen>/primaryTouch/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Touch"",
+                    ""action"": ""TouchPosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -391,15 +431,6 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""TouchCustom"",
-                    ""type"": ""Value"",
-                    ""id"": ""91998556-1682-460a-af72-f666107c7aea"",
-                    ""expectedControlType"": ""Touch"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -820,17 +851,6 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
                     ""action"": ""TrackedDeviceOrientation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b20f9a88-82f9-46fa-8b9a-4171894c26b4"",
-                    ""path"": ""<Touchscreen>/primaryTouch"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TouchCustom"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -903,7 +923,9 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
-        m_Player_Touch = m_Player.FindAction("Touch", throwIfNotFound: true);
+        m_Player_TouchInput = m_Player.FindAction("TouchInput", throwIfNotFound: true);
+        m_Player_TouchPress = m_Player.FindAction("TouchPress", throwIfNotFound: true);
+        m_Player_TouchPosition = m_Player.FindAction("TouchPosition", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -916,7 +938,6 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
-        m_UI_TouchCustom = m_UI.FindAction("TouchCustom", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -979,7 +1000,9 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
-    private readonly InputAction m_Player_Touch;
+    private readonly InputAction m_Player_TouchInput;
+    private readonly InputAction m_Player_TouchPress;
+    private readonly InputAction m_Player_TouchPosition;
     public struct PlayerActions
     {
         private @OriginGame m_Wrapper;
@@ -987,7 +1010,9 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
-        public InputAction @Touch => m_Wrapper.m_Player_Touch;
+        public InputAction @TouchInput => m_Wrapper.m_Player_TouchInput;
+        public InputAction @TouchPress => m_Wrapper.m_Player_TouchPress;
+        public InputAction @TouchPosition => m_Wrapper.m_Player_TouchPosition;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1006,9 +1031,15 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
                 @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @Touch.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouch;
-                @Touch.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouch;
-                @Touch.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouch;
+                @TouchInput.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchInput;
+                @TouchInput.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchInput;
+                @TouchInput.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchInput;
+                @TouchPress.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchPress;
+                @TouchPress.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchPress;
+                @TouchPress.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchPress;
+                @TouchPosition.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchPosition;
+                @TouchPosition.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchPosition;
+                @TouchPosition.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchPosition;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1022,9 +1053,15 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
-                @Touch.started += instance.OnTouch;
-                @Touch.performed += instance.OnTouch;
-                @Touch.canceled += instance.OnTouch;
+                @TouchInput.started += instance.OnTouchInput;
+                @TouchInput.performed += instance.OnTouchInput;
+                @TouchInput.canceled += instance.OnTouchInput;
+                @TouchPress.started += instance.OnTouchPress;
+                @TouchPress.performed += instance.OnTouchPress;
+                @TouchPress.canceled += instance.OnTouchPress;
+                @TouchPosition.started += instance.OnTouchPosition;
+                @TouchPosition.performed += instance.OnTouchPosition;
+                @TouchPosition.canceled += instance.OnTouchPosition;
             }
         }
     }
@@ -1043,7 +1080,6 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_RightClick;
     private readonly InputAction m_UI_TrackedDevicePosition;
     private readonly InputAction m_UI_TrackedDeviceOrientation;
-    private readonly InputAction m_UI_TouchCustom;
     public struct UIActions
     {
         private @OriginGame m_Wrapper;
@@ -1058,7 +1094,6 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
         public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
         public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
         public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
-        public InputAction @TouchCustom => m_Wrapper.m_UI_TouchCustom;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1098,9 +1133,6 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
                 @TrackedDeviceOrientation.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
-                @TouchCustom.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTouchCustom;
-                @TouchCustom.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTouchCustom;
-                @TouchCustom.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTouchCustom;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -1135,9 +1167,6 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
                 @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
-                @TouchCustom.started += instance.OnTouchCustom;
-                @TouchCustom.performed += instance.OnTouchCustom;
-                @TouchCustom.canceled += instance.OnTouchCustom;
             }
         }
     }
@@ -1192,7 +1221,9 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
-        void OnTouch(InputAction.CallbackContext context);
+        void OnTouchInput(InputAction.CallbackContext context);
+        void OnTouchPress(InputAction.CallbackContext context);
+        void OnTouchPosition(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
@@ -1206,6 +1237,5 @@ public partial class @OriginGame : IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
-        void OnTouchCustom(InputAction.CallbackContext context);
     }
 }

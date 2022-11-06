@@ -25,16 +25,52 @@ namespace Gameplay.UsoDeCartas
         private IDeckForGame _deckForGame;
         private Vector2 _pointInScreen;
         private IGameLogic _gameLogic;
+        private OriginGame inputs;
+        private bool _startDragging;
 
         public void PointMouseTouch(InputAction.CallbackContext context)
         {
             _pointInScreen = context.ReadValue<Vector2>();
             Debug.Log($"point {_pointInScreen}");
         }
-        
+        public void PointMouseTouchStart(InputAction.CallbackContext context)
+        {
+            var perfomed = context.performed;
+            Debug.Log($"start {perfomed}");
+        }
+        public void PointMouseTouchCancel(InputAction.CallbackContext context)
+        {
+            Debug.Log($"Start {context.started} cancel {context.canceled}");
+            if (context.started)
+            {
+                //shoot raycast if the gameObject is a card start dragging
+                _startDragging = true;
+                posicionInicial = transform.localPosition;
+            }else if (context.canceled)
+            {
+                _startDragging = false;
+                Dropping();
+            }
+        }
+
+        private void Awake()
+        {
+            inputs = new OriginGame();
+        }
+
         private void Start()
         {
             canUseComponent = true;
+        }
+
+        private void OnEnable()
+        {
+            inputs.Enable();
+        }
+
+        private void OnDisable()
+        {
+            inputs.Disable();
         }
 
         public void CreateEventForDragAndDrop()
@@ -56,9 +92,17 @@ namespace Gameplay.UsoDeCartas
             trigger_Object.triggers.Add(entry_0);
             trigger_Object.triggers.Add(entry_1);
             trigger_Object.triggers.Add(entry_2);
+
+            inputs.Player.TouchPress.started += PointMouseTouchCancel;
+            inputs.Player.TouchPress.canceled += PointMouseTouchCancel;
         }
 
         private void ObjectDrop_(PointerEventData data)
+        {
+            Dropping();
+        }
+
+        private void Dropping()
         {
             OnFinishDragging?.Invoke();
             if (colision == null)
@@ -94,8 +138,16 @@ namespace Gameplay.UsoDeCartas
 
         private void ObjectDragging_(PointerEventData data)
         {
-            Vector3 mousePosition = Application.platform == RuntimePlatform.Android ? _gameLogic.GetPosition() : Mouse.current.position.ReadValue();
-            
+            Dragging();
+        }
+
+        private void Dragging()
+        {
+            Vector3 mousePosition = Application.platform == RuntimePlatform.Android
+                ? inputs.Player.TouchPosition.ReadValue<Vector2>()
+                : inputs.Player.TouchPosition.ReadValue<Vector2>();
+                //: Mouse.current.position.ReadValue();
+
             mousePosition.z = 80;
             Debug.DrawRay(_camera.transform.position, (_camera.ScreenToWorldPoint(mousePosition)), Color.cyan);
 
@@ -117,7 +169,6 @@ namespace Gameplay.UsoDeCartas
                     break;
                 }
             }
-
         }
 
         public void Configure(Camera camera, IDeckForGame deckForGame, IGameLogic gameLogic)
@@ -126,7 +177,6 @@ namespace Gameplay.UsoDeCartas
             _deckForGame = deckForGame;
             _gameLogic = gameLogic;
             //_factoriaCarta = factoriaCartas;
-            posicionInicial = transform.localPosition;
             CreateEventForDragAndDrop();
         }
 
@@ -140,6 +190,14 @@ namespace Gameplay.UsoDeCartas
             if (colision != null && other.name == colision.name)
             {
                 colision = null;   
+            }
+        }
+
+        private void Update()
+        {
+            if (_startDragging)
+            {
+                Dragging();
             }
         }
     }

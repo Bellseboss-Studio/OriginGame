@@ -10,7 +10,19 @@ public class InputSystemCustom : MonoBehaviour
     void Awake()
     {
         _controller = new OriginGame();
-        _controller.Player.Touch.performed += x => CallSomething(x.ReadValue<Vector2>());
+        //_controller.Player.Touch.performed += x => CallSomething(x.ReadValue<Vector2>());
+        //_controller.Player.StartTouch.performed += x => StartTouch(x.ReadValue<bool>());
+        //_controller.Player.StartTouch.canceled += x => CancelTouch(x.ReadValue<bool>());
+    }
+
+    private void CancelTouch(bool cancel)
+    {
+        Debug.Log("Cancel Click");
+    }
+
+    private void StartTouch(bool perfomance)
+    {
+        Debug.Log("Start Click");
     }
 
     private void OnEnable()
