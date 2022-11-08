@@ -20,6 +20,7 @@ public class BotDeck : DeckForGame
     {
         base.BeginTurn();
         StartCoroutine(PlaceCardCoroutine());
+        isFinishTurn = false;
     }
 
     private IEnumerator PlaceCardCoroutine()

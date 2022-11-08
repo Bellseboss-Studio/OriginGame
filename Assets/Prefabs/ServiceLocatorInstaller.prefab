@@ -3374,6 +3374,7 @@ MonoBehaviour:
   shop: 5
   healthEnemyBase: 200
   damageEnemyBase: 10
+  increment: 0.5
 --- !u!114 &346564279
 MonoBehaviour:
   m_ObjectHideFlags: 0
