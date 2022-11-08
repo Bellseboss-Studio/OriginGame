@@ -16,6 +16,7 @@ namespace Hexagons
         [SerializeField] private CostTemplate panel;
         [SerializeField] private GameObject pointToStayPanel;
         [SerializeField]private int sceneBlackJack, sceneRoulette;
+        [SerializeField] private GameObject hide, canConquer;
         private GameObject hexagonPrivate;
         private Hexagon referenceToConfig;
         private ITerrainMap _terrainMap;
@@ -95,14 +96,17 @@ namespace Hexagons
         public void CanConquer()
         {
             Debug.Log($"Try conquer {referenceToConfig.Position}");
+            hide.SetActive(false);
             if (isVisibleForPlayer || isHexagonBelongsThePlayer) return;
             isVisibleForPlayer = true;
+            canConquer.SetActive(true);
             //hexagonPrivate.GetComponent<MeshRenderer>().materials = new[] { _terrainMap.GetConqueredMaterial() };
             /*var costTemplate = Instantiate(panel, _terrainMap.GetCanvasGeneral().transform, true);
             costTemplate.transform.position = pointToStayPanel.transform.position;
             costTemplate.Using($"Cost: {_totalCost} gold");
             costTemplate.transform.LookAt(_terrainMap.GetCanvasGeneral().transform);
             */
+            hide.SetActive(false);
         }
 
         public bool IsVisibleForPlayer()
@@ -114,6 +118,7 @@ namespace Hexagons
         {
             //Debug.Log($"Try Hide {referenceToConfig.Position}");
             //hexagonPrivate.GetComponent<MeshRenderer>().materials = new[] { _terrainMap.GetDarkMaterial() };
+            //hide.SetActive(true);
         }
 
         public Hexagon GetHexagon()

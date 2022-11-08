@@ -5,7 +5,7 @@ using UnityEngine;
 public class Presentation : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    private bool _finishPresentation;
+    private bool _finishPresentation = true;
     private static readonly int Start = Animator.StringToHash("start");
 
     public bool IsFinishPresentation => _finishPresentation;
