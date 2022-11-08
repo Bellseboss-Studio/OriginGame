@@ -13,7 +13,7 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
     [SerializeField] private int cartsInHand;
     [SerializeField] private List<Card> deckOfCards;
     [SerializeField] private List<Card> deckFinish;
-    [SerializeField] private bool isFinishTurn;
+    [SerializeField] protected bool isFinishTurn;
     [SerializeField] private Camera camera;
     protected bool _drawIsFinished;
     private List<CardInWord> cartsToPlace;

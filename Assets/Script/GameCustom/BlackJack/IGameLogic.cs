@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public interface IGameLogic
@@ -10,4 +11,6 @@ public interface IGameLogic
     void EvaluateCard(CardInWord card);
     int TotalNumberInGame();
     Vector2 GetPosition();
+    Action OnBeggingOfTurn { get; set; }
+    Action OnFinishingOfTurn { get; set; }
 }

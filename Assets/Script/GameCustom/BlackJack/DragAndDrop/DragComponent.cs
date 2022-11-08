@@ -120,6 +120,9 @@ namespace Gameplay.UsoDeCartas
                     _deckForGame.PassTurn();
                     RestartPosition();
                     break;
+                case "Set":
+                    _deckForGame.SetGame();
+                    break;
             }
             OnDropCompleted?.Invoke();
         }

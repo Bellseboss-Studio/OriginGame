@@ -15,6 +15,20 @@ public class CardInWord : MonoBehaviour
         _card = card;
         _gameLogic = gameLogic;
         textOfNumber.text = $"{_card.number}";
+        _gameLogic.OnBeggingOfTurn += OnBeggingOfTurn;
+        _gameLogic.OnFinishingOfTurn += OnFinishingOfTurn;
+    }
+
+    private void OnFinishingOfTurn()
+    {
+        if (drag == null) return;
+        drag.enabled = false;
+    }
+
+    private void OnBeggingOfTurn()
+    {
+        if (drag == null) return;
+        drag.enabled = true;
     }
 
     public void EnabledDragComponent(Camera camera, IDeckForGame deckForGame)
@@ -25,5 +39,7 @@ public class CardInWord : MonoBehaviour
     public void LeaveCard()
     {
         drag.enabled = false;
+        _gameLogic.OnBeggingOfTurn -= OnBeggingOfTurn;
+        _gameLogic.OnFinishingOfTurn -= OnFinishingOfTurn;
     }
 }

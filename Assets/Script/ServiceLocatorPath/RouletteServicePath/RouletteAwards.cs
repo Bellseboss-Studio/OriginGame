@@ -6,6 +6,7 @@ namespace SystemOfExtras
     public class RouletteAwards : IRouletteService
     {
         private readonly List<int> _results;
+        private int _countOfTries;
         public RouletteAwards()
         {
             _results = new List<int>()
@@ -30,8 +31,14 @@ namespace SystemOfExtras
         
         public int GetResult()
         {
-            var result = Random.Range(0, _results.Count);
+            var result = Random.Range(_countOfTries <= 0 ? 0 : 6, _results.Count);
+            _countOfTries++;
             return _results[result];
+        }
+
+        public void ResetResult()
+        {
+            _countOfTries = 0;
         }
     }
 }

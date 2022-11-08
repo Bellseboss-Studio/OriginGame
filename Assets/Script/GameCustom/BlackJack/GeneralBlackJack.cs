@@ -138,6 +138,8 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
 
         _definitionOfGame = this.tt().Pause().Add(() =>
         {
+            gameplay.UpdateHpEnemy(healthEnemy);
+            gameplay.UpdateHpPlayer(_healthPlayer);
             if (healthEnemy <= 0)
             {
                 ServiceLocator.Instance.GetService<IGlobalInformation>().WinHexagon();

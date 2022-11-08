@@ -113,6 +113,7 @@ public class RouletteController : MonoBehaviour
         {
             resultBet.gameObject.SetActive(false);
             skullResult.gameObject.SetActive(true);
+            ServiceLocator.Instance.GetService<IRouletteService>().ResetResult();
         }
         else
         {
@@ -132,7 +133,7 @@ public class RouletteController : MonoBehaviour
         else
         {
             var betWin = _result;
-            loot += betWin;
+            loot *= betWin;
             award.ShowAccumulate(betWin);
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using SystemOfExtras;
 using TMPro;
 using UnityEngine;
@@ -8,6 +9,10 @@ public class GameLogic : MonoBehaviour, IGameLogic
     [SerializeField] private int maxNumberInGame;
     [SerializeField] private TextMeshProUGUI totalNumber, loadsToPlayer, loadsToEnemy;
     [SerializeField] private InputSystemCustom inputCustom;
+
+    public Action OnBeggingOfTurn { get; set; }
+    public Action OnFinishingOfTurn { get; set; }
+    
     private int _stateOfGame;//0: inGame; 1: Win; 2: Lose
     private int _loadPlayer, _loadBot, _totalNumber;
     private bool isTurnOfPlayer;
@@ -35,6 +40,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
         });
         _turnOfPlayer = this.tt().Pause().Add(() =>
         {
+            OnBeggingOfTurn?.Invoke();
             playerDeck.BeginTurn();
             ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
         }).Loop(handle =>
@@ -45,6 +51,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
             }
         }).Add(() =>
         {
+            OnFinishingOfTurn?.Invoke();
             isTurnOfPlayer = false;
             playerDeck.FinishTurn();
             _intermediateTurn.Play();
@@ -118,6 +125,10 @@ public class GameLogic : MonoBehaviour, IGameLogic
             {
                 Win();
             }
+
+            _turnOfBot.Stop();
+            _turnOfPlayer.Stop();
+            _intermediateTurn.Stop();
         }
     }
 

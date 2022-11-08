@@ -311,10 +311,10 @@ RectTransform:
   m_Father: {fileID: 2100834040}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1600, y: 1600}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &888785824
 MonoBehaviour:
@@ -376,7 +376,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://unity-youtube-dl-server.herokuapp.com/watch?v=BqQwGXOuwJ4&cli=yt-dlp
+  m_Url: https://unity-youtube-dl-server.herokuapp.com/watch?v=CNxo0zp17f0&cli=yt-dlp
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1

@@ -61,14 +61,14 @@ namespace SystemOfExtras.GlobalInformationPath
                     key = "health",
                     name = "Health",
                     value = "10",
-                    cost = 100
+                    cost = 10
                 },
                 new ElementInShop
                 {
                     key = "damage",
                     name = "Damage",
                     value = "1",
-                    cost = 100
+                    cost = 10
                 }
             };
         }
