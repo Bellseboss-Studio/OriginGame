@@ -18,7 +18,7 @@ public class RouletteController : MonoBehaviour
     private static readonly int Go = Animator.StringToHash("go");
     private bool _autoRun;
     private int _result;
-    private int loot;
+    private int loot = 1;
     private IRouletteGeneral _rouletteGeneral;
 
     private void Start()
@@ -42,13 +42,9 @@ public class RouletteController : MonoBehaviour
     {
         if (_result == 0)
         {
-            loot = 0;
-            lootAccumulate.text = $"Loot: {loot}";
+            loot = 1;
         }
-        else
-        {
-            lootAccumulate.text = $"Loot: {loot}";
-        }
+        lootAccumulate.text = $"Loot: {loot}";
         if (_autoRun)
         {
             Roulette();

@@ -31,7 +31,7 @@ namespace SystemOfExtras
         
         public int GetResult()
         {
-            var result = Random.Range(_countOfTries <= 0 ? 0 : 6, _results.Count);
+            var result = Random.Range(_countOfTries <= 0 ? 6 : 0, _results.Count);
             _countOfTries++;
             return _results[result];
         }
