@@ -4,17 +4,18 @@ using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public abstract class DeckForGame : MonoBehaviour
+public abstract class DeckForGame : MonoBehaviour, IDeckForGame
 {
     [SerializeField] private GameObject deck, originDeck, finishDeck;
     [SerializeField] private GameObject primaryCard, secondaryCard, pointInTheTable;
     [SerializeField] private CardInWord primaryCardInWord, secondaryCardInWord;
     [SerializeField] private CardInWord cardPrefab;
-    protected bool _drawIsFinished;
     [SerializeField] private int cartsInHand;
     [SerializeField] private List<Card> deckOfCards;
     [SerializeField] private List<Card> deckFinish;
-    [SerializeField] private bool isFinishTurn;
+    [SerializeField] protected bool isFinishTurn;
+    [SerializeField] private Camera camera;
+    protected bool _drawIsFinished;
     private List<CardInWord> cartsToPlace;
     protected IGameLogic _gameLogic;
 
@@ -74,18 +75,20 @@ public abstract class DeckForGame : MonoBehaviour
     private CardInWord CreateCard()
     {
         var cardInWord = Instantiate(cardPrefab, transform);
-        cardInWord.Configurate(deckFinish[Random.Range(0, deckFinish.Count)]);
+        cardInWord.Configurate(deckFinish[Random.Range(0, deckFinish.Count)], _gameLogic);
         return cardInWord;
     }
 
     public virtual void PlaceCard()
     {
+        if (primaryCardInWord == null) return; 
         cartsInHand--;
         primaryCardInWord.transform.DOMove(pointInTheTable.transform.position, .5f);
         primaryCardInWord.name = "outOfContext";
         _gameLogic.Sum(primaryCardInWord.Card.number);
         cartsToPlace.Add(primaryCardInWord);
         _gameLogic.EvaluateCard(primaryCardInWord);
+        primaryCardInWord.LeaveCard();
         primaryCardInWord = null;
         _gameLogic.AddLoad();
         isFinishTurn = true;
@@ -95,15 +98,17 @@ public abstract class DeckForGame : MonoBehaviour
     {
         if (_gameLogic.IsSetGame())
         {
+            Debug.Log("Don't pass");
             _gameLogic.DontPassThisTurn();
             return;
         }
+        Debug.Log("Do pass");
         isFinishTurn = true;
     }
 
     public virtual void SetGame()
     {
-        if (_gameLogic.IsSetGame()) return;
+        if (_gameLogic.IsSetGame()) throw new Exception("can't pass");
         PlaceCard();
         _gameLogic.AddLoad();
         _gameLogic.SetGame();
@@ -123,6 +128,7 @@ public abstract class DeckForGame : MonoBehaviour
         cartsInHand++;
         primaryCardInWord = secondaryCardInWord;
         primaryCardInWord.name = "primary";
+        primaryCardInWord.EnabledDragComponent(camera, this);
         secondaryCardInWord = CreateCard();
         secondaryCardInWord.name = "secondary";
         secondaryCardInWord.transform.position = deck.transform.position;
