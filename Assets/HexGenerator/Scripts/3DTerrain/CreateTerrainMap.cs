@@ -38,7 +38,7 @@ namespace Terrains
                     }
                     catch (Exception e)
                     {
-                        //Debug.Log($"{e.Message}");
+                        Debug.Log($"{e.Message}");
                         byHeight = spawner.CreateById("2", i, j, this);
                     }
 

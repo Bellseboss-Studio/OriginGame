@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: New Hexagon Configuration
   m_EditorClassIdentifier: 
   _hexagons:
-  - {fileID: 11400000, guid: 06ae28e57a37d7643af6d8d695d8bfc1, type: 2}
-  - {fileID: 11400000, guid: 5ea4c9823d1d3f54f8063170af4ffec2, type: 2}
   - {fileID: 11400000, guid: 3e575e648fdbc7d4795057d911aafac3, type: 2}
+  - {fileID: 11400000, guid: c959539253c78484380849b622352792, type: 2}
+  - {fileID: 11400000, guid: 9c43a1eccaf818d4d961fc7782c321ac, type: 2}
+  - {fileID: 11400000, guid: 131da29f1f4fe2d4fab538d39ee6631e, type: 2}
+  - {fileID: 11400000, guid: 4e8ccca314ae7a446b39d06d921d217c, type: 2}
+  - {fileID: 11400000, guid: 9c69509a199551649bed9bed69e7d117, type: 2}
+  - {fileID: 11400000, guid: f4c0515204120e548afacfc849985f14, type: 2}
+  - {fileID: 11400000, guid: 0b390e0e71e12f74c9a8259a33103fa5, type: 2}
