@@ -108,7 +108,7 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
 
     public virtual void SetGame()
     {
-        if (_gameLogic.IsSetGame()) return;
+        if (_gameLogic.IsSetGame()) throw new Exception("can't pass");
         PlaceCard();
         _gameLogic.AddLoad();
         _gameLogic.SetGame();

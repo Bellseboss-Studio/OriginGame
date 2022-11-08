@@ -61,6 +61,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         {
             game.BeginGame();
             game.DrawCards();
+            game.DisableSetPower();
         }).Loop(handle =>
         {
             if (game.DrawCardsIsFinished())

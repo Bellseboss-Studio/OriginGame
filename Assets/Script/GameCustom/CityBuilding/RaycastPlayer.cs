@@ -10,7 +10,7 @@ public class RaycastPlayer : MonoBehaviour
 
     public void Click(InputAction.CallbackContext contex)
     {
-        //Debug.Log($" started {contex.started}");
+        Debug.Log($" started {contex.started}");
         //Debug.Log($" canceled {contex.canceled}");
         //Debug.Log($" performed {contex.performed}");
         if (contex.canceled)
@@ -21,7 +21,7 @@ public class RaycastPlayer : MonoBehaviour
     public void Point(InputAction.CallbackContext contex)
     {
         _mousePosition = contex.ReadValue<Vector2>();
-        //Debug.Log($"{_mousePosition}");
+        Debug.Log($"{_mousePosition}");
     }
 
     private void ShootRaycast()

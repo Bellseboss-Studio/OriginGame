@@ -64,6 +64,7 @@ namespace Terrains
             Destroy(mapGameObject[middle1, middle2].gameObject);
             mapGameObject[middle1, middle2] = spawner.CreateById("0", middle1, middle2, this);
             mapGameObject[middle1, middle2].PlayerWinThisHexagon();
+            mapGameObject[middle1, middle2].CanConquer();
             mapGameObject[middle1, middle2].transform.position = position;
             
             //ilumint the next hexagons for the close to conquer hexagons
@@ -75,6 +76,7 @@ namespace Terrains
                     {
                         try
                         {
+                            mapGameObject[i, j].CanConquer();//ok
                             mapGameObject[i - 2, j].CanConquer();//ok
                             mapGameObject[i + 2, j].CanConquer();//ok
                             mapGameObject[i - 1, j].CanConquer();//ok

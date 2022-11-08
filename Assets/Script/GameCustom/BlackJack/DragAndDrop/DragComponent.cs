@@ -121,7 +121,14 @@ namespace Gameplay.UsoDeCartas
                     RestartPosition();
                     break;
                 case "Set":
-                    _deckForGame.SetGame();
+                    try
+                    {
+                        _deckForGame.SetGame();
+                    }
+                    catch (Exception e)
+                    {
+                        RestartPosition();
+                    }
                     break;
             }
             OnDropCompleted?.Invoke();
@@ -146,11 +153,13 @@ namespace Gameplay.UsoDeCartas
 
         private void Dragging()
         {
-            Vector3 mousePosition = Application.platform == RuntimePlatform.Android
-                ? inputs.Player.TouchPosition.ReadValue<Vector2>()
-                //: inputs.Player.TouchPosition.ReadValue<Vector2>();
-                : Mouse.current.position.ReadValue();
-
+            Vector3 mousePosition;
+#if UNITY_ANDROID
+            mousePosition = inputs.Player.TouchPosition.ReadValue<Vector2>();
+#else
+            mousePosition = inputs.UI.Point.ReadValue<Vector2>();
+#endif
+            
             mousePosition.z = 80;
             Debug.DrawRay(_camera.transform.position, (_camera.ScreenToWorldPoint(mousePosition)), Color.cyan);
 

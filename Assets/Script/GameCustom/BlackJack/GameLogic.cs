@@ -9,6 +9,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
     [SerializeField] private int maxNumberInGame;
     [SerializeField] private TextMeshProUGUI totalNumber, loadsToPlayer, loadsToEnemy;
     [SerializeField] private InputSystemCustom inputCustom;
+    [SerializeField] private GameObject setPlayer, setEnemy;
 
     public Action OnBeggingOfTurn { get; set; }
     public Action OnFinishingOfTurn { get; set; }
@@ -175,7 +176,15 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public void SetGame()
     {
         _setGame = true;
-        _generalBlackJack.ShowMessage("SET Game!", "You can't pass turns again.");
+        if (isTurnOfPlayer)
+        {
+            _generalBlackJack.ShowMessage("Player SET Game!", "You can't pass turns again.");
+            setPlayer.SetActive(true);
+        }else
+        {
+            _generalBlackJack.ShowMessage("Bot SET Game!", "You can't pass turns again.");
+            setEnemy.SetActive(true);
+        }
     }
 
     public bool IsSetGame()
@@ -243,5 +252,11 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public void GameFinished()
     {
         //botDeck.Restart();
+    }
+
+    public void DisableSetPower()
+    {
+        setEnemy.SetActive(false);
+        setPlayer.SetActive(false);
     }
 }
