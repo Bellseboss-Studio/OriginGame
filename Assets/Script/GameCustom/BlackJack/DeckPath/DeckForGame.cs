@@ -42,6 +42,9 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
             {
                 _drawIsFinished = true;
             });
+        var increment = pointInTheTable.transform.position;
+        increment.y = .3f;
+        pointInTheTable.transform.position = increment;
     }
 
     public virtual void ComeBackCards()
