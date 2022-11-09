@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1740974237078242362
+--- !u!114 &-356596176383783052
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,11 +34,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_124fa024779c434d8a3828588b9f51a5:
-        m_Texture: {fileID: 2800000, guid: a929248581e182443a1562f78d44b46f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: a929248581e182443a1562f78d44b46f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3e7ff755111f76d41a56b25093f7a27a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a929248581e182443a1562f78d44b46f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3e7ff755111f76d41a56b25093f7a27a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -96,13 +96,13 @@ Material:
     m_Ints: []
     m_Floats:
     - Boolean_0d8c0835c7774d8a8a3d4e5519c2cfdc: 1
-    - Boolean_66a34da4f21749a4bf6b0fc4558913c4: 1
-    - Vector1_2cebf0fae10140ceb3f5cea95479acb2: 5
-    - Vector1_35319a754d484b9c83b867ea83bb25ba: 0.1
-    - Vector1_35f0455c41414a82a14dbfe3a2e9219c: 0.086
-    - Vector1_3cf171c3c2d247b3a20e1e8cf15fbb62: 0
-    - Vector1_849872f5cff149f6a086e627648aa4ca: 0.4
-    - Vector1_ec3b249a41744d368fd91a729aef0aef: 0.936
+    - Boolean_66a34da4f21749a4bf6b0fc4558913c4: 0
+    - Vector1_2cebf0fae10140ceb3f5cea95479acb2: 2
+    - Vector1_35319a754d484b9c83b867ea83bb25ba: 0.34
+    - Vector1_35f0455c41414a82a14dbfe3a2e9219c: 0.5
+    - Vector1_3cf171c3c2d247b3a20e1e8cf15fbb62: 0.04
+    - Vector1_849872f5cff149f6a086e627648aa4ca: 1
+    - Vector1_ec3b249a41744d368fd91a729aef0aef: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -115,7 +115,7 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -133,10 +133,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_6fb0eb1fb6ff4124b68088b8b2ec812f: {r: 1, g: 0.038367823, b: 0, a: 0}
-    - Vector2_d5a9f289618142cdae7fdaeac48800db: {r: 1, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - Color_6fb0eb1fb6ff4124b68088b8b2ec812f: {r: 1, g: 0, b: 0, a: 0}
+    - Vector2_d5a9f289618142cdae7fdaeac48800db: {r: 1, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []

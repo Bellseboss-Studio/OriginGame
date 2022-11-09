@@ -84,6 +84,9 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
         if (primaryCardInWord == null) return; 
         cartsInHand--;
         primaryCardInWord.transform.DOMove(pointInTheTable.transform.position, .5f);
+        var increment = pointInTheTable.transform.position;
+        increment.y += .05f;
+        pointInTheTable.transform.position = increment;
         primaryCardInWord.name = "outOfContext";
         _gameLogic.Sum(primaryCardInWord.Card.number);
         cartsToPlace.Add(primaryCardInWord);
