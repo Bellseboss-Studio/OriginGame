@@ -15,6 +15,7 @@ public class RouletteController : MonoBehaviour
     [SerializeField] private TMP_InputField betInput;
     [SerializeField] private int spendForThrowOfRoulette, multipleOfThrow;
     [SerializeField] private Image skullResult;
+    [SerializeField] private Button buttonPlay, buttonAutoPlay;
     private static readonly int Go = Animator.StringToHash("go");
     private bool _autoRun;
     private int _result;
@@ -26,6 +27,9 @@ public class RouletteController : MonoBehaviour
         resultBet.gameObject.SetActive(true);
         skullResult.gameObject.SetActive(false);
         lootAccumulate.text = $"Loot: {loot}";
+        buttonPlay.onClick.AddListener(Roulette);
+        buttonAutoPlay.onClick.AddListener(RunRouletteWhitAutoRun);
+        ServiceLocator.Instance.GetService<IRouletteService>().ResetResult();
     }
 
     private void OnEnable()
@@ -40,6 +44,8 @@ public class RouletteController : MonoBehaviour
 
     private void OnFinishPresentationAwards()
     {
+        buttonPlay.interactable = true;
+        buttonAutoPlay.interactable = true;
         if (_result == 0)
         {
             loot = 1;
@@ -60,7 +66,6 @@ public class RouletteController : MonoBehaviour
             return;
         }
         _autoRun = true;
-        Roulette();
         textToAutoRun.text = "Stop Auto";
     }
 
@@ -74,6 +79,7 @@ public class RouletteController : MonoBehaviour
             var animationToPlayInRoulette = $"Round{randomRound}";
             Debug.Log(animationToPlayInRoulette);
             animRoulette.Play(animationToPlayInRoulette);
+            buttonPlay.interactable = false;
         }
         catch (Exception e)
         {
@@ -98,6 +104,8 @@ public class RouletteController : MonoBehaviour
                 {
                     //TODO whats happend if the cancel way
                 });
+            buttonPlay.interactable = true;
+            buttonAutoPlay.interactable = true;
         }
     }
 
@@ -141,8 +149,9 @@ public class RouletteController : MonoBehaviour
 
     public void TakeLoot()
     {
+        if(loot == 1) return;
         award.ShowWinLoot(loot);
-        loot = 0;
+        loot = 1;
     }
 
     public void Configure(IRouletteGeneral rouletteGeneral)
