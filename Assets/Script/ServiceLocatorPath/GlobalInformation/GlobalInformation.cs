@@ -217,6 +217,26 @@ namespace SystemOfExtras.GlobalInformationPath
             return _sceneCityBuilding;
         }
 
+        public bool IsFirstTimeInCityBuilding()
+        {
+            bool.TryParse(ServiceLocator.Instance.GetService<ISaveData>().Get("firstTimeInCityBuilding"),
+                out var isFirstTimeInCityBuilding);
+            if (!isFirstTimeInCityBuilding)
+            {
+                ServiceLocator.Instance.GetService<ISaveData>().Save("firstTimeInCityBuilding", true.ToString());
+            }
+            return isFirstTimeInCityBuilding;
+        }
+
+        public Hexagon GetHexagonInBet()
+        {
+            if (_hexagonTemplate.GetHexagon() != null)
+            {
+                return _hexagonTemplate.GetHexagon();
+            }
+            throw new Exception("Hexagon not found");
+        }
+
         public int GetHealth()
         {
             //TODO define of how to increment the health

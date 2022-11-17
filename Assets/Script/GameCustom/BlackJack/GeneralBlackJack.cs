@@ -20,6 +20,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
     [SerializeField] private Presentation messages;
     [SerializeField] private TextMeshProUGUI titleText, messageText;
     [SerializeField] private Camera cameraInBattle;
+    [SerializeField] private Renderer table;
     private int _damagePlayer;
     private int _healthPlayer;
 
@@ -28,6 +29,9 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         HideButtons();
         game.Configurate(this);
         ServiceLocator.Instance.GetService<ILoadScene>().Lock();
+        gameplay.ResetLoadsEnemy();
+        gameplay.ResetLoadsPlayer();
+        SetMaterialInTable();
         _presentationEnemyState = this.tt().Pause().Add(() =>
         {
             presentations.StartPresentationEnemy();
@@ -53,12 +57,23 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
             }
         }).Add(() =>
         {
+            presentations.StartPreparingGame();
+        }).Loop(handle =>
+        {
+            if (presentations.FinishPresentation)
+            {
+                handle.Break();
+            }
+        }).Add(() =>
+        {
             _preparingGameState.Play();
             cameraInBattle.gameObject.SetActive(true);
         });
 
         _preparingGameState = this.tt().Pause().Add(() =>
         {
+            gameplay.ResetLoadsEnemy();
+            gameplay.ResetLoadsPlayer();
             game.BeginGame();
             game.DrawCards();
             game.DisableSetPower();
@@ -176,6 +191,26 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
     }
 
+    private void SetMaterialInTable()
+    {
+        table.materials[1].SetFloat("Is_Rocoso",0);
+        table.materials[1].SetFloat("Is_Arido",0);
+        table.materials[1].SetFloat("Is_Hierva",0);
+        var hexagonInBet = ServiceLocator.Instance.GetService<IGlobalInformation>().GetHexagonInBet();
+        switch (hexagonInBet.TypeOfHexa())
+        {
+            case 1:
+                table.materials[1].SetFloat("Is_Rocoso",1);
+                break;
+            case 2:
+                table.materials[1].SetFloat("Is_Arido",1);
+                break;
+            case 3:
+                table.materials[1].SetFloat("Is_Hierva",1);
+                break;
+        }
+    }
+
     public void GoToCityBuilding()
     {
         ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
@@ -204,5 +239,25 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
     public bool MessageHasBeenDelivered()
     {
         return messages.IsFinishPresentation;
+    }
+
+    public void AddLoadPlayer()
+    {
+        gameplay.AddLoadPlayer();
+    }
+
+    public void AddLoadEnemy()
+    {
+        gameplay.AddLoadEnemy();
+    }
+
+    public void PlayerSetGame()
+    {
+        gameplay.SetFromPlayer();
+    }
+
+    public void EnemySetGame()
+    {
+        gameplay.SetFromEnemy();
     }
 }

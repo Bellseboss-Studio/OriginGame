@@ -11,6 +11,7 @@ namespace Hexagons
 
         [SerializeField] private float minHeight, maxHeight;
         [SerializeField] private int cost;
+        [Header("1=Rocoso;2=Arido;3=Hierva;4=Nieve")] [SerializeField] private int type;
         private string position;
 
         public string Position => position;
@@ -31,6 +32,11 @@ namespace Hexagons
         public void Config(string position)
         {
             this.position = position;
+        }
+
+        public int TypeOfHexa()
+        {
+            return type;
         }
     }
 }

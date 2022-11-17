@@ -92,6 +92,8 @@ Material:
     m_Ints: []
     m_Floats:
     - Vector1_8550781f18c54ea48a8131d338c325c8: 1
+    - Vector1_Vida_AmountVida_Amount: 0
+    - Vida_Amount: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -125,7 +127,7 @@ Material:
     - Color_09cec6a6046e4e4d95963b5e4f07510a: {r: 0, g: 0.1717515, b: 1, a: 0}
     - Color_512df0b8403f40609fd0ee90ce08e421: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0}
     - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
-    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

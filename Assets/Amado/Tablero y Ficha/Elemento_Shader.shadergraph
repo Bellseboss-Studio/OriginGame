@@ -1,5 +1,5 @@
 {
-    "m_SGVersion": 2,
+    "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "c3a0a33e95fc4ff59991bd94e0e125ce",
     "m_Properties": [
@@ -32,6 +32,12 @@
         }
     ],
     "m_Keywords": [],
+    "m_Dropdowns": [],
+    "m_CategoryData": [
+        {
+            "m_Id": "666a1e9e4cb8478aba91bf69d383ab6a"
+        }
+    ],
     "m_Nodes": [
         {
             "m_Id": "cc24ad6d9d1d4e2aa8266f595deffd02"
@@ -474,10 +480,11 @@
         "serializedMesh": {
             "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
             "m_Guid": ""
-        }
+        },
+        "preventRotation": false
     },
     "m_Path": "Shader Graphs",
-    "m_ConcretePrecision": 0,
+    "m_GraphPrecision": 0,
     "m_PreviewMode": 2,
     "m_OutputNode": {
         "m_Id": ""
@@ -578,9 +585,13 @@
         "m_GuidSerialized": "7fd87f29-0d93-4361-b2d7-2aa77bff070e"
     },
     "m_Name": "Is_Hierva",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Boolean_05d9c13e0d944ede972141bda133beff",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "Is_Hierva",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -754,7 +765,8 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 0,
-    "m_NormalMapSpace": 0
+    "m_NormalMapSpace": 0,
+    "m_EnableGlobalMipBias": true
 }
 
 {
@@ -904,9 +916,13 @@
         "m_GuidSerialized": "9a73e102-e534-48ee-a75d-f3405403539d"
     },
     "m_Name": "Hierva",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_1e675863bb62458ab070fdc44678c8d7",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -915,22 +931,30 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
 
 {
-    "m_SGVersion": 0,
+    "m_SGVersion": 1,
     "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
     "m_ObjectId": "21570ae197fb4c7bbfe1e36d2aadd019",
     "m_ActiveSubTarget": {
         "m_Id": "55a2fb45a2c34f84b71f60f4c4038aaf"
     },
+    "m_AllowMaterialOverride": false,
     "m_SurfaceType": 0,
+    "m_ZTestMode": 4,
+    "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_TwoSided": false,
+    "m_RenderFace": 2,
     "m_AlphaClip": false,
-    "m_CustomEditorGUI": ""
+    "m_CastShadows": true,
+    "m_ReceiveShadows": true,
+    "m_CustomEditorGUI": "",
+    "m_SupportVFX": false
 }
 
 {
@@ -998,7 +1022,8 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 0,
-    "m_NormalMapSpace": 0
+    "m_NormalMapSpace": 0,
+    "m_EnableGlobalMipBias": true
 }
 
 {
@@ -1304,7 +1329,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "4ffa86113eee45d7a76b78fc6495a454",
     "m_Id": 0,
-    "m_DisplayName": "Float",
+    "m_DisplayName": "Tiling",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1345,9 +1370,13 @@
         "m_GuidSerialized": "8e5c0a24-7c0a-42db-97ca-570c83a0d87b"
     },
     "m_Name": "Is_Rocoso",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Boolean_57180db51d2d4acda1f56d22569e4ee1",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "Is_Rocoso",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -1400,6 +1429,42 @@
         "w": 0.0
     },
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "666a1e9e4cb8478aba91bf69d383ab6a",
+    "m_Name": "",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "dc09107574664c60b215da4abafca735"
+        },
+        {
+            "m_Id": "7d9fb94d79f74660ba7e08b7d3a40087"
+        },
+        {
+            "m_Id": "57180db51d2d4acda1f56d22569e4ee1"
+        },
+        {
+            "m_Id": "94de7d7ce2c6489fabb6571270fde22e"
+        },
+        {
+            "m_Id": "78cb43e6d69f44d9a62248b3677205e0"
+        },
+        {
+            "m_Id": "1e675863bb62458ab070fdc44678c8d7"
+        },
+        {
+            "m_Id": "05d9c13e0d944ede972141bda133beff"
+        },
+        {
+            "m_Id": "cfaaaf2f0a6b4dfc874b7376308854ed"
+        },
+        {
+            "m_Id": "8c2dc176254c44afb2d7bb6c107298c3"
+        }
+    ]
 }
 
 {
@@ -1644,9 +1709,13 @@
         "m_GuidSerialized": "7af41adc-5a44-40ae-bd74-06f9739aaa7e"
     },
     "m_Name": "Is_Arido",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Boolean_78cb43e6d69f44d9a62248b3677205e0",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "Is_Arido",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -1706,7 +1775,8 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 0,
-    "m_NormalMapSpace": 0
+    "m_NormalMapSpace": 0,
+    "m_EnableGlobalMipBias": true
 }
 
 {
@@ -1717,9 +1787,13 @@
         "m_GuidSerialized": "eaf84735-60e4-4923-8594-500c630078a7"
     },
     "m_Name": "Rocoso",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_7d9fb94d79f74660ba7e08b7d3a40087",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -1728,6 +1802,8 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
@@ -1846,9 +1922,13 @@
         "m_GuidSerialized": "6d536b24-3523-4d87-a8a5-ee53cbc75e23"
     },
     "m_Name": "Smoothness",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_8c2dc176254c44afb2d7bb6c107298c3",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -1922,9 +2002,13 @@
         "m_GuidSerialized": "879dcea2-b1cd-4f0e-ad1b-f9acded4c63d"
     },
     "m_Name": "Arido",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_94de7d7ce2c6489fabb6571270fde22e",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -1933,6 +2017,8 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
@@ -2639,9 +2725,13 @@
         "m_GuidSerialized": "43b77d2f-5798-43a3-875d-4b39186fa2cf"
     },
     "m_Name": "Tiling",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_cfaaaf2f0a6b4dfc874b7376308854ed",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -2757,9 +2847,13 @@
         "m_GuidSerialized": "92f8f1bf-a82b-451a-8592-a074bd78c279"
     },
     "m_Name": "Snow",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_dc09107574664c60b215da4abafca735",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -2768,6 +2862,8 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
@@ -2890,7 +2986,8 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 0,
-    "m_NormalMapSpace": 0
+    "m_NormalMapSpace": 0,
+    "m_EnableGlobalMipBias": true
 }
 
 {

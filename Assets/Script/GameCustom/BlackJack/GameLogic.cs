@@ -165,11 +165,13 @@ public class GameLogic : MonoBehaviour, IGameLogic
         {
             _loadPlayer++;
             loadsToPlayer.text = $"X {_loadPlayer}";
+            _generalBlackJack.AddLoadPlayer();
         }
         else
         {
             _loadBot++;
             loadsToEnemy.text = $"X {_loadBot}";
+            _generalBlackJack.AddLoadEnemy();
         }
     }
 
@@ -180,10 +182,12 @@ public class GameLogic : MonoBehaviour, IGameLogic
         {
             _generalBlackJack.ShowMessage("Player SET Game!", "You can't pass turns again.");
             setPlayer.SetActive(true);
+            _generalBlackJack.PlayerSetGame();
         }else
         {
             _generalBlackJack.ShowMessage("Bot SET Game!", "You can't pass turns again.");
             setEnemy.SetActive(true);
+            _generalBlackJack.EnemySetGame();
         }
     }
 
@@ -241,7 +245,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
         _setGame = false;       
         botDeck.BeginGame();
         playerDeck.BeginGame();
-        _generalBlackJack.ShowMessage("How to Play?", "loses who exceeds 32");
+        //_generalBlackJack.ShowMessage("How to Play?", "loses who exceeds 32");
     }
 
     public void Configurate(IGeneralBlackJack generalBlackJack)

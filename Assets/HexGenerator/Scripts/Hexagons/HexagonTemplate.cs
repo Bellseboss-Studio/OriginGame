@@ -54,9 +54,9 @@ namespace Hexagons
                     ServiceLocator.Instance.GetService<IGlobalInformation>().SpendGold(_totalCost);
                     //Calculate the health and damage for enemy
                     ServiceLocator.Instance.GetService<IStatsInformation>().CalculateStatsForEnemy(referenceToConfig);
+                    ServiceLocator.Instance.GetService<IGlobalInformation>().HexagonToBet(this);
                     ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
                     {
-                        ServiceLocator.Instance.GetService<IGlobalInformation>().HexagonToBet(this);
                         SceneManager.LoadScene(sceneBlackJack);
                     });
                 }

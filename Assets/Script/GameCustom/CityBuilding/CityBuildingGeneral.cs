@@ -24,6 +24,14 @@ public class CityBuildingGeneral : MonoBehaviour
         OnUpdateGold(ServiceLocator.Instance.GetService<IGlobalInformation>().GetGold());
         healthText.text = $"HP: {ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth()}";
         damageText.text = $"PW: {ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage()}";
+
+        if (!ServiceLocator.Instance.GetService<IGlobalInformation>().IsFirstTimeInCityBuilding())
+        {
+            ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton("What happen here?",
+                "You will have to conquer all the territory for the family tradition, now you are weak. Try to go to Roulette and try your luck. \nFor the Horde",
+                "Go to Roulette",
+                GoToRoulette, () => { });
+        }
     }
 
     private void OnEnable()
