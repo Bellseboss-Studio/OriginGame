@@ -1,23 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Presentation : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    [SerializeField] protected Animator animator;
     private bool _finishPresentation = true;
-    private static readonly int Start = Animator.StringToHash("start");
-
+    
     public bool IsFinishPresentation => _finishPresentation;
-
-    public void StartPresentation()
+    
+    public virtual void StartPresentation()
     {
         _finishPresentation = false;
-        animator.SetTrigger(Start);
+        animator.SetTrigger("start");
     }
 
-    public void FinishPresentation()
+    public virtual void FinishPresentation()
     {
         _finishPresentation = true;
+    }
+
+    public void StopAnimation()
+    {
+        _finishPresentation = true;
+        animator.SetTrigger("stop");
     }
 }

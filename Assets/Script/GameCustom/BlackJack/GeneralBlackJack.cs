@@ -1,3 +1,4 @@
+using System;
 using SystemOfExtras;
 using SystemOfExtras.GlobalInformationPath;
 using TMPro;
@@ -8,70 +9,88 @@ using UnityEngine.UI;
 public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
 {
     [SerializeField] private Presentations presentations;
-    [SerializeField] private Button winBtn, loseBtn;
+    [SerializeField] private Button skipTutorial;
     [SerializeField] private GameLogic game;
     private TeaTime _presentationEnemyState, _presentationPlayerState, _preparingGameState, _gameState, _winGameState, _loseGameState, _definitionOfGame;
+    private TeaTime _tutorial, _skipTutorial;
     [SerializeField] private int healthEnemy;
     [SerializeField] private int damageEnemy;
     [SerializeField] private TextMeshProUGUI healthTextPlayer, attackTextPlayer, healthTextBot, damageEnemyText;
     [SerializeField] private int sceneCityBuilding;
     [SerializeField] private int tokensForGame;
     [SerializeField] private NewGamePlayBlackJack gameplay;
-    [SerializeField] private Presentation messages;
-    [SerializeField] private TextMeshProUGUI titleText, messageText;
     [SerializeField] private Camera cameraInBattle;
     [SerializeField] private Renderer table;
+    [SerializeField] private ShowMessageTransitionally message;
     private int _damagePlayer;
     private int _healthPlayer;
+    private bool _skipTutorialResult;
 
     private void Start()
     {
+        skipTutorial.gameObject.SetActive(true);
+        skipTutorial.onClick.AddListener(() =>
+        {
+            _skipTutorialResult = true;
+        });
         HideButtons();
         game.Configurate(this);
         ServiceLocator.Instance.GetService<ILoadScene>().Lock();
         gameplay.ResetLoadsEnemy();
         gameplay.ResetLoadsPlayer();
         SetMaterialInTable();
-        _presentationEnemyState = this.tt().Pause().Add(() =>
+
+        _tutorial = this.tt().Pause().Add(() =>
         {
             presentations.StartPresentationEnemy();
         }).Loop(handler =>
         {
-            if (presentations.FinishEnemyPresentation)
+            if (presentations.FinishEnemyPresentation || _skipTutorialResult)
             {
                 handler.Break();
             }
         }).Add(() =>
         {
-            _presentationPlayerState.Play();
-        });
-
-        _presentationPlayerState = this.tt().Pause().Add(() =>
-        {
+            if (_skipTutorialResult)
+            {
+                _tutorial.Stop();
+                _preparingGameState.Play();
+                presentations.StopAllPresentations();
+                return;
+            }
             presentations.StartPresentationPlayer();
         }).Loop(handler =>
         {
-            if (presentations.FinishPlayerPresentation)
+            if (presentations.FinishPlayerPresentation || _skipTutorialResult)
             {
                 handler.Break();
             }
         }).Add(() =>
         {
+            if (_skipTutorialResult)
+            {
+                _tutorial.Stop();
+                _preparingGameState.Play();
+                presentations.StopAllPresentations();
+                return;
+            }
             presentations.StartPreparingGame();
         }).Loop(handle =>
         {
-            if (presentations.FinishPresentation)
+            if (presentations.FinishPresentation || _skipTutorialResult)
             {
                 handle.Break();
             }
         }).Add(() =>
         {
+            presentations.StopAllPresentations();
             _preparingGameState.Play();
             cameraInBattle.gameObject.SetActive(true);
         });
 
         _preparingGameState = this.tt().Pause().Add(() =>
         {
+            skipTutorial.gameObject.SetActive(false);
             gameplay.ResetLoadsEnemy();
             gameplay.ResetLoadsPlayer();
             game.BeginGame();
@@ -177,7 +196,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
             _preparingGameState.Play();
         });
         
-        _presentationEnemyState.Play();
+        _tutorial.Play();
         
         _damagePlayer = ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage();
         _healthPlayer = ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth();
@@ -200,26 +219,31 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         table.materials[1].SetFloat("Is_Rocoso",0);
         table.materials[1].SetFloat("Is_Arido",0);
         table.materials[1].SetFloat("Is_Hierva",0);
-        var hexagonInBet = ServiceLocator.Instance.GetService<IGlobalInformation>().GetHexagonInBet();
-        switch (hexagonInBet.TypeOfHexa())
+        try
         {
-            case 1:
-                table.materials[1].SetFloat("Is_Rocoso",1);
-                break;
-            case 2:
-                table.materials[1].SetFloat("Is_Arido",1);
-                break;
-            case 3:
-                table.materials[1].SetFloat("Is_Hierva",1);
-                break;
+            var hexagonInBet = ServiceLocator.Instance.GetService<IGlobalInformation>().GetHexagonInBet();
+            switch (hexagonInBet.TypeOfHexa())
+            {
+                case 1:
+                    table.materials[1].SetFloat("Is_Rocoso",1);
+                    break;
+                case 2:
+                    table.materials[1].SetFloat("Is_Arido",1);
+                    break;
+                case 3:
+                    table.materials[1].SetFloat("Is_Hierva",1);
+                    break;
+            }
+        }
+        catch (Exception e)
+        {
+            // ignored
         }
     }
 
     public void GoToCityBuilding()
     {
         ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
-        _presentationEnemyState.Stop();
-        _presentationPlayerState.Stop();
         _preparingGameState.Stop();
         ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
         {
@@ -229,20 +253,16 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
 
     private void HideButtons()
     {
-        winBtn.gameObject.SetActive(false);
-        loseBtn.gameObject.SetActive(false);
     }
 
     public void ShowMessage(string title, string message)
     {
-        titleText.text = $"{title}";
-        messageText.text = $"{message}";
-        messages.StartPresentation();
+        this.message.ShowMessage(title, message);
     }
 
     public bool MessageHasBeenDelivered()
     {
-        return messages.IsFinishPresentation;
+        return message.IsFinishPresentation;
     }
 
     public void AddLoadPlayer()
