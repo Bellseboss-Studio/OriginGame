@@ -13,6 +13,8 @@ public class CityBuildingGeneral : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldText, healthText, damageText;
     [SerializeField] private int sceneRoulette;
     [SerializeField] private int sceneShop;
+    [SerializeField] private int damageInitial;
+    [SerializeField] private int healthInitial;
 
     void Start()
     {
@@ -22,16 +24,18 @@ public class CityBuildingGeneral : MonoBehaviour
         ServiceLocator.Instance.GetService<IStatsInformation>().SetCenter(target.GetHexagon());
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
         OnUpdateGold(ServiceLocator.Instance.GetService<IGlobalInformation>().GetGold());
-        healthText.text = $"HP: {ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth()}";
-        damageText.text = $"PW: {ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage()}";
 
         if (!ServiceLocator.Instance.GetService<IGlobalInformation>().IsFirstTimeInCityBuilding())
         {
+            ServiceLocator.Instance.GetService<IGlobalInformation>().SetDamage(damageInitial);
+            ServiceLocator.Instance.GetService<IGlobalInformation>().SetHealth(healthInitial);
             ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton("What happen here?",
                 "You will have to conquer all the territory for the family tradition, now you are weak. Try to go to Roulette and try your luck. \nFor the Horde",
                 "Go to Roulette",
                 GoToRoulette, () => { });
         }
+        healthText.text = $"HP: {ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth()}";
+        damageText.text = $"PW: {ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage()}";
     }
 
     private void OnEnable()
