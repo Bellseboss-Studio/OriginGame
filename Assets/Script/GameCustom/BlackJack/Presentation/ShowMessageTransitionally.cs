@@ -34,4 +34,9 @@ public class ShowMessageTransitionally : Presentation
             next.onClick?.Invoke();
         });
     }
+
+    public void CloseWindows()
+    {
+        next.onClick.Invoke();
+    }
 }

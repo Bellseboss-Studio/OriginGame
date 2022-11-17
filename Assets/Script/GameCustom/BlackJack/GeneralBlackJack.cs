@@ -53,9 +53,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         {
             if (_skipTutorialResult)
             {
-                _tutorial.Stop();
-                _preparingGameState.Play();
-                presentations.StopAllPresentations();
+                StopAllTutorial();
                 return;
             }
             presentations.StartPresentationPlayer();
@@ -69,9 +67,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         {
             if (_skipTutorialResult)
             {
-                _tutorial.Stop();
-                _preparingGameState.Play();
-                presentations.StopAllPresentations();
+                StopAllTutorial();
                 return;
             }
             presentations.StartPreparingGame();
@@ -212,6 +208,14 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
         gameplay.Configure(_healthPlayer, healthEnemy);
         cameraInBattle.gameObject.SetActive(false);
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
+    }
+
+    private void StopAllTutorial()
+    {
+        _tutorial.Stop();
+        _preparingGameState.Play();
+        presentations.StopAllPresentations();
+        message.CloseWindows();
     }
 
     private void SetMaterialInTable()
