@@ -13,8 +13,6 @@ public class GiveGoldForFirstTime : MonoBehaviour
     private static readonly int StartAnim = Animator.StringToHash("start");
     private static readonly int Finish = Animator.StringToHash("finish");
     [SerializeField] private int goldInitial;
-    [SerializeField] private int damageInitial;
-    [SerializeField] private int healthInitial;
 
     private void Start()
     {
@@ -34,8 +32,6 @@ public class GiveGoldForFirstTime : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(goldInitial);
-        ServiceLocator.Instance.GetService<IGlobalInformation>().SetDamage(damageInitial);
-        ServiceLocator.Instance.GetService<IGlobalInformation>().SetHealth(healthInitial);
         ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
     }
 }

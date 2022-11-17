@@ -35,5 +35,7 @@ namespace SystemOfExtras.GlobalInformationPath
         void ReceiveToken(int tokenCount);
         int GetSceneForRoulette();
         int GetSceneForCityBuilding();
+        bool IsFirstTimeInCityBuilding();
+        Hexagon GetHexagonInBet();
     }
 }

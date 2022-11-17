@@ -18,3 +18,4 @@ MonoBehaviour:
   minHeight: 0.13636364
   maxHeight: 0.27272728
   cost: 0
+  type: 3

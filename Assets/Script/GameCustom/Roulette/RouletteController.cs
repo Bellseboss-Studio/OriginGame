@@ -132,14 +132,15 @@ public class RouletteController : MonoBehaviour
     {
         if (_result == 0)
         {
-            award.ShowLoseGold();
+            //award.ShowLoseGold();
         }
         else
         {
             var betWin = _result;
             loot *= betWin;
-            award.ShowAccumulate(betWin);
+            //award.ShowAccumulate(betWin);
         }
+        OnFinishPresentationAwards();
     }
     
     public void StopAutoRun()
