@@ -24,6 +24,7 @@ public class LoadSceneService : MonoBehaviour, ILoadScene, ILoadScenePrivate
     {
         ServiceLocator.Instance.GetService<IAudioService>().Transition();
         StartCoroutine(LoadScene(false, action));
+        Unlock();
     }
     
     public void Close(Action action)
@@ -62,11 +63,8 @@ public class LoadSceneService : MonoBehaviour, ILoadScene, ILoadScenePrivate
     private IEnumerator LoadScene(bool isOpen,Action action)
     {
         animator.SetBool("open", isOpen);
-        while (!animationController.IsInAnimation)
-        {
-            yield return new WaitForSeconds(.2f);
-        }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
         action?.Invoke();
     }
 

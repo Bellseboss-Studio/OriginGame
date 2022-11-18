@@ -34,8 +34,8 @@ public class CityBuildingGeneral : MonoBehaviour
                 "Go to Roulette",
                 GoToRoulette, () => { });
         }
-        healthText.text = $"HP: {ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth()}";
-        damageText.text = $"PW: {ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage()}";
+        healthText.text = $"{ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth()}";
+        damageText.text = $"{ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage()}";
         ServiceLocator.Instance.GetService<IAudioService>().StayInCityBuilding();
     }
 

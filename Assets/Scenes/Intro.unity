@@ -376,7 +376,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://unity-youtube-dl-server.herokuapp.com/watch?v=CNxo0zp17f0&cli=yt-dlp
+  m_Url: http://bellseboss.com/Intro_Bellseboss_version_mobile.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1

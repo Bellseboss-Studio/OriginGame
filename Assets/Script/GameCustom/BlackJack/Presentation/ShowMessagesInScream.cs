@@ -8,12 +8,12 @@ public class ShowMessagesInScream : MonoBehaviour
     
     public void ShowWhoIsThere()
     {
-        messageGBJ.ShowMessage("He's the enemy", "you'll win if his life drops to zero");
+        messageGBJ.ShowMessage("This is the enemy", "You'll win if its life drops to zero");
     }
 
     public void ShowWhenPowerHave()
     {
-        messageGBJ.ShowMessage("The enemy", $" has {ServiceLocator.Instance.GetService<IStatsInformation>().GetEnemyDamage()} of damage");
+        messageGBJ.ShowMessage("The enemy", $" inflicts {ServiceLocator.Instance.GetService<IStatsInformation>().GetEnemyDamage()} of damage");
     }
 
     public void ShowWhenHealthHave()
