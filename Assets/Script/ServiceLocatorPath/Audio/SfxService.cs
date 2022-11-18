@@ -24,14 +24,14 @@ public class SfxService: MonoBehaviour
     public void ClickRandom()
     {
         var clicks = GetWithContainer("Click");
-        var random = Random.Range(0, clicks.Capacity);
+        var random = Random.Range(0, clicks.Count);
         PlayOneShot(clicks[random].Key);
     }
 
     public void DrawCard()
     {
         var card = GetWithContainer("Carta");
-        var random = Random.Range(0, card.Capacity);
+        var random = Random.Range(0, card.Count);
         PlayOneShot(card[random].Key);
     }
 
