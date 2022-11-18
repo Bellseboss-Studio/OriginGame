@@ -25,12 +25,13 @@ public class GiveGoldForFirstTime : MonoBehaviour
     public void GiveTheToken()
     {
         animatorToReceiveGold.SetTrigger(StartAnim);
+        ServiceLocator.Instance.GetService<IAudioService>().TakeFirstTokens();
         StartCoroutine(GiveToken());
     }
 
     private IEnumerator GiveToken()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(goldInitial);
         ServiceLocator.Instance.GetService<ILoadScene>().Unlock();
     }

@@ -36,6 +36,7 @@ public class CityBuildingGeneral : MonoBehaviour
         }
         healthText.text = $"HP: {ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth()}";
         damageText.text = $"PW: {ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage()}";
+        ServiceLocator.Instance.GetService<IAudioService>().StayInCityBuilding();
     }
 
     private void OnEnable()

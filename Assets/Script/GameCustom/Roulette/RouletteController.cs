@@ -77,6 +77,7 @@ public class RouletteController : MonoBehaviour
             //animRoulette.SetTrigger(Go);
             var randomRound = Random.Range(1, 12);
             var animationToPlayInRoulette = $"Round{randomRound}";
+            ServiceLocator.Instance.GetService<IAudioService>().PlayRoulette(randomRound);
             Debug.Log(animationToPlayInRoulette);
             animRoulette.Play(animationToPlayInRoulette);
             buttonPlay.interactable = false;
@@ -133,11 +134,13 @@ public class RouletteController : MonoBehaviour
         if (_result == 0)
         {
             //award.ShowLoseGold();
+            ServiceLocator.Instance.GetService<IAudioService>().RouletteLose();
         }
         else
         {
             var betWin = _result;
             loot *= betWin;
+            ServiceLocator.Instance.GetService<IAudioService>().RouletteWin();
             //award.ShowAccumulate(betWin);
         }
         OnFinishPresentationAwards();

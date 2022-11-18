@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using SystemOfExtras;
 using UnityEngine;
 
 public class LoadSceneService : MonoBehaviour, ILoadScene, ILoadScenePrivate
@@ -21,11 +22,13 @@ public class LoadSceneService : MonoBehaviour, ILoadScene, ILoadScenePrivate
 
     public void Open(Action action)
     {
+        ServiceLocator.Instance.GetService<IAudioService>().Transition();
         StartCoroutine(LoadScene(false, action));
     }
     
     public void Close(Action action)
     {
+        ServiceLocator.Instance.GetService<IAudioService>().Transition();
         StartCoroutine(LoadScene(true, action));
     }
 
@@ -42,6 +45,7 @@ public class LoadSceneService : MonoBehaviour, ILoadScene, ILoadScenePrivate
     public void ShowMessageWithTwoButton(string title, string message, string titlebuttonone, Action actionButtonOne,
         string titlebuttontwo, Action actionButtonTwo, Action actionToCancel)
     {
+    ServiceLocator.Instance.GetService<IAudioService>().Transition();
         animator.SetInteger("buttons", 2);
         twoButtons.Show(title, message, titlebuttonone, actionButtonOne, titlebuttontwo, actionButtonTwo,
             actionToCancel);
@@ -50,6 +54,7 @@ public class LoadSceneService : MonoBehaviour, ILoadScene, ILoadScenePrivate
     public void ShowMessageWithOneButton(string title, string message, string titleOneButton, Action actionButtonOne,
         Action actionToCancel)
     {
+        ServiceLocator.Instance.GetService<IAudioService>().Transition();
         animator.SetInteger("buttons", 1);
         oneButtons.Show(title, message, titleOneButton, actionButtonOne, actionToCancel);
     }
@@ -70,5 +75,6 @@ public class LoadSceneService : MonoBehaviour, ILoadScene, ILoadScenePrivate
         //TODO close message to animation mode
         animator.SetInteger(Buttons, 0);
         animator.SetTrigger(Closekey);
+        ServiceLocator.Instance.GetService<IAudioService>().Transition();
     }
 }

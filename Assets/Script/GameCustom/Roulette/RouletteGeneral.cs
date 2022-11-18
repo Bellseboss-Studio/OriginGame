@@ -25,6 +25,7 @@ public class RouletteGeneral : MonoBehaviour, IRouletteGeneral
         }
         UpdateGold(ServiceLocator.Instance.GetService<IGlobalInformation>().GetGold());
         roulete.Configure(this);
+        ServiceLocator.Instance.GetService<IAudioService>().StayInRoulette();
     }
 
     private void OnEnable()

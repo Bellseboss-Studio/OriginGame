@@ -17,7 +17,6 @@ public class MainMenuLogic : MonoBehaviour
 
     private void Start()
     {
-        //ServiceLocator.Instance.GetService<MixerManager>().
         HideAllPanels();
         start.onClick.AddListener(StartGame);
         credits.onClick.AddListener(ShowCredits);
@@ -33,6 +32,8 @@ public class MainMenuLogic : MonoBehaviour
         {
             GoBackMainMenu();
         }
+
+        ServiceLocator.Instance.GetService<IAudioService>().StayInMenu();
         ServiceLocator.Instance.GetService<ILoadScene>().Open(() => { });
     }
 
@@ -89,6 +90,7 @@ public class MainMenuLogic : MonoBehaviour
 
     private void StartGame()
     {
+        ServiceLocator.Instance.GetService<IAudioService>().Click();
         ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
         {
             //configure more things

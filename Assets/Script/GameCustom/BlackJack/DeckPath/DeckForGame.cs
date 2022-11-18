@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using SystemOfExtras;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -79,6 +80,7 @@ public abstract class DeckForGame : MonoBehaviour, IDeckForGame
     {
         var cardInWord = Instantiate(cardPrefab, transform);
         cardInWord.Configurate(deckFinish[Random.Range(0, deckFinish.Count)], _gameLogic);
+        ServiceLocator.Instance.GetService<IAudioService>().DrawCard();
         return cardInWord;
     }
 

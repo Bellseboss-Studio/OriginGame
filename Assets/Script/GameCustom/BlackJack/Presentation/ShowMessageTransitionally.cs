@@ -1,4 +1,5 @@
 using System;
+using SystemOfExtras;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class ShowMessageTransitionally : Presentation
         next.onClick.AddListener(() =>
         {
             OnClickInScream?.Invoke();
+            ServiceLocator.Instance.GetService<IAudioService>().Transition();
             animator.SetTrigger("next");
         });
     }
@@ -22,6 +24,7 @@ public class ShowMessageTransitionally : Presentation
     {
         titleText.text = title;
         messageText.text = message;
+        ServiceLocator.Instance.GetService<IAudioService>().Transition();
         StartPresentation();
     }
 
