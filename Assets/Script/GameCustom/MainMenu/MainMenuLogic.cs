@@ -90,6 +90,7 @@ public class MainMenuLogic : MonoBehaviour
 
     private void StartGame()
     {
+        ServiceLocator.Instance.GetService<IAudioService>().Click();
         ServiceLocator.Instance.GetService<ILoadScene>().Close(() =>
         {
             //configure more things

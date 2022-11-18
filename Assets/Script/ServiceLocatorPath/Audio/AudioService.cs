@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class AudioService : MonoBehaviour, IAudioService, IMediatorAudioService
@@ -30,5 +29,55 @@ public class AudioService : MonoBehaviour, IAudioService, IMediatorAudioService
     public void StayInBlackJack()
     {
         musicService.StayInBlackJack();
+    }
+
+    public void Click()
+    {
+        sfxService.ClickRandom();
+    }
+
+    public void DrawCard()
+    {
+        sfxService.DrawCard();
+    }
+
+    public void PlayRoulette(int randomRound)
+    {
+        sfxService.PlayRoulette(randomRound);
+    }
+
+    public void RouletteLose()
+    {
+        sfxService.RouletteLose();
+    }
+
+    public void RouletteWin()
+    {
+        sfxService.RouletteWin();
+    }
+
+    public void RouletteTakeLoot()
+    {
+        sfxService.RouletteTakeLoot();
+    }
+
+    public void TakeFirstTokens()
+    {
+        sfxService.TakeFirstTokens();
+    }
+
+    public void Transition()
+    {
+        sfxService.Transition();
+    }
+
+    public void BlackJackWin()
+    {
+        sfxService.BlackJackWin();
+    }
+
+    public void BlackJackLose()
+    {
+        sfxService.BlackJackLose();   
     }
 }

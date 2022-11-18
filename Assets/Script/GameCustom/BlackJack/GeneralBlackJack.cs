@@ -175,6 +175,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
             if (healthEnemy <= 0)
             {
                 ServiceLocator.Instance.GetService<IGlobalInformation>().WinHexagon();
+                ServiceLocator.Instance.GetService<IAudioService>().BlackJackWin();
                 ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton("You Win",
                     $"Win {tokensForGame} for play the roulette", "Go to CityBuilding",
                     GoToCityBuilding, GoToCityBuilding);
@@ -184,6 +185,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
             if (_healthPlayer <= 0)
             {
                 ServiceLocator.Instance.GetService<IGlobalInformation>().LoseHexagon();
+                ServiceLocator.Instance.GetService<IAudioService>().BlackJackLose();
                 ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton("You Lose",
                     $"Win {tokensForGame} for play the roulette", "Go to CityBuilding",
                     GoToCityBuilding, GoToCityBuilding);
