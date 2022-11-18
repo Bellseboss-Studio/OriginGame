@@ -10,7 +10,7 @@ namespace SystemOfExtras
     {
         [SerializeField] private DialogSystem dialogSystem;
         [SerializeField] private LoadSceneService ladSceneM;
-        [SerializeField] private MixerManager mixerManager;
+        [SerializeField] private AudioService audioService;
         [SerializeField] private int cityBuilding, roulette, shop, healthEnemyBase, damageEnemyBase;
         [SerializeField] private float increment;
         private void Awake()
@@ -37,7 +37,7 @@ namespace SystemOfExtras
             ServiceLocator.Instance.RegisterService<IStatsInformation>(global);
             ServiceLocator.Instance.RegisterService<IShopService>(global);
             ServiceLocator.Instance.RegisterService<IRouletteService>(new RouletteAwards());
-            ServiceLocator.Instance.RegisterService(mixerManager);
+            ServiceLocator.Instance.RegisterService<IAudioService>(audioService);
             DontDestroyOnLoad(gameObject);
         }
     }

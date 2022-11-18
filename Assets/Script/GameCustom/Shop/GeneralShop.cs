@@ -18,6 +18,7 @@ public class GeneralShop : MonoBehaviour
     private float height = 300f;
     void Start()
     {
+        ServiceLocator.Instance.GetService<IAudioService>().StayInMenu();
         var sizeOfContainer = 0;
         var deltaHeight = baseHeight;
         var statsToShop = ServiceLocator.Instance.GetService<IShopService>().GetElements();

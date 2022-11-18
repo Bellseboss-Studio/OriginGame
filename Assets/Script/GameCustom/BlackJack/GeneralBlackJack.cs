@@ -28,6 +28,7 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
 
     private void Start()
     {
+        ServiceLocator.Instance.GetService<IAudioService>().StayInBlackJack();
         skipTutorial.gameObject.SetActive(true);
         skipTutorial.onClick.AddListener(() =>
         {
