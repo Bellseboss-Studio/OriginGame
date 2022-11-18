@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -288,6 +288,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1227984602}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2187532
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +460,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1157969996}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &4019724
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +548,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1563345373}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &5028958
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +689,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 689679580}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &7447727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1467,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1328880591}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &17441648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,6 +1837,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 287866631}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &29853572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +2009,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 88416595}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &34217208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2259,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 875619160}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &41521412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,6 +2761,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 193676956}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &50282275
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,6 +3924,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1263263418}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &62525630
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,6 +3980,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1740132248}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &63319555
 GameObject:
   m_ObjectHideFlags: 0
@@ -4156,6 +4178,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1974218818}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &65934799
 GameObject:
   m_ObjectHideFlags: 0
@@ -4241,6 +4265,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 474223115}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &66883592
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,6 +4880,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 76815786}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &72143416
 GameObject:
   m_ObjectHideFlags: 0
@@ -5275,6 +5303,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1270696325}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &81432832
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,6 +5360,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1957483273}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &83456612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,6 +5694,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 238509275}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &88416595
 GameObject:
   m_ObjectHideFlags: 0
@@ -6489,6 +6523,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2017674402}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &110381490
 GameObject:
   m_ObjectHideFlags: 0
@@ -6543,6 +6579,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1998941344}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &112076079
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,6 +6697,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1736154776}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &117999503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6745,6 +6785,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1694557327}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &120217742
 GameObject:
   m_ObjectHideFlags: 0
@@ -6940,6 +6982,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1937269990}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &123181168
 GameObject:
   m_ObjectHideFlags: 0
@@ -7119,6 +7163,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1951212017}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &130879471
 GameObject:
   m_ObjectHideFlags: 0
@@ -7173,6 +7219,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2027262166}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &133339972
 GameObject:
   m_ObjectHideFlags: 0
@@ -8017,6 +8065,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2089418412}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &144935945
 GameObject:
   m_ObjectHideFlags: 0
@@ -8402,6 +8452,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 14828662}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &152638184
 GameObject:
   m_ObjectHideFlags: 0
@@ -8540,6 +8592,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1665515867}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &154394600
 GameObject:
   m_ObjectHideFlags: 0
@@ -9182,6 +9236,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 88894494}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &169427731
 GameObject:
   m_ObjectHideFlags: 0
@@ -9378,6 +9434,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1911477925}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &170427858
 GameObject:
   m_ObjectHideFlags: 0
@@ -9542,6 +9600,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1313436176}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &171594219
 GameObject:
   m_ObjectHideFlags: 0
@@ -9900,6 +9960,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 904457940}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &172882324
 GameObject:
   m_ObjectHideFlags: 0
@@ -9955,6 +10017,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1965785216}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &176182019
 GameObject:
   m_ObjectHideFlags: 0
@@ -10009,6 +10073,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1148383903}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &176453153
 GameObject:
   m_ObjectHideFlags: 0
@@ -10064,6 +10130,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2009515344}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &177940998
 GameObject:
   m_ObjectHideFlags: 0
@@ -10119,6 +10187,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 321045529}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &179394098
 GameObject:
   m_ObjectHideFlags: 0
@@ -10174,6 +10244,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1663894298}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &181456344
 GameObject:
   m_ObjectHideFlags: 0
@@ -10259,6 +10331,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1202337878}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &181995790
 GameObject:
   m_ObjectHideFlags: 0
@@ -10764,6 +10838,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1156217382}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &186756693
 GameObject:
   m_ObjectHideFlags: 0
@@ -11075,6 +11151,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2127969428}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &190238508
 GameObject:
   m_ObjectHideFlags: 0
@@ -11129,6 +11207,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 650855066}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &190653108
 GameObject:
   m_ObjectHideFlags: 0
@@ -11466,6 +11546,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1476756401}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &196196350
 GameObject:
   m_ObjectHideFlags: 0
@@ -11552,6 +11634,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 499563524}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &198783156
 GameObject:
   m_ObjectHideFlags: 0
@@ -11638,6 +11722,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1324378043}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &201647838
 GameObject:
   m_ObjectHideFlags: 0
@@ -11693,6 +11779,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1041844302}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &202345468
 GameObject:
   m_ObjectHideFlags: 0
@@ -11778,6 +11866,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1995576708}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &204406524
 GameObject:
   m_ObjectHideFlags: 0
@@ -12052,6 +12142,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1670039854}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &208250397
 GameObject:
   m_ObjectHideFlags: 0
@@ -12106,6 +12198,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1366871318}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &208610486
 GameObject:
   m_ObjectHideFlags: 0
@@ -12160,6 +12254,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2080447512}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &209376159
 GameObject:
   m_ObjectHideFlags: 0
@@ -12583,6 +12679,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2060586326}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &221313138
 GameObject:
   m_ObjectHideFlags: 0
@@ -12747,6 +12845,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 196196350}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &224010838
 GameObject:
   m_ObjectHideFlags: 0
@@ -12973,6 +13073,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2052766816}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &231399787
 GameObject:
   m_ObjectHideFlags: 0
@@ -13314,6 +13416,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 315191667}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &238509275
 GameObject:
   m_ObjectHideFlags: 0
@@ -13839,6 +13943,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 237327064}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &248685876
 GameObject:
   m_ObjectHideFlags: 0
@@ -14338,6 +14444,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 918321790}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &254950402
 GameObject:
   m_ObjectHideFlags: 0
@@ -14533,6 +14641,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1931079707}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &255426063
 GameObject:
   m_ObjectHideFlags: 0
@@ -14619,6 +14729,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1124171380}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &257321621
 GameObject:
   m_ObjectHideFlags: 0
@@ -14705,6 +14817,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1487588948}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &258413532
 GameObject:
   m_ObjectHideFlags: 0
@@ -14759,6 +14873,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1009168297}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &260918043
 GameObject:
   m_ObjectHideFlags: 0
@@ -14845,6 +14961,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1983179434}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &262219578
 GameObject:
   m_ObjectHideFlags: 0
@@ -15177,6 +15295,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2134147829}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &267737702
 GameObject:
   m_ObjectHideFlags: 0
@@ -15293,6 +15413,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 815973561}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &270846944
 GameObject:
   m_ObjectHideFlags: 0
@@ -15348,6 +15470,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1370672357}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &271318067
 GameObject:
   m_ObjectHideFlags: 0
@@ -15403,6 +15527,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1628704814}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &272859287
 GameObject:
   m_ObjectHideFlags: 0
@@ -15854,6 +15980,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1457158162}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &283241898
 GameObject:
   m_ObjectHideFlags: 0
@@ -17726,6 +17854,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 7447727}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &305319977
 GameObject:
   m_ObjectHideFlags: 0
@@ -18151,6 +18281,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 620164963}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &314079906
 GameObject:
   m_ObjectHideFlags: 0
@@ -18320,6 +18452,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1789645096}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &320085713
 GameObject:
   m_ObjectHideFlags: 0
@@ -18405,6 +18539,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1127804940}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &321045529
 GameObject:
   m_ObjectHideFlags: 0
@@ -18491,6 +18627,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1608073369}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &325993396
 GameObject:
   m_ObjectHideFlags: 0
@@ -18545,6 +18683,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 289692228}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &327230430
 GameObject:
   m_ObjectHideFlags: 0
@@ -18662,6 +18802,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 863933017}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &335627114
 GameObject:
   m_ObjectHideFlags: 0
@@ -18717,6 +18859,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 117999503}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &335901598
 GameObject:
   m_ObjectHideFlags: 0
@@ -18913,6 +19057,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1480648170}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &343587411
 GameObject:
   m_ObjectHideFlags: 0
@@ -18968,6 +19114,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 627627304}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &344187056
 GameObject:
   m_ObjectHideFlags: 0
@@ -19022,6 +19170,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 753279250}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &346803358
 GameObject:
   m_ObjectHideFlags: 0
@@ -19218,6 +19368,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 557213880}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &351138066
 GameObject:
   m_ObjectHideFlags: 0
@@ -19445,6 +19597,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1806532080}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &355943872
 GameObject:
   m_ObjectHideFlags: 0
@@ -19667,6 +19821,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1391974972}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &360203572
 GameObject:
   m_ObjectHideFlags: 0
@@ -19722,6 +19878,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1526481217}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &362383442
 GameObject:
   m_ObjectHideFlags: 0
@@ -19777,6 +19935,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1326377553}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &364796655
 GameObject:
   m_ObjectHideFlags: 0
@@ -20140,6 +20300,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 248685876}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &366116145
 GameObject:
   m_ObjectHideFlags: 0
@@ -20279,6 +20441,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1647707403}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &370335459
 GameObject:
   m_ObjectHideFlags: 0
@@ -20333,6 +20497,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1729201782}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &370951084
 GameObject:
   m_ObjectHideFlags: 0
@@ -20388,6 +20554,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 169427731}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &372456633
 GameObject:
   m_ObjectHideFlags: 0
@@ -21076,6 +21244,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 437436007}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &378772172
 GameObject:
   m_ObjectHideFlags: 0
@@ -21131,6 +21301,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 351138066}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &381420844
 GameObject:
   m_ObjectHideFlags: 0
@@ -21186,6 +21358,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 269018497}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &381618166
 GameObject:
   m_ObjectHideFlags: 0
@@ -21240,6 +21414,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1104183038}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &382456183
 GameObject:
   m_ObjectHideFlags: 0
@@ -22515,6 +22691,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 888586767}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &394265137
 GameObject:
   m_ObjectHideFlags: 0
@@ -22680,6 +22858,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1376518792}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &394674372
 GameObject:
   m_ObjectHideFlags: 0
@@ -22845,6 +23025,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1786037971}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &397527127
 GameObject:
   m_ObjectHideFlags: 0
@@ -23010,6 +23192,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 666541332}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &402758198
 GameObject:
   m_ObjectHideFlags: 0
@@ -23064,6 +23248,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1295037848}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &403680767
 GameObject:
   m_ObjectHideFlags: 0
@@ -23229,6 +23415,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1380476588}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &407704602
 GameObject:
   m_ObjectHideFlags: 0
@@ -23284,6 +23472,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2036309320}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &409379725
 GameObject:
   m_ObjectHideFlags: 0
@@ -23339,6 +23529,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1452467919}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &410129224
 GameObject:
   m_ObjectHideFlags: 0
@@ -23394,6 +23586,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 267737702}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &411533797
 GameObject:
   m_ObjectHideFlags: 0
@@ -23815,6 +24009,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 816019170}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &418390216
 GameObject:
   m_ObjectHideFlags: 0
@@ -23870,6 +24066,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 257321621}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &421872124
 GameObject:
   m_ObjectHideFlags: 0
@@ -23925,6 +24123,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 9938886}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &425093689
 GameObject:
   m_ObjectHideFlags: 0
@@ -24408,6 +24608,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1569838727}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &441093089
 GameObject:
   m_ObjectHideFlags: 0
@@ -24577,6 +24779,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 867162176}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &444055417
 GameObject:
   m_ObjectHideFlags: 0
@@ -24632,6 +24836,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 756275493}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &444944435
 GameObject:
   m_ObjectHideFlags: 0
@@ -24770,6 +24976,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1082254084}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &448128631
 GameObject:
   m_ObjectHideFlags: 0
@@ -24918,6 +25126,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1197373431}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &453563610
 GameObject:
   m_ObjectHideFlags: 0
@@ -25198,6 +25408,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 224010838}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &459083769
 GameObject:
   m_ObjectHideFlags: 0
@@ -25253,6 +25465,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1657310881}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &459378162
 GameObject:
   m_ObjectHideFlags: 0
@@ -25338,6 +25552,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 412173469}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &465438406
 GameObject:
   m_ObjectHideFlags: 0
@@ -25455,6 +25671,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 63844604}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &467645481
 GameObject:
   m_ObjectHideFlags: 0
@@ -25766,6 +25984,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 489869721}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &476283711
 GameObject:
   m_ObjectHideFlags: 0
@@ -25931,6 +26151,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 714018399}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &479361558
 GameObject:
   m_ObjectHideFlags: 0
@@ -26412,6 +26634,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 9310684}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &495722983
 GameObject:
   m_ObjectHideFlags: 0
@@ -26943,6 +27167,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1835915207}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &501626982
 GameObject:
   m_ObjectHideFlags: 0
@@ -27107,6 +27333,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1982176564}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &504107125
 GameObject:
   m_ObjectHideFlags: 0
@@ -28066,6 +28294,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1940344972}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &523074998
 GameObject:
   m_ObjectHideFlags: 0
@@ -28492,6 +28722,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 812239612}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &534266488
 GameObject:
   m_ObjectHideFlags: 0
@@ -29517,6 +29749,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 93195542}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &557213880
 GameObject:
   m_ObjectHideFlags: 0
@@ -29603,6 +29837,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1048763840}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &559428481
 GameObject:
   m_ObjectHideFlags: 0
@@ -30103,6 +30339,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 298594167}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &562269400
 GameObject:
   m_ObjectHideFlags: 0
@@ -30189,6 +30427,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 917071783}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &567337607
 GameObject:
   m_ObjectHideFlags: 0
@@ -30384,6 +30624,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 120217742}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &570117937
 GameObject:
   m_ObjectHideFlags: 0
@@ -30522,6 +30764,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1783800696}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &572922718
 GameObject:
   m_ObjectHideFlags: 0
@@ -30660,6 +30904,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 283260656}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &573844370
 GameObject:
   m_ObjectHideFlags: 0
@@ -30909,6 +31155,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 681441255}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &579183079
 GameObject:
   m_ObjectHideFlags: 0
@@ -30995,6 +31243,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1318283747}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &585750038
 GameObject:
   m_ObjectHideFlags: 0
@@ -31049,6 +31299,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 535758168}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &586185028
 GameObject:
   m_ObjectHideFlags: 0
@@ -31166,6 +31418,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1772048327}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &588769928
 GameObject:
   m_ObjectHideFlags: 0
@@ -31733,6 +31987,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 961624044}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &597889874
 GameObject:
   m_ObjectHideFlags: 0
@@ -31787,6 +32043,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 696097397}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &604529803
 GameObject:
   m_ObjectHideFlags: 0
@@ -31952,6 +32210,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1079675112}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &609155385
 GameObject:
   m_ObjectHideFlags: 0
@@ -32231,6 +32491,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 656285966}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &611706174
 GameObject:
   m_ObjectHideFlags: 0
@@ -32286,6 +32548,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 431355282}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &611722813
 GameObject:
   m_ObjectHideFlags: 0
@@ -32341,6 +32605,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 721203450}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &612699373
 GameObject:
   m_ObjectHideFlags: 0
@@ -32396,6 +32662,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1485691509}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &614153924
 GameObject:
   m_ObjectHideFlags: 0
@@ -32764,6 +33032,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2044610547}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &624843795
 GameObject:
   m_ObjectHideFlags: 0
@@ -34237,6 +34507,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 229054230}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &650809215
 GameObject:
   m_ObjectHideFlags: 0
@@ -34292,6 +34564,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1386891252}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &650824135
 GameObject:
   m_ObjectHideFlags: 0
@@ -34347,6 +34621,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1897379000}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &650855066
 GameObject:
   m_ObjectHideFlags: 0
@@ -34626,6 +34902,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1769485269}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &656285966
 GameObject:
   m_ObjectHideFlags: 0
@@ -34906,6 +35184,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1909356621}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &660383501
 GameObject:
   m_ObjectHideFlags: 0
@@ -34960,6 +35240,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1788086007}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &660703317
 GameObject:
   m_ObjectHideFlags: 0
@@ -35319,6 +35601,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 971742165}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &664128429
 GameObject:
   m_ObjectHideFlags: 0
@@ -36635,6 +36919,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1056561706}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &680499355
 GameObject:
   m_ObjectHideFlags: 0
@@ -37117,6 +37403,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1900682667}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &684955974
 GameObject:
   m_ObjectHideFlags: 0
@@ -37172,6 +37460,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 946398396}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &687401534
 GameObject:
   m_ObjectHideFlags: 0
@@ -37509,6 +37799,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1571375168}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &691795771
 GameObject:
   m_ObjectHideFlags: 0
@@ -37564,6 +37856,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 130499597}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &693047690
 GameObject:
   m_ObjectHideFlags: 0
@@ -37619,6 +37913,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 451817525}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &693418539
 GameObject:
   m_ObjectHideFlags: 0
@@ -37673,6 +37969,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1229082414}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &694962386
 GameObject:
   m_ObjectHideFlags: 0
@@ -37900,6 +38198,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1700082531}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &698366980
 GameObject:
   m_ObjectHideFlags: 0
@@ -37955,6 +38255,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1515396696}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &699566509
 GameObject:
   m_ObjectHideFlags: 0
@@ -38543,6 +38845,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 589054372}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &709981809
 GameObject:
   m_ObjectHideFlags: 0
@@ -38628,6 +38932,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 702560279}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &711621114
 GameObject:
   m_ObjectHideFlags: 0
@@ -38913,10 +39219,10 @@ RectTransform:
   m_Father: {fileID: 2008414002}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2537, y: 0.7857}
-  m_SizeDelta: {x: 417.219, y: 730.2865}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &715460423
 Animator:
@@ -39031,6 +39337,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2121202138}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &717247768
 GameObject:
   m_ObjectHideFlags: 0
@@ -39086,6 +39394,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1067187190}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &718586648
 GameObject:
   m_ObjectHideFlags: 0
@@ -39251,6 +39561,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2144825027}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &720565645
 GameObject:
   m_ObjectHideFlags: 0
@@ -39592,6 +39904,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2085657674}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &724604452
 GameObject:
   m_ObjectHideFlags: 0
@@ -39871,6 +40185,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1193006813}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &731432224
 GameObject:
   m_ObjectHideFlags: 0
@@ -40120,6 +40436,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1564045437}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &734190765
 GameObject:
   m_ObjectHideFlags: 0
@@ -40285,6 +40603,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1537097229}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &737892443
 GameObject:
   m_ObjectHideFlags: 0
@@ -40339,6 +40659,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1840153603}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &739148337
 GameObject:
   m_ObjectHideFlags: 0
@@ -40901,6 +41223,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1861221909}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &753228484
 GameObject:
   m_ObjectHideFlags: 0
@@ -41154,6 +41478,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1132509072}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &756259080
 GameObject:
   m_ObjectHideFlags: 0
@@ -41208,6 +41534,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1780582043}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &756275493
 GameObject:
   m_ObjectHideFlags: 0
@@ -41545,6 +41873,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1921971696}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &760326630
 GameObject:
   m_ObjectHideFlags: 0
@@ -41599,6 +41929,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1326333292}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &760936548
 GameObject:
   m_ObjectHideFlags: 0
@@ -41826,6 +42158,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1499065086}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &764451306
 GameObject:
   m_ObjectHideFlags: 0
@@ -41912,6 +42246,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 924652105}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &768331012
 GameObject:
   m_ObjectHideFlags: 0
@@ -42108,6 +42444,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 871627681}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &776228636
 GameObject:
   m_ObjectHideFlags: 0
@@ -42357,6 +42695,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2052349828}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &781695626
 GameObject:
   m_ObjectHideFlags: 0
@@ -42883,6 +43223,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2097189853}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &788796780
 GameObject:
   m_ObjectHideFlags: 0
@@ -42938,6 +43280,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 918258262}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &789884844
 GameObject:
   m_ObjectHideFlags: 0
@@ -43170,6 +43514,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1866288203}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &799570611
 GameObject:
   m_ObjectHideFlags: 0
@@ -43476,6 +43822,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 511038904}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &805462134
 GameObject:
   m_ObjectHideFlags: 0
@@ -43530,6 +43878,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1532648879}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &805536451
 GameObject:
   m_ObjectHideFlags: 0
@@ -43668,6 +44018,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 722454916}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &805862080
 GameObject:
   m_ObjectHideFlags: 0
@@ -43723,6 +44075,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 822611828}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &806071186
 GameObject:
   m_ObjectHideFlags: 0
@@ -43861,6 +44215,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 486884123}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &809574997
 GameObject:
   m_ObjectHideFlags: 0
@@ -44815,6 +45171,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1407958155}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &840479711
 GameObject:
   m_ObjectHideFlags: 0
@@ -44870,6 +45228,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1958946814}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &840511946
 GameObject:
   m_ObjectHideFlags: 0
@@ -44987,6 +45347,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 786529850}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &847272101
 GameObject:
   m_ObjectHideFlags: 0
@@ -45236,6 +45598,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 113676466}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &851528519
 GameObject:
   m_ObjectHideFlags: 0
@@ -45991,6 +46355,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 101661154}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &869986450
 GameObject:
   m_ObjectHideFlags: 0
@@ -46465,6 +46831,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 13296764}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &875100474
 GameObject:
   m_ObjectHideFlags: 0
@@ -47164,6 +47532,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 364796655}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &881616078
 GameObject:
   m_ObjectHideFlags: 0
@@ -47218,6 +47588,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 622881390}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &881762260
 GameObject:
   m_ObjectHideFlags: 0
@@ -47273,6 +47645,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1166837775}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &882853861
 GameObject:
   m_ObjectHideFlags: 0
@@ -47328,6 +47702,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1095106646}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &883396774
 GameObject:
   m_ObjectHideFlags: 0
@@ -47383,6 +47759,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 569212611}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &884140541
 GameObject:
   m_ObjectHideFlags: 0
@@ -47438,6 +47816,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1885991644}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &885846005
 GameObject:
   m_ObjectHideFlags: 0
@@ -47603,6 +47983,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 761623673}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &886191542
 GameObject:
   m_ObjectHideFlags: 0
@@ -47767,6 +48149,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 299647894}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &888586767
 GameObject:
   m_ObjectHideFlags: 0
@@ -48521,6 +48905,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1917375669}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &904457940
 GameObject:
   m_ObjectHideFlags: 0
@@ -48607,6 +48993,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1478675479}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &907225736
 GameObject:
   m_ObjectHideFlags: 0
@@ -48913,6 +49301,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1647109851}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &912864099
 GameObject:
   m_ObjectHideFlags: 0
@@ -48968,6 +49358,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 494596400}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &912914117
 GameObject:
   m_ObjectHideFlags: 0
@@ -49471,6 +49863,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 189791555}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &917071783
 GameObject:
   m_ObjectHideFlags: 0
@@ -49760,6 +50154,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1936906325}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &924041941
 GameObject:
   m_ObjectHideFlags: 0
@@ -50079,6 +50475,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 944485720}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &930637631
 GameObject:
   m_ObjectHideFlags: 0
@@ -50244,6 +50642,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 127330605}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &935760668
 GameObject:
   m_ObjectHideFlags: 0
@@ -50439,6 +50839,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 680499355}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &944485720
 GameObject:
   m_ObjectHideFlags: 0
@@ -50634,6 +51036,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 551695206}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &944834187
 GameObject:
   m_ObjectHideFlags: 0
@@ -50861,6 +51265,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2005569075}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &946708684
 GameObject:
   m_ObjectHideFlags: 0
@@ -51219,6 +51625,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1926689334}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &951586360
 GameObject:
   m_ObjectHideFlags: 0
@@ -51274,6 +51682,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1578192031}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &951642772
 GameObject:
   m_ObjectHideFlags: 0
@@ -51329,6 +51739,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1714250701}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &959644680
 GameObject:
   m_ObjectHideFlags: 0
@@ -51609,6 +52021,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 210705404}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &961327239
 GameObject:
   m_ObjectHideFlags: 0
@@ -51664,6 +52078,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 609155385}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &961338816
 GameObject:
   m_ObjectHideFlags: 0
@@ -51718,6 +52134,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1847283564}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &961624044
 GameObject:
   m_ObjectHideFlags: 0
@@ -52155,6 +52573,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 894934325}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &971742165
 GameObject:
   m_ObjectHideFlags: 0
@@ -52381,6 +52801,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1431858207}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &973999865
 GameObject:
   m_ObjectHideFlags: 0
@@ -52467,6 +52889,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2110676423}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &977720760
 GameObject:
   m_ObjectHideFlags: 0
@@ -52778,6 +53202,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1731416435}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &984711994
 GameObject:
   m_ObjectHideFlags: 0
@@ -53668,6 +54094,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1901814329}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &990748439
 GameObject:
   m_ObjectHideFlags: 0
@@ -54058,6 +54486,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1771033413}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &995419107
 GameObject:
   m_ObjectHideFlags: 0
@@ -54113,6 +54543,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1709095991}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &995485097
 GameObject:
   m_ObjectHideFlags: 0
@@ -54251,6 +54683,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2187532}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1000170882
 GameObject:
   m_ObjectHideFlags: 0
@@ -54306,6 +54740,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 555073258}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1000250897
 GameObject:
   m_ObjectHideFlags: 0
@@ -55260,6 +55696,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1671017349}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1015079442
 GameObject:
   m_ObjectHideFlags: 0
@@ -55508,6 +55946,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 586185028}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1020989432
 GameObject:
   m_ObjectHideFlags: 0
@@ -55788,6 +56228,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 941189211}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1024305033
 GameObject:
   m_ObjectHideFlags: 0
@@ -56095,6 +56537,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1911008299}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1027559188
 GameObject:
   m_ObjectHideFlags: 0
@@ -56370,6 +56814,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 586876573}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1031416997
 GameObject:
   m_ObjectHideFlags: 0
@@ -57046,6 +57492,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1362025351}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1048266154
 GameObject:
   m_ObjectHideFlags: 0
@@ -57101,6 +57549,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 748115945}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1048431151
 GameObject:
   m_ObjectHideFlags: 0
@@ -57327,6 +57777,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1504001503}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1051532294
 GameObject:
   m_ObjectHideFlags: 0
@@ -57382,6 +57834,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1308705731}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1053299791
 GameObject:
   m_ObjectHideFlags: 0
@@ -57436,6 +57890,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2119403900}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1053406888
 GameObject:
   m_ObjectHideFlags: 0
@@ -57882,6 +58338,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 189144945}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1060827818
 GameObject:
   m_ObjectHideFlags: 0
@@ -58052,6 +58510,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1573394693}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1067187190
 GameObject:
   m_ObjectHideFlags: 0
@@ -58446,6 +58906,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 65934799}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1075523780
 GameObject:
   m_ObjectHideFlags: 0
@@ -59421,6 +59883,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 277477028}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1087122993
 GameObject:
   m_ObjectHideFlags: 0
@@ -59476,6 +59940,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 235519270}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1087178912
 GameObject:
   m_ObjectHideFlags: 0
@@ -59782,6 +60248,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1542903522}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1089542093
 GameObject:
   m_ObjectHideFlags: 0
@@ -60647,6 +61115,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1260683546}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1102667208
 GameObject:
   m_ObjectHideFlags: 0
@@ -60701,6 +61171,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 789884844}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1103301453
 GameObject:
   m_ObjectHideFlags: 0
@@ -60897,6 +61369,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 620478256}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1103908847
 GameObject:
   m_ObjectHideFlags: 0
@@ -61264,6 +61738,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 541624284}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1109893411
 GameObject:
   m_ObjectHideFlags: 0
@@ -61319,6 +61795,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 680033409}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1110156078
 GameObject:
   m_ObjectHideFlags: 0
@@ -61374,6 +61852,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1883338552}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1110252766
 GameObject:
   m_ObjectHideFlags: 0
@@ -62067,6 +62547,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 526078464}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1118505632
 GameObject:
   m_ObjectHideFlags: 0
@@ -62232,6 +62714,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2117134366}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1120373258
 GameObject:
   m_ObjectHideFlags: 0
@@ -62318,6 +62802,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 959644680}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1120915387
 GameObject:
   m_ObjectHideFlags: 0
@@ -62372,6 +62858,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1581914750}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1124171380
 GameObject:
   m_ObjectHideFlags: 0
@@ -62660,6 +63148,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 593695088}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1134067972
 GameObject:
   m_ObjectHideFlags: 0
@@ -62714,6 +63204,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1165842691}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1134748785
 GameObject:
   m_ObjectHideFlags: 0
@@ -62879,6 +63371,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2042101328}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1135946813
 GameObject:
   m_ObjectHideFlags: 0
@@ -63573,6 +64067,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1352660134}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1145075271
 GameObject:
   m_ObjectHideFlags: 0
@@ -63712,6 +64208,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1633209317}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1147180849
 GameObject:
   m_ObjectHideFlags: 0
@@ -63766,6 +64264,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1290088089}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1148383903
 GameObject:
   m_ObjectHideFlags: 0
@@ -63851,6 +64351,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 722634638}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1150118777
 GameObject:
   m_ObjectHideFlags: 0
@@ -63936,6 +64438,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 459378162}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1150212266
 GameObject:
   m_ObjectHideFlags: 0
@@ -63991,6 +64495,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 682158121}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1150254626
 GameObject:
   m_ObjectHideFlags: 0
@@ -64186,6 +64692,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1712749216}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1151730098
 GameObject:
   m_ObjectHideFlags: 0
@@ -64241,6 +64749,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 143923767}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1154413763
 GameObject:
   m_ObjectHideFlags: 0
@@ -64467,6 +64977,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1784494481}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1157398208
 GameObject:
   m_ObjectHideFlags: 0
@@ -65122,6 +65634,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1977653767}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1173789948
 GameObject:
   m_ObjectHideFlags: 0
@@ -65177,6 +65691,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 11173488}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1174422336
 GameObject:
   m_ObjectHideFlags: 0
@@ -65231,6 +65747,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1097098811}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1175158002
 GameObject:
   m_ObjectHideFlags: 0
@@ -65396,6 +65914,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1150118777}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1178809296
 GameObject:
   m_ObjectHideFlags: 0
@@ -65450,6 +65970,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1096040964}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1179461919
 GameObject:
   m_ObjectHideFlags: 0
@@ -65835,6 +66357,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 442614507}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1189318939
 GameObject:
   m_ObjectHideFlags: 0
@@ -65889,6 +66413,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1054446282}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1192140320
 GameObject:
   m_ObjectHideFlags: 0
@@ -65944,6 +66470,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1080158892}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1192394014
 GameObject:
   m_ObjectHideFlags: 0
@@ -66114,6 +66642,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 926717765}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1195265882
 GameObject:
   m_ObjectHideFlags: 0
@@ -66644,6 +67174,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 13613104}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1202337878
 GameObject:
   m_ObjectHideFlags: 0
@@ -66760,6 +67292,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 7526170}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1210276836
 GameObject:
   m_ObjectHideFlags: 0
@@ -66815,6 +67349,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 982537976}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1211030499
 GameObject:
   m_ObjectHideFlags: 0
@@ -67174,6 +67710,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1527114655}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1218229428
 GameObject:
   m_ObjectHideFlags: 0
@@ -67506,6 +68044,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 471871552}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1220822096
 GameObject:
   m_ObjectHideFlags: 0
@@ -67923,6 +68463,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 202345468}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1227984602
 GameObject:
   m_ObjectHideFlags: 0
@@ -68039,6 +68581,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 348015426}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1229082414
 GameObject:
   m_ObjectHideFlags: 0
@@ -68513,6 +69057,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1543416388}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1235482892
 GameObject:
   m_ObjectHideFlags: 0
@@ -68677,6 +69223,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 964733906}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1238357377
 GameObject:
   m_ObjectHideFlags: 0
@@ -68815,6 +69363,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 385201145}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1239756858
 GameObject:
   m_ObjectHideFlags: 0
@@ -68869,6 +69419,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 760936548}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1242024668
 GameObject:
   m_ObjectHideFlags: 0
@@ -68924,6 +69476,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1344378763}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1244486103
 GameObject:
   m_ObjectHideFlags: 0
@@ -68979,6 +69533,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 795253224}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1246524024
 GameObject:
   m_ObjectHideFlags: 0
@@ -69034,6 +69590,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1049300131}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1246723130
 GameObject:
   m_ObjectHideFlags: 0
@@ -69089,6 +69647,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1163009903}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1246971398
 GameObject:
   m_ObjectHideFlags: 0
@@ -69311,6 +69871,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 280818441}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1252693872
 GameObject:
   m_ObjectHideFlags: 0
@@ -69559,6 +70121,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 840511946}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1259788091
 GameObject:
   m_ObjectHideFlags: 0
@@ -69569,7 +70133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1259788094}
   - component: {fileID: 1259788093}
-  - component: {fileID: 1259788092}
+  - component: {fileID: 1259788095}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -69577,26 +70141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1259788092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1259788091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1259788093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69627,6 +70171,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1259788095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259788091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!1 &1260655900
 GameObject:
   m_ObjectHideFlags: 0
@@ -69682,6 +70255,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 272859287}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1260683546
 GameObject:
   m_ObjectHideFlags: 0
@@ -70134,6 +70709,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1454872367}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1269333523
 GameObject:
   m_ObjectHideFlags: 0
@@ -70188,6 +70765,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1608578196}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1270010342
 GameObject:
   m_ObjectHideFlags: 0
@@ -70635,6 +71214,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 297422665}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1278983539
 GameObject:
   m_ObjectHideFlags: 0
@@ -70690,6 +71271,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 260918043}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1278989950
 GameObject:
   m_ObjectHideFlags: 0
@@ -70854,6 +71437,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2044457708}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1283657642
 GameObject:
   m_ObjectHideFlags: 0
@@ -71213,6 +71798,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1940266141}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1288388563
 GameObject:
   m_ObjectHideFlags: 0
@@ -71268,6 +71855,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 123181168}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1289290678
 GameObject:
   m_ObjectHideFlags: 0
@@ -71609,6 +72198,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1297636574}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1300381218
 GameObject:
   m_ObjectHideFlags: 0
@@ -71999,6 +72590,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 709981809}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1313436176
 GameObject:
   m_ObjectHideFlags: 0
@@ -72169,6 +72762,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2020244766}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1315138552
 GameObject:
   m_ObjectHideFlags: 0
@@ -72338,6 +72933,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1621322576}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1319246246
 GameObject:
   m_ObjectHideFlags: 0
@@ -72393,6 +72990,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1888283930}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1321437278
 GameObject:
   m_ObjectHideFlags: 0
@@ -72447,6 +73046,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1377649403}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1322299295
 GameObject:
   m_ObjectHideFlags: 0
@@ -72501,6 +73102,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 41521412}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1323697930
 GameObject:
   m_ObjectHideFlags: 0
@@ -72640,6 +73243,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 327230430}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1324378043
 GameObject:
   m_ObjectHideFlags: 0
@@ -73404,6 +74009,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 142099597}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1339464404
 GameObject:
   m_ObjectHideFlags: 0
@@ -73678,6 +74285,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1489453572}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1342676124
 GameObject:
   m_ObjectHideFlags: 0
@@ -74150,6 +74759,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2083053304}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1352660134
 GameObject:
   m_ObjectHideFlags: 0
@@ -74345,6 +74956,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 972387718}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1355598731
 GameObject:
   m_ObjectHideFlags: 0
@@ -74509,6 +75122,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1626366451}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1362025351
 GameObject:
   m_ObjectHideFlags: 0
@@ -74846,6 +75461,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 354193885}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1366820401
 GameObject:
   m_ObjectHideFlags: 0
@@ -75042,6 +75659,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1069335924}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1370672357
 GameObject:
   m_ObjectHideFlags: 0
@@ -75745,6 +76364,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1715295510}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1384139851
 GameObject:
   m_ObjectHideFlags: 0
@@ -75910,6 +76531,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1205595337}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1385642686
 GameObject:
   m_ObjectHideFlags: 0
@@ -76216,6 +76839,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 505341670}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1390483988
 GameObject:
   m_ObjectHideFlags: 0
@@ -76945,6 +77570,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2096107863}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1398973011
 GameObject:
   m_ObjectHideFlags: 0
@@ -77110,6 +77737,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 507189492}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1401915486
 GameObject:
   m_ObjectHideFlags: 0
@@ -77357,6 +77986,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 728008933}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1407958155
 GameObject:
   m_ObjectHideFlags: 0
@@ -77525,6 +78156,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 159197014}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1411486703
 GameObject:
   m_ObjectHideFlags: 0
@@ -77690,6 +78323,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1557914996}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1414705197
 GameObject:
   m_ObjectHideFlags: 0
@@ -78325,6 +78960,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 100413132}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1420974654
 GameObject:
   m_ObjectHideFlags: 0
@@ -78877,6 +79514,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 747826580}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1424915415
 GameObject:
   m_ObjectHideFlags: 0
@@ -79041,6 +79680,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2140420183}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1428223467
 GameObject:
   m_ObjectHideFlags: 0
@@ -79567,6 +80208,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 840961909}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1433999628
 GameObject:
   m_ObjectHideFlags: 0
@@ -79622,6 +80265,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 758037616}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1434720078
 GameObject:
   m_ObjectHideFlags: 0
@@ -79677,6 +80322,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 483963901}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1438668245
 GameObject:
   m_ObjectHideFlags: 0
@@ -79926,6 +80573,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 667234808}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1440460203
 GameObject:
   m_ObjectHideFlags: 0
@@ -80175,6 +80824,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1467580601}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1447994407
 GameObject:
   m_ObjectHideFlags: 0
@@ -80230,6 +80881,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 579183079}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1448814680
 GameObject:
   m_ObjectHideFlags: 0
@@ -80738,6 +81391,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 451160944}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1460329330
 GameObject:
   m_ObjectHideFlags: 0
@@ -81233,6 +81888,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 495722983}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1470914781
 GameObject:
   m_ObjectHideFlags: 0
@@ -81287,6 +81944,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 182381426}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1472238426
 GameObject:
   m_ObjectHideFlags: 0
@@ -81341,6 +82000,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 426760361}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1472244658
 GameObject:
   m_ObjectHideFlags: 0
@@ -81396,6 +82057,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2082038690}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1473032753
 GameObject:
   m_ObjectHideFlags: 0
@@ -81843,6 +82506,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 448128631}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1478675479
 GameObject:
   m_ObjectHideFlags: 0
@@ -82663,6 +83328,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1523141908}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1495458898
 GameObject:
   m_ObjectHideFlags: 0
@@ -82802,6 +83469,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 136690000}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1499065086
 GameObject:
   m_ObjectHideFlags: 0
@@ -82887,6 +83556,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1021365524}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1502966780
 GameObject:
   m_ObjectHideFlags: 0
@@ -82941,6 +83612,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2004817953}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1503723736
 GameObject:
   m_ObjectHideFlags: 0
@@ -83136,6 +83809,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 437781858}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1507422339
 GameObject:
   m_ObjectHideFlags: 0
@@ -83301,6 +83976,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1390483988}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1510156553
 GameObject:
   m_ObjectHideFlags: 0
@@ -83576,6 +84253,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 676000285}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1512359443
 GameObject:
   m_ObjectHideFlags: 0
@@ -83741,6 +84420,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1588225020}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1515396696
 GameObject:
   m_ObjectHideFlags: 0
@@ -84087,6 +84768,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 68826436}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1523141908
 GameObject:
   m_ObjectHideFlags: 0
@@ -84397,6 +85080,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1012484678}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1527114655
 GameObject:
   m_ObjectHideFlags: 0
@@ -84677,6 +85362,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 504107125}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1532648879
 GameObject:
   m_ObjectHideFlags: 0
@@ -85552,6 +86239,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 310274429}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1549961936
 GameObject:
   m_ObjectHideFlags: 0
@@ -85717,6 +86406,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1196836641}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1555092288
 GameObject:
   m_ObjectHideFlags: 0
@@ -85882,6 +86573,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1063025337}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1557629902
 GameObject:
   m_ObjectHideFlags: 0
@@ -86281,6 +86974,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 899205021}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1565100084
 GameObject:
   m_ObjectHideFlags: 0
@@ -86336,6 +87031,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1681043924}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1565877068
 GameObject:
   m_ObjectHideFlags: 0
@@ -86391,6 +87088,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1909474239}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1566113350
 GameObject:
   m_ObjectHideFlags: 0
@@ -86446,6 +87145,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 597439477}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1566941134
 GameObject:
   m_ObjectHideFlags: 0
@@ -86500,6 +87201,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 768331012}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1569838727
 GameObject:
   m_ObjectHideFlags: 0
@@ -87229,6 +87932,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1328607356}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1577551928
 GameObject:
   m_ObjectHideFlags: 0
@@ -87283,6 +87988,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1160635242}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1578192031
 GameObject:
   m_ObjectHideFlags: 0
@@ -87368,6 +88075,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1768139861}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1579923552
 GameObject:
   m_ObjectHideFlags: 0
@@ -87422,6 +88131,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 235127961}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1580201540
 GameObject:
   m_ObjectHideFlags: 0
@@ -87477,6 +88188,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 453563610}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1581914750
 GameObject:
   m_ObjectHideFlags: 0
@@ -87757,6 +88470,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2141452117}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1586561655
 GameObject:
   m_ObjectHideFlags: 0
@@ -88367,6 +89082,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 411533797}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1593826423
 GameObject:
   m_ObjectHideFlags: 0
@@ -88422,6 +89139,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 136152124}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1595406696
 GameObject:
   m_ObjectHideFlags: 0
@@ -88644,6 +89363,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1392436074}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1598723713
 GameObject:
   m_ObjectHideFlags: 0
@@ -88783,6 +89504,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1633352896}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1600652276
 GameObject:
   m_ObjectHideFlags: 0
@@ -89733,6 +90456,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 312061666}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1618255552
 GameObject:
   m_ObjectHideFlags: 0
@@ -89981,6 +90706,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 335901598}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1621115107
 GameObject:
   m_ObjectHideFlags: 0
@@ -90151,6 +90878,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 181456344}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1626366451
 GameObject:
   m_ObjectHideFlags: 0
@@ -90237,6 +90966,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1722130293}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1627484983
 GameObject:
   m_ObjectHideFlags: 0
@@ -90433,6 +91164,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 914195324}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1633209317
 GameObject:
   m_ObjectHideFlags: 0
@@ -90937,6 +91670,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 801238200}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1644008827
 GameObject:
   m_ObjectHideFlags: 0
@@ -90992,6 +91727,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 254950402}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1647109851
 GameObject:
   m_ObjectHideFlags: 0
@@ -91856,6 +92593,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 626791496}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1661014612
 GameObject:
   m_ObjectHideFlags: 0
@@ -91910,6 +92649,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 112076079}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1661849628
 GameObject:
   m_ObjectHideFlags: 0
@@ -92080,6 +92821,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 555713237}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1665515867
 GameObject:
   m_ObjectHideFlags: 0
@@ -92250,6 +92993,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2099458395}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1667400246
 GameObject:
   m_ObjectHideFlags: 0
@@ -92482,6 +93227,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1700672779}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1678042304
 GameObject:
   m_ObjectHideFlags: 0
@@ -92961,6 +93708,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 209517812}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1691877930
 GameObject:
   m_ObjectHideFlags: 0
@@ -93125,6 +93874,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1332043887}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1692303504
 GameObject:
   m_ObjectHideFlags: 0
@@ -93179,6 +93930,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 89103591}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1694536596
 GameObject:
   m_ObjectHideFlags: 0
@@ -93541,6 +94294,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 595056828}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1696455744
 GameObject:
   m_ObjectHideFlags: 0
@@ -93815,6 +94570,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 465510253}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1699579365
 GameObject:
   m_ObjectHideFlags: 0
@@ -94151,6 +94908,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1114940974}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1705153656
 GameObject:
   m_ObjectHideFlags: 0
@@ -94425,6 +95184,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1135946813}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1707700163
 GameObject:
   m_ObjectHideFlags: 0
@@ -94480,6 +95241,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1539950619}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1708187936
 GameObject:
   m_ObjectHideFlags: 0
@@ -94878,6 +95641,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1103301453}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1718112617
 GameObject:
   m_ObjectHideFlags: 0
@@ -94933,6 +95698,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 517784866}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1718310520
 GameObject:
   m_ObjectHideFlags: 0
@@ -95098,6 +95865,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2063568199}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1722130293
 GameObject:
   m_ObjectHideFlags: 0
@@ -95378,6 +96147,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 920563858}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1725706940
 GameObject:
   m_ObjectHideFlags: 0
@@ -95432,6 +96203,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 706450872}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1727004208
 GameObject:
   m_ObjectHideFlags: 0
@@ -95486,6 +96259,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1228280236}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1727438811
 GameObject:
   m_ObjectHideFlags: 0
@@ -95766,6 +96541,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 875100474}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1731416435
 GameObject:
   m_ObjectHideFlags: 0
@@ -95851,6 +96628,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2144501103}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1733067363
 GameObject:
   m_ObjectHideFlags: 0
@@ -95906,6 +96685,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 99976939}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1733313464
 GameObject:
   m_ObjectHideFlags: 0
@@ -96075,6 +96856,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 531485061}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1740132248
 GameObject:
   m_ObjectHideFlags: 0
@@ -96301,6 +97084,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1515538999}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1744206059
 GameObject:
   m_ObjectHideFlags: 0
@@ -96355,6 +97140,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1973632973}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1750314155
 GameObject:
   m_ObjectHideFlags: 0
@@ -96410,6 +97197,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 255426063}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1752480501
 GameObject:
   m_ObjectHideFlags: 0
@@ -97103,6 +97892,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1742288726}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1759216548
 GameObject:
   m_ObjectHideFlags: 0
@@ -97158,6 +97949,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1875886754}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1760578906
 GameObject:
   m_ObjectHideFlags: 0
@@ -97297,6 +98090,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2117429722}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1763436620
 GameObject:
   m_ObjectHideFlags: 0
@@ -97572,6 +98367,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1087258363}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1768139861
 GameObject:
   m_ObjectHideFlags: 0
@@ -97914,6 +98711,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1982260929}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1772048327
 GameObject:
   m_ObjectHideFlags: 0
@@ -98109,6 +98908,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 294138859}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1774393620
 GameObject:
   m_ObjectHideFlags: 0
@@ -98357,6 +99158,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1103908847}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1780582043
 GameObject:
   m_ObjectHideFlags: 0
@@ -98698,6 +99501,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 534266488}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1785528403
 GameObject:
   m_ObjectHideFlags: 0
@@ -99457,6 +100262,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 183332834}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1805261389
 GameObject:
   m_ObjectHideFlags: 0
@@ -99929,6 +100736,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 562269400}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1808668205
 GameObject:
   m_ObjectHideFlags: 0
@@ -100288,6 +101097,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1563862862}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1812231998
 GameObject:
   m_ObjectHideFlags: 0
@@ -100453,6 +101264,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 209376159}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1813522780
 GameObject:
   m_ObjectHideFlags: 0
@@ -100948,6 +101761,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 508679546}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1816492933
 GameObject:
   m_ObjectHideFlags: 0
@@ -101113,6 +101928,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1460428551}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1817394529
 GameObject:
   m_ObjectHideFlags: 0
@@ -101168,6 +101985,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 973999865}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1819278093
 GameObject:
   m_ObjectHideFlags: 0
@@ -101222,6 +102041,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1262464147}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1819464706
 GameObject:
   m_ObjectHideFlags: 0
@@ -101387,6 +102208,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1038924791}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1824507806
 GameObject:
   m_ObjectHideFlags: 0
@@ -101750,6 +102573,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 68986874}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1833865274
 GameObject:
   m_ObjectHideFlags: 0
@@ -101946,6 +102771,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1964224279}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1839548062
 GameObject:
   m_ObjectHideFlags: 0
@@ -102142,6 +102969,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1953208985}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1843544535
 GameObject:
   m_ObjectHideFlags: 0
@@ -102196,6 +103025,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1156450454}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1844373248
 GameObject:
   m_ObjectHideFlags: 0
@@ -102360,6 +103191,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1755102011}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1847283564
 GameObject:
   m_ObjectHideFlags: 0
@@ -102922,6 +103755,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1614248479}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1861221909
 GameObject:
   m_ObjectHideFlags: 0
@@ -103008,6 +103843,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1150254626}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1862213624
 GameObject:
   m_ObjectHideFlags: 0
@@ -103428,6 +104265,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1829878677}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1874796744
 GameObject:
   m_ObjectHideFlags: 0
@@ -103764,6 +104603,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1130382096}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1880553471
 GameObject:
   m_ObjectHideFlags: 0
@@ -104159,6 +105000,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 560268480}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1888283930
 GameObject:
   m_ObjectHideFlags: 0
@@ -104659,6 +105502,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1852298322}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1895866848
 GameObject:
   m_ObjectHideFlags: 0
@@ -105331,6 +106176,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1160586378}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1901814329
 GameObject:
   m_ObjectHideFlags: 0
@@ -105527,6 +106374,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1482125942}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1904935327
 GameObject:
   m_ObjectHideFlags: 0
@@ -105582,6 +106431,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1519878752}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1905616107
 GameObject:
   m_ObjectHideFlags: 0
@@ -105808,6 +106659,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 465438406}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1911008299
 GameObject:
   m_ObjectHideFlags: 0
@@ -106246,6 +107099,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 305319977}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1917375669
 GameObject:
   m_ObjectHideFlags: 0
@@ -106441,6 +107296,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2132379459}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1919164372
 GameObject:
   m_ObjectHideFlags: 0
@@ -106495,6 +107352,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 31520228}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1919227369
 GameObject:
   m_ObjectHideFlags: 0
@@ -106748,6 +107607,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 72143416}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1922539100
 GameObject:
   m_ObjectHideFlags: 0
@@ -107536,6 +108397,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 10404667}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1936906325
 GameObject:
   m_ObjectHideFlags: 0
@@ -107715,6 +108578,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 539344978}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1940871642
 GameObject:
   m_ObjectHideFlags: 0
@@ -107770,6 +108635,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 707332969}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1942777991
 GameObject:
   m_ObjectHideFlags: 0
@@ -107935,6 +108802,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 915008201}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1948919580
 GameObject:
   m_ObjectHideFlags: 0
@@ -108466,6 +109335,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 979591281}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1953190709
 GameObject:
   m_ObjectHideFlags: 0
@@ -108746,6 +109617,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2121962667}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1957483273
 GameObject:
   m_ObjectHideFlags: 0
@@ -108916,6 +109789,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1011886615}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1958946814
 GameObject:
   m_ObjectHideFlags: 0
@@ -109002,6 +109877,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2021262094}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1959412327
 GameObject:
   m_ObjectHideFlags: 0
@@ -109166,6 +110043,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2109667547}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1960588041
 GameObject:
   m_ObjectHideFlags: 0
@@ -109415,6 +110294,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 945453400}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1963684822
 GameObject:
   m_ObjectHideFlags: 0
@@ -109469,6 +110350,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1796860869}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1964224279
 GameObject:
   m_ObjectHideFlags: 0
@@ -109585,6 +110468,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1685787153}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1970497558
 GameObject:
   m_ObjectHideFlags: 0
@@ -109640,6 +110525,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 198783156}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1970942009
 GameObject:
   m_ObjectHideFlags: 0
@@ -109805,6 +110692,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 523074998}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1973016458
 GameObject:
   m_ObjectHideFlags: 0
@@ -110031,6 +110920,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 907225736}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1975947696
 GameObject:
   m_ObjectHideFlags: 0
@@ -110545,6 +111436,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1031853059}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1989500684
 GameObject:
   m_ObjectHideFlags: 0
@@ -110599,6 +111492,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 992739484}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1989583575
 GameObject:
   m_ObjectHideFlags: 0
@@ -110738,6 +111633,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 331225264}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1992781429
 GameObject:
   m_ObjectHideFlags: 0
@@ -110877,6 +111774,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 24788438}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &1994615107
 GameObject:
   m_ObjectHideFlags: 0
@@ -111683,6 +112582,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1365239705}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2004817953
 GameObject:
   m_ObjectHideFlags: 0
@@ -112097,10 +112998,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 900, y: 1900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -112544,6 +113445,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 688977300}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2018182696
 GameObject:
   m_ObjectHideFlags: 0
@@ -112855,6 +113758,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1676967667}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2027262166
 GameObject:
   m_ObjectHideFlags: 0
@@ -113248,6 +114153,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 20901090}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2037128356
 GameObject:
   m_ObjectHideFlags: 0
@@ -113413,6 +114320,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1928338976}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2038437007
 GameObject:
   m_ObjectHideFlags: 0
@@ -113468,6 +114377,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1979860876}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2039138810
 GameObject:
   m_ObjectHideFlags: 0
@@ -113553,6 +114464,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1042593264}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2042101328
 GameObject:
   m_ObjectHideFlags: 0
@@ -113700,6 +114613,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1104158141}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2046972482
 GameObject:
   m_ObjectHideFlags: 0
@@ -113838,6 +114753,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 17441648}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2048449963
 GameObject:
   m_ObjectHideFlags: 0
@@ -114624,6 +115541,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 89526728}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2065678197
 GameObject:
   m_ObjectHideFlags: 0
@@ -114789,6 +115708,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1011078611}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2068966489
 GameObject:
   m_ObjectHideFlags: 0
@@ -114844,6 +115765,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 683496899}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2069421789
 GameObject:
   m_ObjectHideFlags: 0
@@ -114982,6 +115905,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 320085713}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2074961067
 GameObject:
   m_ObjectHideFlags: 0
@@ -115147,6 +116072,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 300657611}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2078231141
 GameObject:
   m_ObjectHideFlags: 0
@@ -115373,6 +116300,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 540685256}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2082038690
 GameObject:
   m_ObjectHideFlags: 0
@@ -115459,6 +116388,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 540205853}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2082436667
 GameObject:
   m_ObjectHideFlags: 0
@@ -115655,6 +116586,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 855359465}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2085239382
 GameObject:
   m_ObjectHideFlags: 0
@@ -115709,6 +116642,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 792186696}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2085657674
 GameObject:
   m_ObjectHideFlags: 0
@@ -115993,6 +116928,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 4019724}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2093091777
 GameObject:
   m_ObjectHideFlags: 0
@@ -116048,6 +116985,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 764451306}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2095101216
 GameObject:
   m_ObjectHideFlags: 0
@@ -116102,6 +117041,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1120373258}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2095753589
 GameObject:
   m_ObjectHideFlags: 0
@@ -116413,6 +117354,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1543690838}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2099458395
 GameObject:
   m_ObjectHideFlags: 0
@@ -117026,6 +117969,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 643040421}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2110676423
 GameObject:
   m_ObjectHideFlags: 0
@@ -117305,6 +118250,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 698072366}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2115997416
 GameObject:
   m_ObjectHideFlags: 0
@@ -118100,6 +119047,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1862213624}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2124491098
 GameObject:
   m_ObjectHideFlags: 0
@@ -118963,6 +119912,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2039138810}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2138560170
 GameObject:
   m_ObjectHideFlags: 0
@@ -119101,6 +120052,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 2078231141}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2139947330
 GameObject:
   m_ObjectHideFlags: 0
@@ -119270,6 +120223,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1850446020}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2141452117
 GameObject:
   m_ObjectHideFlags: 0
@@ -119440,6 +120395,8 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1475580642}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
 --- !u!1 &2144501103
 GameObject:
   m_ObjectHideFlags: 0
@@ -119777,3 +120734,5 @@ MonoBehaviour:
   pointToStayPanel: {fileID: 1878053924}
   sceneBlackJack: 3
   sceneRoulette: 4
+  hide: {fileID: 0}
+  canConquer: {fileID: 0}
