@@ -29,8 +29,8 @@ public class CityBuildingGeneral : MonoBehaviour
         {
             ServiceLocator.Instance.GetService<IGlobalInformation>().SetDamage(damageInitial);
             ServiceLocator.Instance.GetService<IGlobalInformation>().SetHealth(healthInitial);
-            ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton("What happen here?",
-                "You will have to conquer all the territory for the family tradition, now you are weak. Try to go to Roulette and try your luck. \nFor the Horde",
+            ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton("What happened here?",
+                "You'll need to conquer all this territory because of your traditions. However, you're weak right now. Try your luck using the roulette and change that. Do it \nfor the horde",
                 "Go to Roulette",
                 GoToRoulette, () => { });
         }

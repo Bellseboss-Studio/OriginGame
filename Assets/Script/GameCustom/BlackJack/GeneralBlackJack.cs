@@ -186,8 +186,8 @@ public class GeneralBlackJack : MonoBehaviour, IGeneralBlackJack
             {
                 ServiceLocator.Instance.GetService<IGlobalInformation>().LoseHexagon();
                 ServiceLocator.Instance.GetService<IAudioService>().BlackJackLose();
-                ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton("You Lose",
-                    $"Win {tokensForGame} for play the roulette", "Go to CityBuilding",
+                ServiceLocator.Instance.GetService<ILoadScene>().ShowMessageWithOneButton("You lose!",
+                    $"But here's {tokensForGame / 2} tokens for the roulette", "Go to CityBuilding",
                     GoToCityBuilding, GoToCityBuilding);
                 ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveToken(tokensForGame / 2);
             }

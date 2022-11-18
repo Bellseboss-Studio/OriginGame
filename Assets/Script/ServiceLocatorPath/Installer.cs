@@ -39,6 +39,7 @@ namespace SystemOfExtras
             ServiceLocator.Instance.RegisterService<IRouletteService>(new RouletteAwards());
             ServiceLocator.Instance.RegisterService<IAudioService>(audioService);
             DontDestroyOnLoad(gameObject);
+            Screen.orientation = ScreenOrientation.Portrait;
         }
     }
 }

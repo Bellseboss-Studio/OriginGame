@@ -105,7 +105,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
     public void Lose()
     {
         _stateOfGame = 2;
-        _generalBlackJack.ShowMessage("You Lose", "you exceeded 32");
+        _generalBlackJack.ShowMessage("You just lost the game!", "By exceeding 32 points.");
     }
 
     public void Sum(int cardNumber)
@@ -222,7 +222,7 @@ public class GameLogic : MonoBehaviour, IGameLogic
 
     private void ShowComodinEvent()
     {
-        _generalBlackJack.ShowMessage("It's a JOKE!", "Take one more load");
+        _generalBlackJack.ShowMessage("It's a JOKE!", "Take one another charge");
     }
 
     public int LoadToPlayer()

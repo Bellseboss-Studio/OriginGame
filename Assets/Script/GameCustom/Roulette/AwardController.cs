@@ -36,7 +36,7 @@ public class AwardController : MonoBehaviour
     public void ShowWinLoot(int totalLootWin)
     {
         animatorAwards.SetBool(Open, true);
-        resultText.text = $"You Win Total {totalLootWin}";
+        resultText.text = $"You Win! \nTotal: {totalLootWin}";
         ServiceLocator.Instance.GetService<IAudioService>().RouletteTakeLoot();
         ServiceLocator.Instance.GetService<IGlobalInformation>().ReceiveGold(totalLootWin);
     }

@@ -8,12 +8,12 @@ public class PlayerShowMessage : MonoBehaviour
 
     public void ShowWhenHealthYouHave()
     {
-        messageGBJ.ShowMessage("You health", $"is {ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth()}");
+        messageGBJ.ShowMessage("Your health", $"is {ServiceLocator.Instance.GetService<IStatsInformation>().GetHealth()}");
     }
     
     
     public void ShowWhenDamageYouHave()
     {
-        messageGBJ.ShowMessage("You Damage", $"is {ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage()}");
+        messageGBJ.ShowMessage("Your Damage", $"is {ServiceLocator.Instance.GetService<IStatsInformation>().GetDamage()}");
     }
 }

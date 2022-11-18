@@ -6,26 +6,26 @@ public class ShowMessageFromGamePresentation : MonoBehaviour
 
     public void DontExceed32()
     {
-        messageGBJ.ShowMessage("How to Play?", "loses who exceeds 32");
+        messageGBJ.ShowMessage("How to Play?", "Whoever exceeds 32 points, will lose the game");
     }
 
     public void YouCanPlace()
     {
-        messageGBJ.ShowMessage("Place", "Move the card to the center of the table and add +1 Load");
+        messageGBJ.ShowMessage("Place", "move the cards to the center for adding 1 charge");
     }
 
     public void YouCanPass()
     {
-        messageGBJ.ShowMessage("Pass", "Move the card to the back of the table and it does not add to the load");
+        messageGBJ.ShowMessage("Pass", "Just move the card to the back of the table");
     }
     
     public void YouCanSet()
     {
-        messageGBJ.ShowMessage("Set", "Move the card to the altar of the hand, add +2 load and don't pass again in this round");
+        messageGBJ.ShowMessage("Set", "Move the card To the altar. Adds +2 to your charge but you won't be able to pass again in that round. Use it wisely.");
     }
 
     public void WhenLose()
     {
-        messageGBJ.ShowMessage("When somebody lose", "receives damage multiplied by the opponent's loads");
+        messageGBJ.ShowMessage("When someone loses", "will also receive multiplied damage, according by the opponent's previous charge");
     }
 }
