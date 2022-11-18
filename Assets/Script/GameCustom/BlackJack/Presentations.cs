@@ -119,4 +119,11 @@ public class Presentations : MonoBehaviour
     {
         return attackPlayer.IsFinishPresentation;
     }
+
+    public void StopAllPresentations()
+    {
+        enemy.StopAnimation();
+        player.StopAnimation();
+        game.StopAnimation();
+    }
 }

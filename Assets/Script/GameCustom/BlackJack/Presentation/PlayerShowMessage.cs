@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShowMessage : MonoBehaviour
 {
-    [SerializeField] private GeneralBlackJack messageGBJ;
+    [SerializeField] private ShowMessageTransitionally messageGBJ;
 
     public void ShowWhenHealthYouHave()
     {
