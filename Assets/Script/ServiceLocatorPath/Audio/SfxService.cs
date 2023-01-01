@@ -7,8 +7,11 @@ public class SfxService: MonoBehaviour
     [SerializeField] private AudioSource source;
     [SerializeField] private List<AudioClip> clips;
     private Dictionary<string, AudioClip> _clipsInOrdered;
+    private IMediatorAudioService _audioService;
+
     public void Configure(IMediatorAudioService audioService)
     {
+        _audioService = audioService;
         _clipsInOrdered = new Dictionary<string, AudioClip>();
         foreach (var clip in clips)
         {
@@ -19,6 +22,7 @@ public class SfxService: MonoBehaviour
     private void PlayOneShot(string nameOfSfx)
     {
         source.PlayOneShot(_clipsInOrdered[nameOfSfx]);
+        _audioService.MuteMusic();
     }
 
     public void ClickRandom()

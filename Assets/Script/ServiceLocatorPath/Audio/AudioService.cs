@@ -80,4 +80,9 @@ public class AudioService : MonoBehaviour, IAudioService, IMediatorAudioService
     {
         sfxService.BlackJackLose();   
     }
+
+    public void MuteMusic()
+    {
+        musicService.Mute();
+    }
 }

@@ -3,7 +3,7 @@ using UnityEngine.Audio;
 
 public class MusicService: MonoBehaviour
 {
-    [SerializeField] private AudioMixerSnapshot mute, menu, cityBuilding, blackJack, roulette;
+    [SerializeField] private AudioMixerSnapshot mute, menu, cityBuilding, blackJack, roulette, mixerFather;
     [SerializeField] private float timeToTransition;
     public void Configure(IMediatorAudioService audioService)
     {
@@ -28,5 +28,10 @@ public class MusicService: MonoBehaviour
     public void StayInRoulette()
     {
         roulette.TransitionTo(timeToTransition);
+    }
+
+    public void Mute()
+    {
+        
     }
 }
