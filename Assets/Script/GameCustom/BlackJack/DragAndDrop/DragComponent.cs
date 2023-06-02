@@ -27,6 +27,7 @@ namespace Gameplay.UsoDeCartas
         private IGameLogic _gameLogic;
         private OriginGame inputs;
         private bool _startDragging;
+        private Vector3 offset;
 
         public void PointMouseTouch(InputAction.CallbackContext context)
         {
@@ -142,6 +143,29 @@ namespace Gameplay.UsoDeCartas
         private void BeginDrag_(PointerEventData data)
         {
             posicionInicial = transform.position;
+            Vector3 mousePosition;
+#if UNITY_ANDROID
+            mousePosition = inputs.Player.TouchPosition.ReadValue<Vector2>();
+#else
+            mousePosition = inputs.UI.Point.ReadValue<Vector2>();
+#endif
+            
+            mousePosition.z = 80;
+            RaycastHit[] hits;
+            //Debug.Log($"mouse is in {mousePosition}");
+            var screenPointToRay = _camera.ViewportPointToRay(mousePosition);
+            hits = Physics.RaycastAll(_camera.transform.position, _camera.ScreenToWorldPoint(mousePosition),
+                Mathf.Infinity);
+                foreach (var hit in hits)
+            {
+                if (hit.collider.gameObject.TryGetComponent<DropComponent>(out var drop))
+                {
+                    //drop.Drop(this);
+                    //Debug.Log("did hit");
+                    offset = transform.position - hit.point;
+                    break;
+                }
+            }
             OnDragging?.Invoke();
         }
 
@@ -177,7 +201,8 @@ namespace Gameplay.UsoDeCartas
                 {
                     drop.Drop(this);
                     //Debug.Log("did hit");
-                    transform.position = hit.point;
+
+                    transform.position = hit.point + offset;
                     break;
                 }
             }
